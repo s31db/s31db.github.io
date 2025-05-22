@@ -1,0 +1,244 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8">
+  <title>Icônes Liberating Structures colorisées</title>
+  <link rel="icon" type="image/svg+xml" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='152' height='152' viewBox='0 0 152 152'%3E%3Cg fill='none'%3E%3Ccircle cx='76' cy='76' r='76' fill='%23F2F2F2'/%3E%3Cpath fill='%23000' d='M90.76 99.91H61.68a.43.43 0 01-.42-.53l3.24-14.7a.43.43 0 01.42-.33h22.6c.2 0 .37.14.42.33l3.24 14.7a.43.43 0 01-.42.53zM61.91 99.05h28.63l-2.95-13.38H64.86l-2.95 13.38zM87.93 82.32H64.5a.43.43 0 01-.42-.53l3.13-14.3a.43.43 0 01.42-.33h17.17c.2 0 .37.14.42.33l3.13 14.3a.43.43 0 01-.42.53zM64.73 81.46h22.96l-2.85-13.01H67.58l-2.85 13zM86.29 65.3H66.13a.43.43 0 01-.42-.53l2.42-11.07c.05-.2.22-.33.42-.33h15.72c.2 0 .37.13.42.33l2.42 11.07c.05.2-.1.53-.42.53zM66.35 64.44h19.72l-2.12-9.73H68.47l-2.12 9.73z'/%3E%3C/g%3E%3C/svg%3E">
+
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <style>
+    :root {
+      --bg: #f9fafb;
+      --text: #111827;
+      --primary: #4f46e5;
+      --border: #d1d5db;
+      --card: #ffffff;
+      --bg-color-light: #f4f4f961;
+      --text-color-light: #333;
+      --text-color-dark: #f4f4f9;
+      --link-color-light: #007BFF;
+      --link-color-dark: #4dabf7;
+      --card-bg-light: #ffffff61;
+      --card-bg-dark: #1e1e1ed4;
+      --shadow-light: rgba(0, 0, 0, 0.1);
+      --shadow-dark: rgba(255, 255, 255, 0.1);
+    }
+
+    @media (prefers-color-scheme: dark) {
+      :root {
+        --bg: #111827;
+        --text: #f9fafb;
+        --primary: #818cf8;
+        --border: #374151;
+        --card: #1f2937;
+      }
+    }
+
+    * {
+      box-sizing: border-box;
+    }
+
+    body {
+      margin: 0;
+      font-family: 'Segoe UI', sans-serif;
+      background: var(--bg);
+      color: var(--text);
+      padding: 20px;
+    }
+
+    h1 {
+      font-size: 2em;
+      margin-bottom: 10px;
+    }
+
+    label, h2 {
+      font-weight: 600;
+    }
+
+    input[type="color"] {
+      margin-left: 10px;
+      width: 40px;
+      height: 40px;
+      border: none;
+      border-radius: 6px;
+      cursor: pointer;
+    }
+
+    input[type="text"] {
+      margin-top: 10px;
+      padding: 8px 12px;
+      border-radius: 8px;
+      border: 1px solid var(--border);
+      width: 100%;
+      max-width: 400px;
+      background: var(--card);
+      color: var(--text);
+    }
+
+    #iconChecklist {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 10px;
+      margin-top: 20px;
+    }
+
+    .icon-item {
+      background: var(--card);
+      padding: 8px 8px;
+      border-radius: 8px;
+      box-shadow: 0 1px 3px rgba(0, 0, 0, 0.05);
+      border: 1px solid var(--border);
+      display: flex;
+      align-items: center;
+      gap: 8px;
+      cursor: pointer;
+    }
+
+    .icon-item-all {
+      display: initial;
+    }
+
+    #preview {
+      display: grid;
+      grid-template-columns: repeat(auto-fill, minmax(180px, 1fr));
+      gap: 20px;
+      margin-top: 20px;
+    }
+
+    .icon-preview {
+      width: 100%;
+      aspect-ratio: 1/1;
+      background: var(--card);
+      border: 1px solid var(--border);
+      border-radius: 10px;
+      box-shadow: 0 1px 5px rgba(0, 0, 0, 0.05);
+      padding: 10px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      transition: transform 0.3s ease;
+    }
+
+    .icon-preview:hover {
+      transform: scale(1.05);
+    }
+
+    .icon-preview svg {
+      width: 100%;
+      height: 100%;
+      object-fit: contain;
+    }
+
+    button {
+      background: var(--primary);
+      color: white;
+      border: none;
+      padding: 12px 20px;
+      border-radius: 8px;
+      font-size: 1em;
+      cursor: pointer;
+      margin-top: 20px;
+      transition: background 0.3s ease;
+    }
+
+    button:hover {
+      background: #4338ca;
+    }
+
+    @media (max-width: 600px) {
+      .icon-item {
+        font-size: 14px;
+      }
+
+      button {
+        width: 100%;
+      }
+    }
+
+    section {
+        max-width: 800px;
+        margin: 20px auto;
+        padding: 20px;
+        background: var(--card-bg-light);
+        box-shadow: 0 0 10px var(--shadow-light);
+        border-radius: 5px;
+    }
+
+    section.h2 {
+        color: var(--text-color-light);
+        margin-top: 0;
+    }
+
+    section a {
+            color: var(--link-color-light);
+            text-decoration: none;
+        }
+
+    footer {
+        text-align: center;
+        padding: 10px;
+        background: var(--bg-color-light);
+        color: var(--text-color-light);
+        margin-top: 20px;
+    }
+
+    @media (prefers-color-scheme: dark) {
+
+        section {
+            background: var(--card-bg-dark);
+            box-shadow: 0 0 10px var(--shadow-dark);
+        }
+
+        section.h2 {
+            color: var(--text-color-dark);
+        }
+
+        section a {
+            color: var(--link-color-dark);
+        }
+    }
+  </style>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/jszip/3.10.1/jszip.min.js"></script>
+  <script src="liberating_structures_colors_icons.js"></script>
+</head>
+<body>
+<h1>🎨 Personnalise la couleur de tes icônes LS</h1>
+<details id="infoBox" class="info-box" open>
+  <summary>Informations et licences</summary>
+  <section>
+      <h2>🎨 Icônes colorées des Liberating Structures</h2>
+      <p>Un ensemble complet d'icônes illustrant chaque structure de manière visuelle et attrayante. Idéal pour :
+    </p>
+    <ul>
+      <li>Créer des supports de présentation ou d'atelier</li>
+      <li>Faciliter visuellement les échanges en équipe</li>
+      <li>Renforcer la clarté et l'engagement des participants</li>
+    </ul>
+    <p>Les icônes sont disponibles dans plusieurs couleurs et utilisables sous licence Creative Commons License<a href="https://creativecommons.org/licenses/by-nc/3.0/" target="_blank"> <img src="https://i.creativecommons.org/l/by-nc/3.0/88x31.png" alt="CC BY NC"/></a></p>
+      <p>Dépot originel <a href="https://github.com/jfastnacht/liberating-structures-icons">liberating-structures-icons</a></p>
+      <footer>
+          <p><a href="https://github.com/s31db/liberating-structures-color-icons">Voir sur GitHub</a></p>
+      </footer>
+  </section>
+</details>
+
+
+  <label for="colorPicker">Choisir une couleur :</label>
+  <input type="color" id="colorPicker" value="#000000">
+
+  <h2>🔍 Rechercher une icône</h2>
+  <input type="text" id="searchInput" placeholder="ex: impromptu">
+
+  <h2>🧩 Sélection des icônes</h2>
+  <label class="icon-item icon-item-all">
+    <input type="checkbox" id="selectAll"> Tout sélectionner
+  </label>
+  <div id="iconChecklist"></div>
+
+  <h2>🔎 Aperçu</h2>
+  <div id="preview"></div>
+
+  <button id="downloadBtn">⬇️ Télécharger les icônes sélectionnées</button>
+
+</body>
+</html>
