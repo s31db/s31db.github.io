@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ateliers & Conférences – Libérer l’Agilité</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+<header>
+    <div class="nav">
+        <div><strong>Libérer l’Agilité</strong></div>
+        <div class="nav-links">
+            <a href="index.html">Accueil</a>
+            <a href="histoires.html">Histoires</a>
+            <a href="outils.html">Outils</a>
+        </div>
+    </div>
+</header>
+
+<section class="hero">
+    <h1>Ateliers & Conférences</h1>
+    <p>Vivez l’expérience en direct dans vos équipes et événements.</p>
+    <p>Disponible pour des BBL, des ateliers, des conférences et des webinaires.</p>
+    <p>Exemples de conférences <a href="https://sessionize.com/samuel-bastiat/" target="_blank" rel="noopener">sessionize.com/samuel-bastiat/</a></p>
+
+</section>
+<section class="content-section">
+    <h2>Sessions</h2>
+    <div class="sessionize-container">
+        <script type="text/javascript" src="https://sessionize.com/api/speaker/sessions/90vo9dq46o/0x1x3fb393x"></script>
+    </div>
+</section>
+
+<section class="content-section">
+    <h2>Événements</h2>
+    <div class="sessionize-container">
+        <script type="text/javascript" src="https://sessionize.com/api/speaker/events/90vo9dq46o/0x1x3fb393x"></script>
+    </div>
+</section>
+
+<script>
+    // Gestion du mode sombre pour Sessionize
+    function updateSessionizeTheme() {
+        const isDarkMode = window.matchMedia && window.matchMedia('(prefers-color-scheme: dark)').matches;
+        const containers = document.querySelectorAll('.sessionize-container');
+        
+        containers.forEach(container => {
+            // Trouver le script existant
+            const oldScript = container.querySelector('script[src*="sessionize.com"]');
+            if (!oldScript) return;
+            
+            // Créer un nouveau script avec l'URL mise à jour
+            const newScript = document.createElement('script');
+            newScript.type = 'text/javascript';
+            newScript.src = isDarkMode 
+                ? oldScript.src.replace('/0x', '/1x')
+                : oldScript.src.replace('/1x', '/0x');
+            
+            // Remplacer l'ancien script par le nouveau
+            container.removeChild(oldScript);
+            container.appendChild(newScript);
+        });
+    }
+
+    // Mise à jour au chargement
+    document.addEventListener('DOMContentLoaded', updateSessionizeTheme);
+
+    // Écoute des changements de thème
+    window.matchMedia('(prefers-color-scheme: dark)').addEventListener('change', updateSessionizeTheme);
+</script>
+
+<footer>
+    © 2025 Samuel Bastiat — Libérer l’Agilité
+</footer>
+</body>
+</html>

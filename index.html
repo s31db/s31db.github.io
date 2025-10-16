@@ -5,372 +5,142 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="icon" href="favicon.ico" type="image/x-icon">
     <title>Libérer l’Agilité</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700;800&family=Playfair+Display:wght@600;700;900&display=swap">
+    <link rel="stylesheet" href="style.css">
     <script data-goatcounter="https://s31db.goatcounter.com/count" async src="/js/count.js"></script>
-    <style>
-        :root {
-            --bg-color-light: #f4f4f961;
-            --text-color-light: #333;
-            --bg-color-dark: #121212d4;
-            --text-color-dark: #f4f4f9;
-            --link-color-light: #007BFF;
-            --link-color-dark: #4dabf7;
-            --card-bg-light: #ffffff61;
-            --card-bg-dark: #1e1e1ed4;
-            --shadow-light: rgba(0, 0, 0, 0.1);
-            --shadow-dark: rgba(255, 255, 255, 0.1);
-        }
-
-        body {
-            font-family: Arial, sans-serif;
-            line-height: 1.6;
-            margin: 0;
-            padding: 0;
-            background-color: var(--bg-color-light);
-            background-image: linear-gradient(rgba(255,255,255,.5), rgba(255,255,255,.5)), url('background-image.png');
-            color: var(--text-color-light);
-        }
-
-        header {
-            background-color: var(--bg-color-light);
-            color: var(--text-color-light);
-            padding: 20px 0;
-            text-align: center;
-        }
-
-        header h1 {
-            margin: 0;
-            font-size: 2em;
-        }
-
-        section {
-            max-width: 800px;
-            margin: 20px auto;
-            padding: 20px;
-            background: var(--card-bg-light);
-            box-shadow: 0 0 10px var(--shadow-light);
-            border-radius: 5px;
-        }
-
-        h2 {
-            color: var(--text-color-light);
-            margin-top: 0;
-        }
-
-        ul {
-            padding-left: 20px;
-        }
-
-        ul li {
-            margin-bottom: 10px;
-        }
-
-        a {
-            color: var(--link-color-light);
-            text-decoration: none;
-        }
-
-        a:hover {
-            text-decoration: underline;
-        }
-
-        footer {
-            text-align: center;
-            padding: 10px;
-            background: var(--bg-color-light);
-            color: var(--text-color-light);
-            margin-top: 20px;
-        }
-
-
-
-        #floating-menu {
-            position: fixed;
-            top: 100px;
-            left: 20px;
-            background: var(--bg-color-light);
-            border: 1px solid #ccc;
-            padding: 1em;
-            border-radius: 8px;
-            box-shadow: 0 2px 6px rgba(0,0,0,0.1);
-            z-index: 1000;
-            font-size: 14px;
-            max-width: 250px;
-        }
-
-        #floating-menu ul {
-            list-style: none;
-            padding: 0;
-            margin: 0;
-        }
-
-        #floating-menu li {
-            margin-bottom: 0.5em;
-        }
-
-        #floating-menu a {
-            text-decoration: none;
-            color: var(--text-color-light);
-        }
-
-        #floating-menu a:hover {
-          text-decoration: underline;
-        }
-
-        @media screen and (max-width: 1399px) {
-            #floating-menu {
-                display: none;
-            }
-        }
-
-        @media (prefers-color-scheme: dark) {
-            body {
-                background-color: var(--bg-color-dark);
-                color: var(--text-color-dark);
-            }
-
-            header {
-                background-color: var(--bg-color-dark);
-                color: var(--text-color-dark);
-            }
-
-            section {
-                background: var(--card-bg-dark);
-                box-shadow: 0 0 10px var(--shadow-dark);
-            }
-
-            h2 {
-                color: var(--text-color-dark);
-            }
-
-            a {
-                color: var(--link-color-dark);
-            }
-
-            footer {
-                background-color: var(--bg-color-dark);
-                color: var(--text-color-dark);
-            }
-
-            #floating-menu{
-                background-color: var(--bg-color-dark);
-            }
-            #floating-menu a {
-                color: var(--text-color-dark);
-            }
-        }
-
-        .media iframe {
-            max-width: 100%;
-        }
-
-        .audio-player {
-            margin-top: 1em;
-        }
-
-    </style>
 </head>
 <body>
-    <header>
-        <h1>Libérer l’Agilité</h1>
-        <p>Samuel Bastiat – outils, cartes et histoires pour élargir le champ des possibles</p>
-    </header>
-
-    <nav id="floating-menu">
-  <ul>
-    <li><a href="#sm-tools">🛠️ SM-Tools</a></li>
-    <li><a href="#ls-cards">📚 Jeu de cartes des Liberating Structures francophones</a></li>
-    <li><a href="#ls-icons">🎨 Icônes colorées des Liberating Structures</a></li>
-    <li><a href="#llm-assisted-software-design">📘 LLM-Assisted Software Design</a></li>
-    <li><a href="#tuer_scrummaster">📘 Le jour où j’ai tué le Scrum Master</a></li>
-    <li><a href="#tuer_agile">📘 Le jour où j’ai tué Agile</a></li>
-    <li><a href="#tuer_agile_en">📘 The day I killed Agile</a></li>
-    <li><a href="#retour_scrummaster">📘 Le jour où le Scrum Master revient d'outre tombe</a></li>
-  </ul>
-</nav>
-    <section id="sm-tools">
-        <h2>SM-Tools 🛠️</h2>
-        <p><strong>SM-Tools</strong> est une collection d'outils conçus pour assister les Scrum Masters dans leurs tâches quotidiennes.</p>
-        
-        <h3>Fonctionnalités principales</h3>
-        <ul>
-            <li><strong>Extraction de données :</strong> Digital.ai Agility, Jira, CSV, Excel, presse-papiers</li>
-            <li><strong>Visualisation et rapports :</strong> BurnDown, Cumulative Flow Diagram, Treemap, graphiques interactifs, HTML, presse-papiers</li>
-            <li><strong>Préparation des cérémonies :</strong> animation de rétrospectives, préparation de reviews</li>
-            <li><strong>Partage collaboratif :</strong> version web interactive</li>
-        </ul>
-        <footer>
-            <p><a href="https://github.com/s31db/sm-tools">Voir sur GitHub</a></p>
-        </footer>
-    </section>
-
-    <section id="ls-cards">
-        <h2>Liberating Structures Card Deck 📚 francophone</h2>
-        <p>Une version francophone et améliorée du jeu de cartes Liberating Structures, pour faciliter la collaboration et l'animation d'ateliers.</p>
-
-        <h3>Fonctionnalités principales</h3>
-        <ul>
-            <li>Basé sur le dépôt originel d'Holisticon avec des scripts pour l'ajout de nouvelles langues</li>
-            <li>Format imprimable en A4 avec instructions pour un rendu professionnel</li>
-        </ul>
-        
-        <h3>Instructions d'impression</h3>
-        <ol>
-            <li>Imprimer en couleur sur papier A4 (recto uniquement).</li>
-            <li>Plier pour créer un recto-verso.</li>
-            <li>Découper le long des pointillés et plastifier si besoin.</li>
-            <li>Utiliser du papier de 160 g/m² pour un meilleur résultat.</li>
-        </ol>
-        <p>Les cartes sont disponibles dans plusieurs langues et utilisables sous licence Creative Commons License<a href="https://creativecommons.org/licenses/by-nc/3.0/" target="_blank"> <img src="https://i.creativecommons.org/l/by-nc/3.0/88x31.png" alt="CC BY NC"/></a></p>
-        <p>Dépot originel <a href="https://github.com/vpapadopou/liberating-structures-cards">liberating-structures-cards</a></p>
-        <footer>
-            <p>Version actuelle : <a href="https://github.com/s31db/liberating-structures-cards-fr/releases/download/2.3/print-a4-fr.pdf">2.3</a> |
-                <a href="https://github.com/s31db/liberating-structures-cards-fr">Voir sur GitHub</a></p>
-        </footer>
-    </section>
-
-    <section id="ls-icons">
-        <h2>🎨 Icônes colorées des Liberating Structures</h2>
-        <p>Un ensemble complet d'icônes illustrant chaque structure de manière visuelle et attrayante. Idéal pour :</p>
-        <ul>
-            <li>Créer des supports de présentation ou d'atelier</li>
-            <li>Faciliter visuellement les échanges en équipe</li>
-            <li>Renforcer la clarté et l'engagement des participants</li>
-          </ul>
-        <p>Version en ligne pour choisir votre propre couleur : 🎨 <a href="liberating_structures_colors_icons.html">Personnalise la couleur de tes icônes LS
-            <img src="https://raw.githubusercontent.com/s31db/liberating-structures-color-icons/master/icons_blue/ls-menu.svg" width="25"></a></p>
-        <p>Les icônes sont disponibles dans plusieurs couleurs et utilisables sous licence Creative Commons License<a href="https://creativecommons.org/licenses/by-nc/3.0/" target="_blank"> <img src="https://i.creativecommons.org/l/by-nc/3.0/88x31.png" alt="CC BY NC"/></a></p>
-            <p>Dépot originel <a href="https://github.com/jfastnacht/liberating-structures-icons">liberating-structures-icons</a></p>
-        <footer>
-            <p><a href="https://github.com/s31db/liberating-structures-color-icons">Voir sur GitHub</a></p>
-        </footer>
-    </section>
-
-    <section id="llm-assisted-software-design">
-        <h2>📘 LLM-Assisted Software Design</h2>
-        <p><strong>Un langage de motifs pour concevoir avec l’IA</strong></p>
-
-        <div class="media">
-          <iframe width="640" height="360"
-                  src="https://www.youtube.com/embed/fB_Q5iN54jA"
-                  title="Présentation du livre LLM-Assisted Software Design"
-                  frameborder="0" allowfullscreen>
-          </iframe>
+<header>
+    <div class="nav">
+        <div><strong>Libérer l’Agilité</strong></div>
+        <div class="nav-links">
+            <a href="#manifeste">Manifeste</a>
+            <a href="#gateways">Découvrir</a>
+            <a href="#apropos">À propos</a>
         </div>
+    </div>
+</header>
 
-        <div class="audio-player">
-          <p><em>🎧 Entretien audio sur le livre</em></p>
-          <audio controls preload="metadata">
-            <source src="https://github.com/s31db/llm-dev-books/raw/refs/heads/main/resume/entretien.mp4" type="audio/mp4">
-            Votre navigateur ne prend pas en charge la lecture audio.
-          </audio>
-        </div>
-
-        <p>
-            Ce livre explore une nouvelle manière de concevoir les systèmes logiciels à l’ère des LLM (modèles de langage de grande taille).<br/>
-            Plutôt que de voir ces outils comme de simples assistants, <strong>LLM-Assisted Software Design</strong> propose de les considérer comme de véritables partenaires de dialogue, capables d’augmenter notre pensée, notre créativité et nos processus de conception.
-        </p>
-        <p>
-            Le cœur du livre est une <strong>grammaire de motifs d’interaction</strong> : des structures, des postures, des canevas qui permettent aux développeurs, PO, coachs agiles et architectes d’<strong>intégrer les LLM dans leurs pratiques</strong> quotidiennes, de manière structurée, éthique et efficace.
-        </p>
-        <p>
-            🛠️ 16 chapitres, des dizaines d’exemples, des fiches-outils, des canevas de prompt, une réflexion sur les rôles, la responsabilité, l’éthique et les futurs métiers de la conception augmentée.<br/>
-            💬 Pensé comme une conversation entre humains et IA — à continuer dans vos équipes.
+<section id="manifeste" aria-labelledby="titre-manifeste" class="hero">
+    <h1>Libérer l’Agilité</h1>
+    <div>
+        <p class="subtitle">
+            Agile n’est pas un cadre inaltérable. C’est une disposition, une pratique vivante, souvent étouffée par les procédures.<br/>
+            Ce site est une invitation : respirer, expérimenter, reprendre la responsabilité de nos pratiques, et s'outiller pour libérer du temps.
         </p>
 
-        <p>➡️ <a href="https://leanpub.com/llm_assisted_software_design" target="_blank">Lire ou télécharger le livre (édition communautaire gratuite sur Leanpub)</a></p>
-        <footer>
-            <p><a href="https://github.com/s31db/llm-dev-books">Voir sur GitHub les éléments de construction</a></p>
-        </footer>
-    </section>
-
-    <section id="tuer_scrummaster">
-        <div style="float: right;margin-left: 20px;">
-            <img src="images/tuer_sm.png" alt="Le jour où j’ai tué le Scrum Master" width="200" height="auto">
+        <div class="manifest-lines" aria-hidden="false">
+            <p>Agile n’est pas un cadre, ni une recette, ni un dogme.</p>
+            <p>C’est un souffle, une dynamique vivante qui se réinvente chaque jour.</p>
+            <p>Libérer l’Agilité, c’est ouvrir les verrous.</p>
+            <p>Retrouver le sens, l’humain et la confiance.</p>
+            <p>Oser expérimenter, adapter, co-créer.</p>
+            <p><strong>Et si nous le faisions ensemble ?</strong></p>
         </div>
-        <h2>📘 Le jour où j’ai tué le Scrum Master</h2>
+        <div style="margin-top:2rem;display:flex;gap:1rem;flex-wrap:wrap">
+            <button class="btn" onclick="document.getElementById('gateways').scrollIntoView({behavior:'smooth'})">Découvrir comment</button>
+            <!--<button class="btn btn-outline" onclick="document.getElementById('newsletter').scrollIntoView({behavior:'smooth'})">Rejoindre le mouvement</button>-->
+        </div>
+    </div>
+</section>
 
+<!-- References & Inspirations -->
+<section aria-labelledby="refs-title">
+    <h2 id="refs-title" style="font-family:'Playfair Display',serif;font-weight:700;font-size:1.25rem;margin:0 0 .8rem 0">Références & inspirations</h2>
 
-        <div class="audio-player">
-            <p><em>🎧 Entretien audio sur le livre - Une fable moderne sur les dérives du cadre et la passivité</em></p>
-            <audio controls preload="metadata">
-            <source src="resume/tuer_scrummaster.mp3" type="audio/mp3">
-            Votre navigateur ne prend pas en charge la lecture audio.
-            </audio>
+    <div class="cards" role="list">
+        <div class="card" role="listitem">
+            <h4>Manifesto for Agile Software Development (2001)</h4>
+            <p>Les principes fondateurs — sens, interactions, feedback rapide.</p>
+            <p style="margin-top:.6rem"><a href="https://agilemanifesto.org/" target="_blank" rel="noopener">agilemanifesto.org →</a></p>
         </div>
 
-        <p>
-            Une fiction noire sur l’effacement d’un Scrum Master, racontée par son équipe. Huis clos agile, tensions, silence et complicité collective.
+        <div class="card" role="listitem">
+            <h4>Liberating Structures</h4>
+            <p>Une boîte à outils pour des interactions puissantes et inclusives.</p>
+            <p style="margin-top:.6rem"><a href="http://www.liberatingstructures.com/" target="_blank" rel="noopener">liberatingstructures.com →</a></p>
+        </div>
+
+        <div class="card" role="listitem">
+            <h4>Manifesto for Software Craftsmanship (2009)</h4>
+            <p>Elever le niveau.</p>
+            <p style="margin-top:.6rem"><a href="https://manifesto.softwarecraftsmanship.org/#/fr-fr" target="_blank" rel="noopener">manifesto.softwarecraftsmanship.org →</a></p>
+        </div>
+
+        <div class="card" role="listitem">
+            <h4>Management 3.0 — Jurgen Appelo</h4>
+            <p>Complexité, leadership distribué et pratiques managériales adaptatives.</p>
+            <p style="margin-top:.6rem"><a href="https://management30.com/" target="_blank" rel="noopener">management30.com →</a></p>
+        </div>
+
+        <div class="card" role="listitem">
+            <h4>Le jour où j’ai tué Agile — Samuel Bastiat</h4>
+            <p>Une réflexion critique et narrative sur les dévoiements de l’agilité en entreprise.</p>
+            <p style="margin-top:.6rem"><a href="https://leanpub.com/tuer-agile" target="_blank" rel="noopener">Lire le livre →</a></p>
+        </div>
+
+        <div class="card" role="listitem">
+            <h4>LLM-Assisted Software Design</h4>
+            <p>Design logiciel assisté par modèles de langage — motifs et pratiques.</p>
+            <p style="margin-top:.6rem"><a href="https://leanpub.com/llm_assisted_software_design" target="_blank" rel="noopener">Lire le livre →</a></p>
+        </div>
+    </div>
+</section>
+
+
+<section id="gateways" aria-labelledby="excerpts-title">
+    <h2 id="excerpts-title" style="font-family:'Playfair Display',serif;font-weight:700;font-size:1.25rem;margin:0 0 .8rem 0">Outils & Histoires</h2>
+
+    <div class="cards" role="list">
+        <div class="card">
+            <h3>📖 Histoires & Expériences</h3>
+            <p>Plongez dans mes récits, fictions et retours d’expérience : apprentissages, détours, victoires, frissons.</p>
+            <a href="histoires.html" class="btn" style="width:80%;margin-top:1rem">Lire les histoires</a>
+        </div>
+        <div class="card">
+            <h3>🛠️ Outils & Ressources</h3>
+            <p>Fiches, templates et guides pour libérer l’agilité au quotidien.</p>
+            <a href="outils.html" class="btn" style="width:80%;margin-top:1rem">Découvrir les outils</a>
+        </div>
+        <div class="card">
+            <h3>🎤 Ateliers & Conférences</h3>
+            <p>Vivez l’expérience en direct dans vos équipes et événements.</p>
+            <a href="ateliers.html" class="btn" style="width:80%;margin-top:1rem">Inviter Samuel</a>
+        </div>
+</section>
+<!--
+<section id="newsletter" class="newsletter">
+    <div style="flex:1">
+        <h3>Rejoignez le mouvement « Libérer l’Agilité »</h3>
+        <p>Une idée, un outil, une histoire — chaque mois, sans spam.</p>
+    </div>
+    <form onsubmit="event.preventDefault();alert('Merci !');" style="display:flex;flex:1;gap:.5rem">
+        <input type="email" required placeholder="Votre email" aria-label="Adresse e-mail">
+        <button class="btn" type="submit">S’abonner</button>
+    </form>
+</section>
+-->
+<section id="apropos" class="apropos">
+    <div class="apropos-photo">
+        <div class="apropos-initials">SB</div>
+    </div>
+    <div>
+        <h3 style="font-size:1.5rem;margin:0;">Samuel Bastiat</h3>
+        <p class="cv">
+            Avec 19 ans d'expérience dans le développement logiciel et 10 ans comme agiliste, Scrum Master et Coach Agile j’aide les équipes et les organisations à retrouver du sens, du rythme et de la confiance.
+            <br/>
+            « Libérer l’Agilité » est un laboratoire vivant : histoires vraies, fictions éducatives, outils concrets, expériences à vivre.
         </p>
-
-        <p>➡️ <a href="https://leanpub.com/tuer-scrummaster" target="_blank">Lire ou télécharger le livre en format PDF et ePub</a></p>
-    </section>
-
-    <section id="tuer_agile">
-        <div style="float: right;margin-left: 20px;">
-            <img src="images/tuer_agile.png" alt="Le jour où j’ai tué Agile" width="200" height="auto">
+        <div style="margin-top:1rem;display:flex;gap:.75rem;flex-wrap:wrap">
+            <a href="mailto:s31db.github@gmail.com" class="btn btn-outline">Me contacter</a>
+            <a href="https://www.linkedin.com/in/samuel-bastiat" target="_blank" class="btn">LinkedIn</a>
         </div>
-        <h2>📘 Le jour où j’ai tué Agile</h2>
+    </div>
+</section>
 
-
-        <div class="audio-player">
-            <p><em>🎧 Entretien audio sur le livre - Chronique d'une Désillusion Collective en Entreprise</em></p>
-            <audio controls preload="metadata">
-            <source src="resume/tuer_agile.mp3" type="audio/mp3">
-            Your browser does not support audio playback.
-            </audio>
-        </div>
-
-        <p>
-            Un récit choral poignant sur la mort silencieuse d’Agile, à travers les voix de ceux qui l’ont incarné… puis abandonné.
-        </p>
-
-        <p>➡️ <a href="https://leanpub.com/tuer-agile" target="_blank">Lire ou télécharger le livre en format PDF et ePub</a></p>
-    </section>
-
-    <section id="tuer_agile_en">
-        <div style="float: right;margin-left: 20px;">
-            <img src="images/tuer_agile_en.png" alt="The Day I Killed Agile" width="200" height="auto">
-        </div>
-        <h2>📘 The day I killed Agile</h2>
-
-
-        <div class="audio-player">
-            <p><em>Chronicle of Collective Disillusionment in Business</em></p>
-            <video controls preload="metadata" width="480" height="270">
-            <source src="resume/tuer_agile_en.mp4" type="video/mp4">
-            Your browser does not support audio playback.
-            </video>
-        </div>
-
-        <p>
-            A poignant choral narrative about the silent death of Agile, through the voices of those who embodied it... then abandoned it.
-        </p>
-
-        <p>➡️ <a href="https://leanpub.com/kill-agile" target="_blank">Read or download the book in PDF and ePub format</a></p>
-    </section>
-
-
-
-    <section id="retour_scrummaster">
-        <div style="float: right;margin-left: 20px;">
-            <img src="images/retour_sm.png" alt="Le jour où le Scrum Master revient d’outre-tombe" width="200" height="auto">
-        </div>
-        <h2>📘 Le jour où le Scrum Master revient d’outre-tombe</h2>
-
-
-        <div class="audio-player">
-            <p><em>🎧 Entretien audio sur le livre - Le Retour Silencieux du Scrum Master, quand la Présence Transforme l'Équipe</em></p>
-            <audio controls preload="metadata">
-            <source src="resume/retour_sm.mp3" type="audio/mp3">
-            Votre navigateur ne prend pas en charge la lecture audio.
-            </audio>
-        </div>
-
-        <p>
-            Le Scrum Master revient. Plus discret. Plus humain. Une fiction lucide sur l’équipe, le doute, et ce qui reste quand l’agilité cesse de faire semblant.
-        </p>
-
-        <p>➡️ <a href="https://leanpub.com/retour-scrummaster" target="_blank">Lire ou télécharger le livre en format PDF et ePub</a></p>
-    </section>
+<footer>
+    © 2025 Samuel Bastiat — Libérer l’Agilité | <a href="https://leanpub.com/u/s31db">Livre (Leanpub)</a>
+</footer>
 </body>
 </html>
