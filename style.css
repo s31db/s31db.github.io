@@ -15,6 +15,9 @@ body {
     margin: 0;
     font-family: 'Inter', sans-serif;
     background: linear-gradient(to bottom,#fff,#f8fafc);
+    --color: #0f172a;
+    --background-color: var(--bg-color-light);
+    --background-image: linear-gradient(rgba(255,255,255,.5), rgba(255,255,255,.5)), url('background-image.png');
     color: var(--text-color-light);
 }
 
@@ -45,6 +48,7 @@ header {
 .hero {
     position: relative;
     overflow: hidden;
+    /*padding: 6rem 1rem 3rem;*/
     text-align: left;
     max-width: 72rem;
     margin: 0 auto;
@@ -89,7 +93,7 @@ header {
     color: #ea0c2b;
 }
 .btn-outline:hover {
-    background: #ea0c2b;
+    background: var(--link-color-dark);
     color: white;
 }
 
@@ -187,6 +191,7 @@ article footer {
 }
 
 article, section {
+    /*max-width: 800px;*/
     max-width: 72rem;
     margin: 10px auto;
     padding: 20px;
@@ -282,8 +287,14 @@ h2, h3 {
     /* delays applied inline via style attr for precise staggering below */
 }
 
+ul > li {
+    margin: .5em 0;
+    line-height: 1.15;
+}
+
 @media (prefers-color-scheme: dark) {
     body {
+        --background-color: var(--bg-color-dark);
         background: linear-gradient(to bottom,var(--bg-color-dark),var(--bg-color-dark));
         color: var(--text-color-dark);
     }
@@ -334,5 +345,9 @@ h2, h3 {
     .cv {
         color:var(--text-color-dark);
     }
+    .btn-outline {
+         border: 2px solid #ffffff;
+         color: #ffffff;
+     }
 
 }
