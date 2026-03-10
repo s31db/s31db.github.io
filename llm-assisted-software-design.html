@@ -1,0 +1,287 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" href="favicon.ico" type="image/x-icon">
+    <title>LLM-Assisted Software Design – Libérer l'Agilité</title>
+    <link rel="stylesheet" href="style.css">
+    <script data-goatcounter="https://s31db.goatcounter.com/count" async src="/js/count.js"></script>
+</head>
+<body>
+<header>
+    <div class="nav">
+        <div><strong>Libérer l'Agilité</strong></div>
+        <div class="nav-links">
+            <a href="index.html">Accueil</a>
+            <a href="histoires.html">Histoires</a>
+            <a href="outils.html">Outils & Ressources</a>
+            <a href="ateliers.html">Ateliers & Conférences</a>
+            <a href="#apropos">À propos</a>
+        </div>
+    </div>
+</header>
+
+<section class="hero" style="text-align:center; padding:4rem 0 2rem 0;">
+    <h1>LLM-Assisted Software Design</h1>
+    <p>Un langage de motifs pour concevoir avec l'IA</p>
+</section>
+
+<main style="max-width:72rem; margin:0 auto; padding:1rem 1rem;">
+
+    <article style="margin-bottom:2rem;">
+        <div class="media">
+            <iframe width="640" height="360"
+                    src="https://www.youtube.com/embed/fB_Q5iN54jA"
+                    title="Présentation du livre LLM-Assisted Software Design"
+                    frameborder="0" allowfullscreen>
+            </iframe>
+        </div>
+        
+        <div class="audio-player">
+            <p><em>🎧 Entretien audio sur le livre</em></p>
+            <audio controls preload="metadata">
+                <source src="https://github.com/s31db/llm-dev-books/raw/refs/heads/main/resume/entretien.mp4" type="audio/mp4">
+                Votre navigateur ne prend pas en charge la lecture audio.
+            </audio>
+        </div>
+
+        <p>
+            Ce livre explore une nouvelle manière de concevoir les systèmes logiciels à l'ère des LLM (modèles de langage de grande taille).<br/>
+            Plutôt que de voir ces outils comme de simples assistants, <strong>LLM-Assisted Software Design</strong> propose de les considérer comme de véritables partenaires de dialogue, capables d'augmenter notre pensée, notre créativité et nos processus de conception.
+        </p>
+        
+        <p style="text-align: center; margin: 2rem 0;">
+            <a href="https://leanpub.com/llm_assisted_software_design" class="btn" target="_blank">Lire ou télécharger le livre (édition communautaire gratuite)</a>
+            <a href="https://www.amazon.fr/dp/B0GPNXMHBP" class="btn" target="_blank">Acheter sur Amazon</a>
+            <a href="https://github.com/s31db/llm-dev-books" class="btn" target="_blank">Voir sur GitHub les éléments de construction</a>
+        </p>
+    </article>
+
+    <article style="margin-bottom:2rem;">
+        <h2>Les Motifs de Dialogue</h2>
+        <p>
+            Le cœur de cette approche réside dans une <strong>grammaire de motifs d'interaction</strong> qui structure la collaboration entre humains et IA. Ces motifs permettent aux développeurs, PO, coachs agiles et architectes d'intégrer les LLM dans leurs pratiques quotidiennes de manière structurée, éthique et efficace.
+        </p>
+        
+        <h3>🎯 Les 9 Motifs de Dialogue Fondamentaux</h3>
+        
+        <div class="cards">
+            
+            <div class="card">
+                <h3>🤔 Question Socratique</h3>
+                <p>🔢 <strong>Finalité principale</strong> : Clarifier un besoin flou</p>
+                <p>💡 <strong>Geste clé</strong> : Poser des questions ciblées</p>
+                <p>🧠 <strong>Posture recommandée</strong> : Se mettre en position de facilitateur de sa propre pensée</p>
+                <p>💬 <strong>Prompt-type</strong> : <em>Aide-moi à clarifier ma demande en me posant des questions.</em></p>
+            </div>
+
+            <div class="card">
+                <h3>🗺️ Exploration guidée</h3>
+                <p>🔢 <strong>Finalité principale</strong> : Structurer un sujet complexe</p>
+                <p>💡 <strong>Geste clé</strong> : Demander un découpage ou un plan</p>
+                <p>🧠 <strong>Posture recommandée</strong> : Explorer sans chercher à résoudre d'un coup</p>
+                <p>💬 <strong>Prompt-type</strong> : <em>Propose un plan en étapes pour aborder ce sujet.</em></p>
+            </div>
+
+            <div class="card">
+                <h3>🔍 Spécification inversée</h3>
+                <p>🔢 <strong>Finalité principale</strong> : Comprendre du code sans documentation</p>
+                <p>💡 <strong>Geste clé</strong> : Inférer les intentions à partir du code</p>
+                <p>🧠 <strong>Posture recommandée</strong> : Interpréter, reformuler, confronter</p>
+                <p>💬 <strong>Prompt-type</strong> : <em>Quelles règles métier ce code implémente-t-il ?</em></p>
+            </div>
+
+            <div class="card">
+                <h3>🪞 Modèle miroir</h3>
+                <p>🔢 <strong>Finalité principale</strong> : Comparer des options avant un choix</p>
+                <p>💡 <strong>Geste clé</strong> : Générer plusieurs solutions puis les comparer</p>
+                <p>🧠 <strong>Posture recommandée</strong> : Ne pas se précipiter, ouvrir l'espace de décision</p>
+                <p>💬 <strong>Prompt-type</strong> : <em>Propose 2 ou 3 options et compare-les sur ces critères…</em></p>
+            </div>
+
+            <div class="card">
+                <h3>⚠️ Clarification par contre-exemple</h3>
+                <p>🔢 <strong>Finalité principale</strong> : Tester la solidité d'une solution</p>
+                <p>💡 <strong>Geste clé</strong> : Demander un cas où ça échoue</p>
+                <p>🧠 <strong>Posture recommandée</strong> : Adopter une posture critique, tester la limite</p>
+                <p>💬 <strong>Prompt-type</strong> : <em>Quelle situation rend cette solution invalide ?</em></p>
+            </div>
+
+            <div class="card">
+                <h3>🧪 Prompt piloté par les tests </h3>
+                <p>🔢 <strong>Finalité principale</strong> : Stabiliser la qualité des réponses</p>
+                <p>💡 <strong>Geste clé</strong> : Définir les attentes avant d'écrire</p>
+                <p>🧠 <strong>Posture recommandée</strong> : Concevoir le prompt comme un artefact testable</p>
+                <p>💬 <strong>Prompt-type</strong> : <em>Voici un exemple de sortie attendue. Que faut-il inclure dans le prompt ?</em></p>
+            </div>
+
+            <div class="card">
+                <h3>🎨 Reformulation visuelle</h3>
+                <p>🔢 <strong>Finalité principale</strong> : Détecter les flous dans une solution textuelle</p>
+                <p>💡 <strong>Geste clé</strong> : Représenter sous forme visuelle puis reformuler</p>
+                <p>🧠 <strong>Posture recommandée</strong> : Clarifier en dessinant, dialoguer à partir du schéma</p>
+                <p>💬 <strong>Prompt-type</strong> : <em>Voici ma compréhension sous forme structurée. Que manque-t-il ?</em></p>
+            </div>
+
+            <div class="card">
+                <h3>🌱 Soin systémique</h3>
+                <p>🔢 <strong>Finalité principale</strong> : Identifier les causes profondes d'un problème</p>
+                <p>💡 <strong>Geste clé</strong> : Enquêter par questionnement causal</p>
+                <p>🧠 <strong>Posture recommandée</strong> : Suspendre l'action pour investiguer en profondeur</p>
+                <p>💬 <strong>Prompt-type</strong> : <em>Peux-tu m'aider à explorer les causes racines de ce problème ?</em></p>
+            </div>
+
+            <div class="card">
+                <h3>🌊 Cascade de prompts</h3>
+                <p>🔢 <strong>Finalité principale</strong> : Approfondir un sujet complexe étape par étape</p>
+                <p>💡 <strong>Geste clé</strong> : Construire une progression (question → esquisse → test → raffinement → synthèse)</p>
+                <p>🧠 <strong>Posture recommandée</strong> : Orchestrer le cheminement plutôt que forcer une réponse unique</p>
+                <p>💬 <strong>Prompt-type</strong> : <em>Nous allons travailler en plusieurs étapes. Voici la première : pose-moi 5 questions pour clarifier…</em></p>
+            </div>
+
+        </div>
+
+        <h3>🛠️ Postures d'Interaction</h3>
+        <ul>
+            <li><strong>🔍 Explorateur</strong> : Découverte et apprentissage collaboratif — Curiosité active, exploration sans jugement, ouverture aux surprises</li>
+            <li><strong>🤝 Facilitateur</strong> : Guidage et structuration du dialogue — Orchestration conversationnelle, clarification progressive, synthèse active</li>
+            <li><strong>⚖️ Challengeur</strong> : Questionnement critique et validation — Esprit critique, test des limites, validation rigoureuse des hypothèses</li>
+            <li><strong>🎨 Créateur</strong> : Co-création et innovation — Imagination augmentée, génération d'idées, construction collaborative</li>
+        </ul>
+    </article>
+
+    <article style="margin-bottom:2rem;">
+        <h2>📚 Structure du Livre</h2>
+        <p>Une exploration complète en <strong>16 chapitres + 6 annexes</strong> pour transformer votre pratique du développement avec les LLM.</p>
+        
+        <div class="cards">
+            
+            <div class="card">
+                <h3>🌱 Fondements & Introduction</h3>
+                <p><strong>Préface</strong> — Et si coder devenait un art du dialogue&nbsp;?</p>
+                <p><strong>Avant-propos</strong> — Ce livre est un terrain d'expérimentation</p>
+                <p><strong>Introduction</strong> — Concevoir avec l'IA, un nouvel artisanat logiciel</p>
+                <p><em>Une invitation à dialoguer, plus qu'à automatiser.</em></p>
+            </div>
+
+            <div class="card">
+                <h3>🎯 Maîtrise des Prompts et Motifs de Dialogue</h3>
+                <p><strong>Chapitre 1</strong> — Anatomie d'un bon prompt&nbsp;: précision, contexte et intention</p>
+                <p><strong>Chapitre 2</strong> — La grammaire de l'intention&nbsp;: penser et formuler avec un LLM</p>
+                <p><strong>Chapitre 3</strong> — Les motifs du dialogue&nbsp;: construire un langage de conception</p>
+                <p><em>L'art de structurer le dialogue pour une collaboration fluide.<br/>Une bibliothèque de motifs concrets pour mieux concevoir ensemble.</em></p>
+            </div>
+
+            <div class="card">
+                <h3>👥 Rôles & Usages</h3>
+                <p><strong>Chapitre 4</strong> — Nouveaux rôles, nouvelles compétences&nbsp;: l'évolution des équipes augmentées</p>
+                <p><strong>Chapitre 5</strong> — Cartographier les usages&nbsp;: typologie des situations et des rôles</p>
+                <p><em>Comment les rôles évoluent et comment identifier les bonnes situations.</em></p>
+            </div>
+
+            <div class="card">
+                <h3>🛠️ Pratiques Quotidiennes</h3>
+                <p><strong>Chapitre 6</strong> — Intégrer les motifs au quotidien&nbsp;: individuel et équipe</p>
+                <p><strong>Chapitre 7</strong> — Responsabilité, transparence et limites&nbsp;: éthique du développement augmenté</p>
+                <p><strong>Chapitre 8</strong> — Une agilité augmentée&nbsp;?</p>
+                <p><em>Des pratiques utiles, vivantes, partagées et responsables.</em></p>
+            </div>
+
+            <div class="card">
+                <h3>🔬 Cadres & Formation</h3>
+                <p><strong>Chapitre 9</strong> — Cadres de mise en œuvre&nbsp;: ateliers, méthodes et rituels</p>
+                <p><strong>Chapitre 10</strong> — Transmettre, former, partager les motifs</p>
+                <p><strong>Chapitre 11</strong> — Usages de l'IA dans l'apprentissage</p>
+                <p><em>Faire vivre les motifs, ensemble et dans la durée.</em></p>
+            </div>
+
+            <div class="card">
+                <h3>🗂️ Mémoire & Prospective</h3>
+                <p><strong>Chapitre 12</strong> — Documenter, archiver, capitaliser&nbsp;: vers une mémoire augmentée</p>
+                <p><strong>Chapitre 13</strong> — Scénarios prospectifs&nbsp;: vers une ingénierie conversationnelle générative</p>
+                <p><em>Quand la conversation devient le cœur du système.</em></p>
+            </div>
+
+            <div class="card">
+                <h3>🤔 Réflexions & Design Patterns</h3>
+                <p><strong>Chapitre 14</strong> — Dois-je avoir honte d'utiliser l'IA dans mon métier&nbsp;?</p>
+                <p><strong>Chapitre 15</strong> — Repenser les design patterns à l'ère des LLM</p>
+                <p><strong>Chapitre 16</strong> — Nouveaux design patterns émergents avec les agents IA</p>
+                <p><em>Entre syndrome de l'imposteur et fierté augmentée.</em></p>
+            </div>
+
+            <div class="card">
+                <h3>🧵 Conclusion & Méthodes</h3>
+                <p><strong>Conclusion</strong> — Vers un manifeste du développement augmenté</p>
+                <p><strong>Annexe 1</strong> — Fiches d'outils</p>
+                <p><strong>Annexe 2</strong> — TDP&nbsp;: Test-Driven Prompting</p>
+                <p><em>Des principes fondateurs et des outils concrets.</em></p>
+            </div>
+
+            <div class="card">
+                <h3>👥 Rôles Augmentés</h3>
+                <p><strong>Annexe 3</strong> — PO augmenté&nbsp;: pratiquer son rôle avec l'appui d'un LLM</p>
+                <p><strong>Annexe 4</strong> — Développeur augmenté&nbsp;: étendre ses gestes avec l'appui d'un LLM</p>
+                <p><strong>Annexe 5</strong> — Coach agile augmenté&nbsp;: enrichir ses accompagnements</p>
+                <p><strong>Annexe 6</strong> — Manager 3.0 augmenté&nbsp;: soutenir les dynamiques collectives</p>
+                <p><em>L'IA comme partenaire pour chaque rôle clé.</em></p>
+            </div>
+
+        </div>
+        
+        <div class="content-section" style="text-align: center; margin-top: 2rem;">
+            <h3 style="margin-bottom: 1rem;">🎯 Ce livre vous offre :</h3>
+            <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); gap: 1rem; text-align: left;">
+                <div>
+                    <p><strong>📖 16 chapitres</strong> progressifs</p>
+                    <p><strong>🛠️ 6 annexes pratiques</strong></p>
+                </div>
+                <div>
+                    <p><strong>🧩 9 motifs de dialogue</strong> concrets</p>
+                    <p><strong>🎓 Fiches-outils</strong> immédiatement utilisables</p>
+                </div>
+                <div>
+                    <p><strong>⚖️ Réflexion éthique</strong> approfondie</p>
+                    <p><strong>📋 Guide pratique</strong> et manifeste</p>
+                </div>
+            </div>
+        </div>
+    </article>
+
+    <article style="margin-bottom:2rem;">
+        <h2>🎯 Pour Qui ?</h2>
+        <p>Ce livre s'adresse aux professionnels du logiciel qui souhaitent intégrer l'IA de manière réfléchie dans leurs pratiques :</p>
+        
+        <ul>
+            <li><strong>Développeurs et Architectes</strong> : Pour augmenter leurs capacités de conception et de décision</li>
+            <li><strong>Product Owners et Managers</strong> : Pour mieux comprendre et guider les opportunités IA</li>
+            <li><strong>Coachs Agiles et Facilitateurs</strong> : Pour accompagner les équipes dans cette transition</li>
+            <li><strong>Équipes de Développement</strong> : Pour établir des pratiques collaboratives efficaces</li>
+        </ul>
+    </article>
+</main>
+
+<section id="apropos" class="apropos">
+    <div class="apropos-photo">
+        <div class="apropos-initials">SB</div>
+    </div>
+    <div>
+        <h3 style="font-size:1.5rem;margin:0;">Samuel Bastiat</h3>
+        <p class="cv">
+            Avec 19 ans d'expérience dans le développement logiciel et 10 ans comme agiliste, Scrum Master et Coach Agile j'aide les équipes et les organisations à retrouver du sens, du rythme et de la confiance.
+            <br/>
+            « Libérer l'Agilité » est un laboratoire vivant : histoires vraies, fictions éducatives, outils concrets, expériences à vivre.
+        </p>
+        <div style="margin-top:1rem;display:flex;gap:.75rem;flex-wrap:wrap">
+            <a href="mailto:s31db.github@gmail.com" class="btn btn-outline">Me contacter</a>
+            <a href="https://www.linkedin.com/in/samuel-bastiat" target="_blank" class="btn">LinkedIn</a>
+        </div>
+    </div>
+</section>
+
+<footer>
+    © 2026 Samuel Bastiat — Libérer l'Agilité | <a href="index.html">Retour à l'accueil</a>
+</footer>
+</body>
+</html>
