@@ -1,109 +1,108 @@
 <!DOCTYPE html>
 <html lang="fr">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="icon" href="favicon.ico" type="image/x-icon">
-    <title>Ateliers & Conférences – Libérer l’Agilité</title>
-    <link rel="stylesheet" href="style.css">
-    <script data-goatcounter="https://s31db.goatcounter.com/count" async src="/js/count.js"></script>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="icon" href="favicon.ico" type="image/x-icon">
+  <title>Ateliers & Conférences – Samuel Bastiat</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,600;0,700;0,900;1,600&family=Source+Serif+4:ital,wght@0,300;0,400;0,600;1,300;1,400&display=swap">
+  <link rel="stylesheet" href="style.css">
+  <script data-goatcounter="https://s31db.goatcounter.com/count" async src="/js/count.js"></script>
 </head>
 <body>
+
 <header>
-    <div class="nav">
-        <div><strong>Libérer l’Agilité</strong></div>
-        <div class="nav-links">
-            <a href="index.html">Accueil</a>
-            <a href="histoires.html">Histoires</a>
-            <a href="outils.html">Outils</a>
-            <a href="#apropos">À propos</a>
-        </div>
+  <nav>
+    <a href="index.html" class="nav-brand">Samuel Bastiat</a>
+    <div class="nav-links">
+      <a href="index.html#logibla">Logibla</a>
+      <a href="index.html#manifeste">Manifeste</a>
+      <a href="histoires.html">Livres</a>
+      <a href="outils.html">Outils</a>
     </div>
+  </nav>
 </header>
 
 <section class="hero">
-    <h1>Ateliers & Conférences</h1>
-    <p>Vivez l’expérience en direct dans vos équipes et événements.</p>
-    <p>Disponible pour des BBL, des ateliers, des conférences et des webinaires.</p>
-    <p>Exemples de conférences <a href="https://sessionize.com/samuel-bastiat/" target="_blank" rel="noopener">sessionize.com/samuel-bastiat/</a></p>
-
+  <div class="wrap">
+    <p class="hero-eyebrow">Conférences & ateliers</p>
+    <h1>Ateliers &amp; Conférences</h1>
+    <p class="hero-lead">Vivez l'expérience en direct dans vos équipes et événements.<br>
+    Disponible pour des BBL, ateliers, conférences et webinaires.</p>
+    <div class="hero-cta">
+      <a href="mailto:s31db.github@gmail.com" class="btn btn-primary">Inviter Samuel →</a>
+      <a href="https://sessionize.com/samuel-bastiat/" target="_blank" rel="noopener" class="btn btn-ghost">Profil Sessionize →</a>
+    </div>
+  </div>
 </section>
-<section class="content-section">
+
+<main>
+  <div class="block">
     <h2>Sessions</h2>
     <div class="sessionize-container">
-        <script type="text/javascript" src="https://sessionize.com/api/speaker/sessions/90vo9dq46o/0x1x3fb393x"></script>
+      <script type="text/javascript" src="https://sessionize.com/api/speaker/sessions/90vo9dq46o/0x1x3fb393x"></script>
     </div>
-</section>
+  </div>
 
-<section class="content-section">
-    <h2>Ateliers Spécifiques</h2>
-    
-    <article style="margin-bottom:2rem;">
-        <h3>LLM-Assisted Software Design</h3>
-        <p>Atelier pratique sur les motifs de dialogue pour concevoir avec l'IA</p>
-        <p>Découvrez comment intégrer les LLM dans vos pratiques de développement de manière structurée et éthique.</p>
-        <a href="llm-assisted-software-design.html" class="btn">En savoir plus sur le livre et les motifs</a>
-    </article>
-</section>
+  <article>
+    <h2>Ateliers spécifiques</h2>
+    <h3>LLM-Assisted Software Design</h3>
+    <p>Atelier pratique sur les motifs de dialogue pour concevoir avec l'IA. Découvrez comment intégrer les LLM dans vos pratiques de développement de manière structurée et éthique.</p>
+    <a href="llm-assisted-software-design.html" class="btn btn-ghost">En savoir plus →</a>
+  </article>
 
-<section class="content-section">
+  <div class="block">
     <h2>Événements</h2>
     <div class="sessionize-container">
-        <script type="text/javascript" src="https://sessionize.com/api/speaker/events/90vo9dq46o/0x1x3fb393x"></script>
+      <script type="text/javascript" src="https://sessionize.com/api/speaker/events/90vo9dq46o/0x1x3fb393x"></script>
     </div>
-</section>
+  </div>
+</main>
 
 <script>
-    // Gestion du mode sombre pour Sessionize
-    function updateSessionizeTheme() {
-        const isDarkMode = window.matchMedia && window.matchMedia('(prefers-color-scheme: dark)').matches;
-        const containers = document.querySelectorAll('.sessionize-container');
-        
-        containers.forEach(container => {
-            // Trouver le script existant
-            const oldScript = container.querySelector('script[src*="sessionize.com"]');
-            if (!oldScript) return;
-            
-            // Créer un nouveau script avec l'URL mise à jour
-            const newScript = document.createElement('script');
-            newScript.type = 'text/javascript';
-            newScript.src = isDarkMode 
-                ? oldScript.src.replace('/0x', '/1x')
-                : oldScript.src.replace('/1x', '/0x');
-            
-            // Remplacer l'ancien script par le nouveau
-            container.removeChild(oldScript);
-            container.appendChild(newScript);
-        });
-    }
-
-    // Mise à jour au chargement
-    document.addEventListener('DOMContentLoaded', updateSessionizeTheme);
-
-    // Écoute des changements de thème
-    window.matchMedia('(prefers-color-scheme: dark)').addEventListener('change', updateSessionizeTheme);
+  function updateSessionizeTheme() {
+    const isDark = window.matchMedia('(prefers-color-scheme: dark)').matches;
+    document.querySelectorAll('.sessionize-container').forEach(container => {
+      const old = container.querySelector('script[src*="sessionize.com"]');
+      if (!old) return;
+      const s = document.createElement('script');
+      s.type = 'text/javascript';
+      s.src = isDark ? old.src.replace('/0x', '/1x') : old.src.replace('/1x', '/0x');
+      container.removeChild(old);
+      container.appendChild(s);
+    });
+  }
+  document.addEventListener('DOMContentLoaded', updateSessionizeTheme);
+  window.matchMedia('(prefers-color-scheme: dark)').addEventListener('change', updateSessionizeTheme);
 </script>
 
-<section id="apropos" class="apropos">
-    <div class="apropos-photo">
-        <div class="apropos-initials">SB</div>
-    </div>
-    <div>
-        <h3 style="font-size:1.5rem;margin:0;">Samuel Bastiat</h3>
-        <p class="cv">
-            Avec 19 ans d'expérience dans le développement logiciel et 10 ans comme agiliste, Scrum Master et Coach Agile j’aide les équipes et les organisations à retrouver du sens, du rythme et de la confiance.
-            <br/>
-            « Libérer l’Agilité » est un laboratoire vivant : histoires vraies, fictions éducatives, outils concrets, expériences à vivre.
+<section id="apropos">
+  <div class="wrap">
+    <div class="apropos-grid">
+      <div class="apropos-avatar">SB</div>
+      <div>
+        <h2 style="margin-bottom:.75rem">Samuel Bastiat</h2>
+        <p class="apropos-bio">
+          Développeur depuis 20 ans, agiliste et coach depuis 10 ans.
+          Fondateur de <a href="https://logibla.fr" style="color:var(--accent-logibla);font-weight:600;text-decoration:none">Logibla</a>.
         </p>
-        <div style="margin-top:1rem;display:flex;gap:.75rem;flex-wrap:wrap">
-            <a href="mailto:s31db.github@gmail.com" class="btn btn-outline">Me contacter</a>
-            <a href="https://www.linkedin.com/in/samuel-bastiat" target="_blank" class="btn">LinkedIn</a>
+        <div class="apropos-links">
+          <a href="mailto:s31db.github@gmail.com" class="btn btn-ghost">Me contacter</a>
+          <a href="https://www.linkedin.com/in/samuel-bastiat" target="_blank" class="btn btn-primary">LinkedIn</a>
         </div>
+      </div>
     </div>
+  </div>
 </section>
 
 <footer>
-    © 2026 Samuel Bastiat — Libérer l’Agilité
+  © 2026 Samuel Bastiat —
+  <a href="index.html">Accueil</a> ·
+  <a href="https://logibla.fr">Logibla</a> ·
+  <a href="histoires.html">Livres</a> ·
+  <a href="outils.html">Outils</a>
 </footer>
+
 </body>
 </html>

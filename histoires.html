@@ -5,28 +5,35 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="icon" href="favicon.ico" type="image/x-icon">
     <title>Histoires & Expériences – Libérer l’Agilité</title>
-    <link rel="stylesheet" href="style.css">
-    <script data-goatcounter="https://s31db.goatcounter.com/count" async src="/js/count.js"></script>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,600;0,700;0,900;1,600&family=Source+Serif+4:ital,wght@0,300;0,400;0,600;1,300;1,400&display=swap">
+  <link rel="stylesheet" href="style.css">
+  <script data-goatcounter="https://s31db.goatcounter.com/count" async src="/js/count.js"></script>
 </head>
 <body>
 <header>
-    <div class="nav">
-        <div><strong>Libérer l’Agilité</strong></div>
-        <div class="nav-links">
-            <a href="index.html">Accueil</a>
-            <a href="outils.html">Outils & Ressources</a>
-            <a href="ateliers.html">Ateliers & Conférences</a>
-            <a href="#apropos">À propos</a>
-        </div>
+  <nav>
+    <a href="index.html" class="nav-brand">Samuel Bastiat</a>
+    <div class="nav-links">
+      <a href="index.html#logibla">Logibla</a>
+      <a href="index.html#manifeste">Manifeste</a>
+      <a href="outils.html">Outils</a>
+      <a href="ateliers.html">Ateliers</a>
     </div>
+  </nav>
 </header>
 
-  <section class="hero" style="text-align:center; padding:4rem 0 2rem 0;">
-      <h1>Livres, Histoires & Expériences</h1>
-      <p style="text-align:left; padding: 2rem 0 0 2rem;"><a href="https://leanpub.com/u/s31db" class="btn" target="_blank" rel="noopener">Les publications sur leanpub</a></p>
+<section class="hero">
+  <div class="wrap">
+    <p class="hero-eyebrow">Publications</p>
+    <h1>Livres, Histoires &amp; Expériences</h1>
+    <div class="hero-cta">
+      <a href="https://leanpub.com/u/s31db" class="btn btn-primary" target="_blank" rel="noopener">Toutes les publications sur Leanpub →</a>
+    </div>
+  </div>
 </section>
 
-  <main style="max-width:72rem; margin:0 auto; padding:1rem 1rem;">
+  <main>
 
     <article style="margin-bottom:2rem;" id="llm-assisted-software-design">
       <h2>LLM-Assisted Software Design</h2>
@@ -34,10 +41,9 @@
 
 
         <div class="media">
-            <iframe width="640" height="360"
-                    src="https://www.youtube.com/embed/fB_Q5iN54jA"
+            <iframe src="https://www.youtube.com/embed/fB_Q5iN54jA"
                     title="Présentation du livre LLM-Assisted Software Design"
-                    frameborder="0" allowfullscreen>
+                    allowfullscreen frameborder="0">
             </iframe>
         </div>
         <div class="audio-player">
@@ -60,12 +66,12 @@
             💬 Pensé comme une conversation entre humains et IA — à continuer dans vos équipes.
         </p>
 
-        <p>
-            <a href="https://leanpub.com/llm_assisted_software_design" class="btn" target="_blank">Lire ou télécharger le livre (édition communautaire gratuite sur Leanpub)</a> <a href="https://www.amazon.fr/dp/B0GPNXMHBP" class="btn" target="_blank">Acheter sur Amazon</a>
-        </p>
-        <p>
-            <a href="llm-assisted-software-design.html" class="btn">Découvrir les motifs de dialogue et plus de détails sur le livre</a> <a href="https://github.com/s31db/llm-dev-books" class="btn" target="_blank">Voir sur GitHub les éléments de construction</a>
-        </p>
+        <div style="display:flex;gap:.75rem;flex-wrap:wrap;margin-top:1.25rem">
+          <a href="https://leanpub.com/llm_assisted_software_design" class="btn btn-primary" target="_blank">Lire sur Leanpub (gratuit)</a>
+          <a href="https://www.amazon.fr/dp/B0GPNXMHBP" class="btn btn-primary" target="_blank" style="background:var(--warm)">📦 Édition papier Amazon</a>
+          <a href="llm-assisted-software-design.html" class="btn btn-ghost">Détails & motifs →</a>
+          <a href="https://github.com/s31db/llm-dev-books" class="btn btn-ghost" target="_blank">GitHub →</a>
+        </div>
     </article>
 
     <article style="margin-bottom:2rem;"><div style="float: right;margin-left: 20px;">
@@ -80,7 +86,7 @@
         </audio>
         </div>
       <p>Une fiction noire sur l’effacement d’un Scrum Master, racontée par son équipe. Huis clos agile, tensions, silence et complicité collective.</p>
-      <a href="https://leanpub.com/tuer-scrummaster" class="btn">Lire ou télécharger le livre en format PDF et ePub</a>
+      <a href="https://leanpub.com/tuer-scrummaster" class="btn btn-primary" target="_blank">Lire sur Leanpub →</a>
     </article>
 
 
@@ -99,7 +105,7 @@
         <p>
             Un récit choral poignant sur la mort silencieuse d’Agile, à travers les voix de ceux qui l’ont incarné… puis abandonné.
         </p>
-      <a href="https://leanpub.com/tuer-agile" class="btn">Lire ou télécharger le livre en format PDF et ePub</a>
+      <a href="https://leanpub.com/tuer-agile" class="btn btn-primary" target="_blank">Lire sur Leanpub →</a>
     </article>
 
 
@@ -110,15 +116,15 @@
       <h2>📘 The day I killed Agile</h2>
         <div class="audio-player">
             <p><em>Chronicle of Collective Disillusionment in Business</em></p>
-            <video controls preload="metadata" width="480" height="270">
+            <video controls preload="metadata">
                 <source src="resume/tuer_agile_en.mp4" type="video/mp4">
-                Your browser does not support audio playback.
+                Your browser does not support video playback.
             </video>
         </div>
         <p>
             A poignant choral narrative about the silent death of Agile, through the voices of those who embodied it... then abandoned it.
         </p>
-        <a href="https://leanpub.com/kill-agile" class="btn" target="_blank">Read or download the book in PDF and ePub format</a>
+        <a href="https://leanpub.com/kill-agile" class="btn btn-primary" target="_blank">Read on Leanpub →</a>
     </article>
 
     <article style="margin-bottom:2rem;">
@@ -140,30 +146,35 @@
             Le Scrum Master revient. Plus discret. Plus humain. Une fiction lucide sur l’équipe, le doute, et ce qui reste quand l’agilité cesse de faire semblant.
         </p>
 
-        <p> <a href="https://leanpub.com/retour-scrummaster" class="btn" target="_blank">Lire ou télécharger le livre en format PDF et ePub</a></p>
+        <a href="https://leanpub.com/retour-scrummaster" class="btn btn-primary" target="_blank">Lire sur Leanpub →</a>
     </article>
   </main>
 
-<section id="apropos" class="apropos">
-    <div class="apropos-photo">
-        <div class="apropos-initials">SB</div>
-    </div>
-    <div>
-        <h3 style="font-size:1.5rem;margin:0;">Samuel Bastiat</h3>
-        <p class="cv">
-            Avec 19 ans d'expérience dans le développement logiciel et 10 ans comme agiliste, Scrum Master et Coach Agile j’aide les équipes et les organisations à retrouver du sens, du rythme et de la confiance.
-            <br/>
-            « Libérer l’Agilité » est un laboratoire vivant : histoires vraies, fictions éducatives, outils concrets, expériences à vivre.
+<section id="apropos">
+  <div class="wrap">
+    <div class="apropos-grid">
+      <div class="apropos-avatar">SB</div>
+      <div>
+        <h2 style="margin-bottom:.75rem">Samuel Bastiat</h2>
+        <p class="apropos-bio">
+          Développeur depuis 20 ans, agiliste et coach depuis 10 ans.
+          Fondateur de <a href="https://logibla.fr" style="color:var(--accent-logibla);font-weight:600;text-decoration:none">Logibla</a>.
         </p>
-        <div style="margin-top:1rem;display:flex;gap:.75rem;flex-wrap:wrap">
-            <a href="mailto:s31db.github@gmail.com" class="btn btn-outline">Me contacter</a>
-            <a href="https://www.linkedin.com/in/samuel-bastiat" target="_blank" class="btn">LinkedIn</a>
+        <div class="apropos-links">
+          <a href="mailto:s31db.github@gmail.com" class="btn btn-ghost">Me contacter</a>
+          <a href="https://www.linkedin.com/in/samuel-bastiat" target="_blank" class="btn btn-primary">LinkedIn</a>
         </div>
+      </div>
     </div>
+  </div>
 </section>
 
 <footer>
-    © 2026 Samuel Bastiat — Libérer l’Agilité | <a href="index.html">Retour à l’accueil</a>
+  © 2026 Samuel Bastiat —
+  <a href="index.html">Accueil</a> ·
+  <a href="https://logibla.fr">Logibla</a> ·
+  <a href="outils.html">Outils</a> ·
+  <a href="ateliers.html">Ateliers</a>
 </footer>
 </body>
 </html>
