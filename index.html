@@ -1,169 +1,273 @@
 <!DOCTYPE html>
 <html lang="fr">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="icon" href="favicon.ico" type="image/x-icon">
-    <title>Libérer l’Agilité</title>
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700;800&family=Playfair+Display:wght@600;700;900&display=swap">
-    <link rel="stylesheet" href="style.css">
-    <script data-goatcounter="https://s31db.goatcounter.com/count" async src="/js/count.js"></script>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="icon" href="favicon.ico" type="image/x-icon">
+  <title>Samuel Bastiat — Développeur, Agiliste, Fondateur de Logibla</title>
+  <meta name="description" content="20 ans de développement logiciel, 10 ans de coaching agile. Créateur de Logibla — CRM, Kanban et Agenda pour TPE et freelances.">
+  <meta property="og:title" content="Samuel Bastiat — Développeur, Agiliste, Fondateur de Logibla">
+  <meta property="og:description" content="20 ans de développement logiciel, 10 ans de coaching agile. Créateur de Logibla.">
+  <meta property="og:type" content="website">
+  <meta property="og:locale" content="fr_FR">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,600;0,700;0,900;1,600&family=Source+Serif+4:ital,wght@0,300;0,400;0,600;1,300;1,400&display=swap">
+  <link rel="stylesheet" href="style.css">
+  <script data-goatcounter="https://s31db.goatcounter.com/count" async src="/js/count.js"></script>
 </head>
 <body>
+
 <header>
-    <div class="nav">
-        <div><strong>Libérer l’Agilité</strong></div>
-        <div class="nav-links">
-            <a href="#manifeste">Manifeste</a>
-            <a href="#gateways">Découvrir</a>
-            <a href="#apropos">À propos</a>
-        </div>
+  <nav>
+    <a href="#" class="nav-brand">Samuel Bastiat</a>
+    <div class="nav-links">
+      <a href="#logibla">Logibla</a>
+      <a href="#manifeste">Manifeste</a>
+      <a href="#outils">Outils</a>
+      <a href="#livres">Livres</a>
+      <a href="#apropos">Contact</a>
     </div>
+  </nav>
 </header>
 
-<section id="manifeste" aria-labelledby="titre-manifeste" class="hero">
-    <h1>Libérer l’Agilité</h1>
-    <div>
-        <p class="subtitle">
-            Agile n’est pas un cadre inaltérable. C’est une disposition, une pratique vivante, souvent étouffée par les procédures.<br/>
-            Ce site est une invitation : respirer, expérimenter, reprendre la responsabilité de nos pratiques, et s'outiller pour libérer du temps.
-        </p>
-
-        <div class="manifest-lines" aria-hidden="false">
-            <p>Agile n’est pas un cadre, ni une recette, ni un dogme.</p>
-            <p>C’est un souffle, une dynamique vivante qui se réinvente chaque jour.</p>
-            <p>Libérer l’Agilité, c’est ouvrir les verrous.</p>
-            <p>Retrouver le sens, l’humain et la confiance.</p>
-            <p>Oser expérimenter, adapter, co-créer.</p>
-            <p><strong>Et si nous le faisions ensemble ?</strong></p>
-        </div>
-        <div style="margin-top:2rem;display:flex;gap:1rem;flex-wrap:wrap">
-            <button class="btn" onclick="document.getElementById('gateways').scrollIntoView({behavior:'smooth'})">Découvrir comment</button>
-            <!--<button class="btn btn-outline" onclick="document.getElementById('newsletter').scrollIntoView({behavior:'smooth'})">Rejoindre le mouvement</button>-->
-            <a class="btn btn-outline" href="https://framateam.org/liberer-agile" target="_blank">Rejoindre le mouvement</a>
-        </div>
-    </div>
-</section>
-
-<!-- References & Inspirations -->
-<section aria-labelledby="refs-title">
-    <h2 id="refs-title" style="font-family:'Playfair Display',serif;font-weight:700;font-size:1.25rem;margin:0 0 .8rem 0">Références & inspirations</h2>
-
-    <div class="cards" role="list">
-        <div class="card" role="listitem">
-            <h4>Manifesto for Agile Software Development (2001)</h4>
-            <p>Les principes fondateurs — sens, interactions, feedback rapide.</p>
-            <p style="margin-top:.6rem"><a href="https://agilemanifesto.org/" target="_blank" rel="noopener">agilemanifesto.org →</a></p>
-        </div>
-
-        <div class="card" role="listitem">
-            <h4>Liberating Structures</h4>
-            <p>Une boîte à outils pour des interactions puissantes et inclusives.</p>
-            <p style="margin-top:.6rem"><a href="http://www.liberatingstructures.com/" target="_blank" rel="noopener">liberatingstructures.com →</a></p>
-        </div>
-
-        <div class="card" role="listitem">
-            <h4>Manifesto for Software Craftsmanship (2009)</h4>
-            <p>Elever le niveau.</p>
-            <p style="margin-top:.6rem"><a href="https://manifesto.softwarecraftsmanship.org/#/fr-fr" target="_blank" rel="noopener">manifesto.softwarecraftsmanship.org →</a></p>
-        </div>
-
-        <div class="card" role="listitem">
-            <h4>Management 3.0 — Jurgen Appelo</h4>
-            <p>Complexité, leadership distribué et pratiques managériales adaptatives.</p>
-            <p style="margin-top:.6rem"><a href="https://management30.com/" target="_blank" rel="noopener">management30.com →</a></p>
-        </div>
-
-        <div class="card" role="listitem">
-            <h4>Le jour où j’ai tué Agile — Samuel Bastiat</h4>
-            <p>Une réflexion critique et narrative sur les dévoiements de l’agilité en entreprise.</p>
-            <p style="margin-top:.6rem"><a href="https://leanpub.com/tuer-agile" target="_blank" rel="noopener">Lire le livre →</a></p>
-        </div>
-
-        <div class="card" role="listitem">
-            <h4>LLM-Assisted Software Design</h4>
-            <p>Design logiciel assisté par modèles de langage — motifs et pratiques.</p>
-            <p style="margin-top:.6rem"><a href="https://leanpub.com/llm_assisted_software_design" target="_blank" rel="noopener">Lire le livre →</a></p>
-        </div>
-    </div>
-</section>
-
-
-<section id="gateways" aria-labelledby="excerpts-title">
-    <h2 id="excerpts-title" style="font-family:'Playfair Display',serif;font-weight:700;font-size:1.25rem;margin:0 0 .8rem 0">Outils & Histoires</h2>
-
-    <div class="cards" role="list">
-        <div class="card">
-            <h3>📖 Histoires & Expériences</h3>
-            <p>Plongez dans mes récits, fictions et retours d’expérience : apprentissages, détours, victoires, frissons.</p>
-            <a href="histoires.html" class="btn" style="width:80%;margin-top:1rem">Lire les histoires</a>
-        </div>
-        <div class="card">
-            <h3>🛠️ Outils & Ressources</h3>
-            <p>Fiches, templates et guides pour libérer l’agilité au quotidien.</p>
-            <a href="outils.html" class="btn" style="width:80%;margin-top:1rem">Découvrir les outils</a>
-        </div>
-        <div class="card">
-            <h3>🎤 Ateliers & Conférences</h3>
-            <p>Vivez l’expérience en direct dans vos équipes et événements.</p>
-            <a href="ateliers.html" class="btn" style="width:80%;margin-top:1rem">Inviter Samuel</a>
-        </div>
-    </div>
-</section>
-
-<section id="comment" aria-labelledby="comment-title">
-    <h2 id="comment-title" style="font-family:'Playfair Display',serif;font-weight:700;font-size:1.25rem;margin:0 0 .8rem 0">Rejoindre la démarche - Contribuer au mouvement.</h2>
-    <p>Ce projet est ouvert, réellement ouvert.</p>
-    <p>Il ne s’agit pas seulement de lire, mais d’explorer, de critiquer, de proposer, de transformer.</p>
-    <p>Ici, l’Agilité n'est plus un cadre à appliquer, mais un terrain commun à questionner.</p>
-    <p>Que vous soyez praticien·ne aguerri·e, curieux·se de passage, sceptique bienveillant·e ou expérimentateur·rice compulsif·ve, votre perspective compte.</p>
-    <p>Vous pouvez :
-        <ul>
-            <li>Contribuer aux projets open source : améliorer le site, enrichir les pages, proposer de nouveaux outils, partager vos propres pratiques ou modèles.</li>
-            <li>Commenter, débattre et challenger les idées développées dans les livres — LLM-Assisted Software Design, Le jour où j’ai tué Agile, ou les autres histoires.</li>
-            <li>Partager vos retours d’expérience : ce qui a marché, ce qui a échoué, ce qui a été transformateur.</li>
-            <li>Imaginer et ouvrir de nouvelles pistes : récits, patterns, expérimentations, cadres narratifs, provocations bienveillantes — tout ce qui aide à repenser nos façons de faire.</li>
-            <li>Co-créer de nouvelles histoires : prolonger celles déjà publiées, en proposer d’autres, explorer ensemble les angles morts de l’Agilité.</li>
-        </ul>
+<section class="hero">
+  <div class="wrap">
+    <p class="hero-eyebrow">Développeur · Agiliste · Fondateur</p>
+    <h1>Samuel Bastiat</h1>
+    <p class="hero-lead">
+      20 ans à construire des logiciels. 10 ans à coacher des équipes agiles.<br>
+      Et la conviction que les outils devraient libérer l'humain — pas l'inverse.
     </p>
-    <p>Ici, la contribution n’est pas un geste technique :</p>
-    <p>c’est un acte de liberté, un refus du prêt-à-appliquer, un choix d’écrire — ensemble — une Agilité plus vivante.</p>
-    <p>Si cela résonne en vous, alors vous êtes déjà des nôtres.</p>
-    <a class="btn" href="https://framateam.org/liberer-agile" target="_blank">Rejoindre le mouvement</a>
-</section>
-<!--
-<section id="newsletter" class="newsletter">
-    <div style="flex:1">
-        <h3>Rejoignez le mouvement « Libérer l’Agilité »</h3>
-        <p>Une idée, un outil, une histoire — chaque mois, sans spam.</p>
+    <div class="hero-cta">
+      <a href="https://logibla.fr" target="_blank" class="btn btn-primary">Découvrir Logibla →</a>
+      <a href="#manifeste" class="btn btn-ghost">Le Manifeste ↓</a>
     </div>
-    <form onsubmit="event.preventDefault();alert('Merci !');" style="display:flex;flex:1;gap:.5rem">
-        <input type="email" required placeholder="Votre email" aria-label="Adresse e-mail">
-        <button class="btn" type="submit">S’abonner</button>
-    </form>
+  </div>
 </section>
--->
-<section id="apropos" class="apropos">
-    <div class="apropos-photo">
-        <div class="apropos-initials">SB</div>
-    </div>
+
+<div class="logibla-section" id="logibla">
+  <div class="logibla-inner">
     <div>
-        <h3 style="font-size:1.5rem;margin:0;">Samuel Bastiat</h3>
-        <p class="cv">
-            Avec 19 ans d'expérience dans le développement logiciel et 10 ans comme agiliste, Scrum Master et Coach Agile j’aide les équipes et les organisations à retrouver du sens, du rythme et de la confiance.
-            <br/>
-            « Libérer l’Agilité » est un laboratoire vivant : histoires vraies, fictions éducatives, outils concrets, expériences à vivre.
-        </p>
-        <div style="margin-top:1rem;display:flex;gap:.75rem;flex-wrap:wrap">
-            <a href="mailto:s31db.github@gmail.com" class="btn btn-outline">Me contacter</a>
-            <a href="https://www.linkedin.com/in/samuel-bastiat" target="_blank" class="btn">LinkedIn</a>
-        </div>
+      <p class="section-label">Projet principal</p>
+      <h2>Logibla</h2>
+      <blockquote class="logibla-quote">
+        « J'avais besoin d'un CRM simple, d'un Kanban lisible, d'un Agenda qui ne soit pas une prison.
+        Après des années à conseiller des équipes, j'ai décidé de construire l'outil que je cherchais. »
+      </blockquote>
+      <div class="logibla-pills">
+        <span class="pill">CRM</span>
+        <span class="pill">Kanban</span>
+        <span class="pill">Agenda</span>
+        <span class="pill">Logibla Carrière</span>
+        <span class="pill">TPE · Freelances</span>
+      </div>
+      <a href="https://logibla.fr" target="_blank" class="btn btn-logibla">Visiter logibla.fr →</a>
     </div>
+    <!-- Copier doc/communication/blabou.svg → images/blabou.svg pour activer -->
+    <img src="images/blabou.svg" alt="Blabou, la mascotte Logibla" class="logibla-blabou" onerror="this.style.display='none'">
+  </div>
+</div>
+
+<section id="manifeste">
+  <div class="wrap">
+    <p class="section-label">Manifeste</p>
+    <h2>Libérer l'Agilité</h2>
+    <div class="manifeste-lines">
+      <p>Agile n'est pas un cadre, ni une recette, ni un dogme.</p>
+      <p>C'est un souffle, une dynamique vivante qui se réinvente chaque jour.</p>
+      <p>Libérer l'Agilité, c'est ouvrir les verrous.</p>
+      <p>Retrouver le sens, l'humain, la confiance.</p>
+      <p>Oser expérimenter, adapter, co-créer.</p>
+      <p><em>Logibla est la concrétisation de ce manifeste.</em></p>
+    </div>
+    <div class="manifeste-links">
+      <a href="histoires.html" class="link-arrow">📖 Histoires & Expériences →</a>
+      <a href="ateliers.html" class="link-arrow">🎤 Ateliers & Conférences →</a>
+    </div>
+  </div>
+</section>
+
+<section id="outils">
+  <div class="wrap">
+    <p class="section-label">Open source</p>
+    <h2>Outils &amp; Ressources</h2>
+    <div class="tools-grid">
+      <div class="tool-card">
+        <div class="tool-card-accent green"></div>
+        <div class="tool-card-body">
+          <h2>🛠 SM-Tools</h2>
+          <p>Outils pour Scrum Masters — extraction de données, visualisations (BurnDown, CFD, Treemap), préparation des cérémonies.</p>
+          <div class="tool-features">
+            <span class="tool-feature">Jira · Digital.ai</span>
+            <span class="tool-feature">BurnDown · CFD</span>
+            <span class="tool-feature">Rétrospectives</span>
+          </div>
+        </div>
+        <div class="tool-card-footer">
+          <a href="https://github.com/s31db/sm-tools" class="btn btn-primary" target="_blank">GitHub →</a>
+          <a href="outils.html#sm-tools" class="btn btn-ghost">Détails →</a>
+        </div>
+      </div>
+      <div class="tool-card">
+        <div class="tool-card-accent violet"></div>
+        <div class="tool-card-body">
+          <h2>🃏 Card Deck LS francophone</h2>
+          <p>Jeu de cartes Liberating Structures en français — imprimable, plastifiable, prêt pour vos ateliers.</p>
+          <div class="tool-features">
+            <span class="tool-feature">Français & Anglais</span>
+            <span class="tool-feature">Imprimable A4</span>
+            <span class="tool-feature">CC BY-NC 3.0</span>
+          </div>
+        </div>
+        <div class="tool-card-footer">
+          <a href="https://github.com/s31db/liberating-structures-cards-fr" class="btn btn-primary" target="_blank">GitHub →</a>
+          <a href="outils.html#ls-cards" class="btn btn-ghost">Détails →</a>
+        </div>
+      </div>
+      <div class="tool-card">
+        <div class="tool-card-accent orange"></div>
+        <div class="tool-card-body">
+          <h2>🎨 Icônes LS colorées</h2>
+          <p>38 icônes Liberating Structures en SVG, disponibles en plusieurs couleurs, personnalisables en ligne.</p>
+          <div class="tool-features">
+            <span class="tool-feature">38 structures</span>
+            <span class="tool-feature">SVG · Multi-couleurs</span>
+            <span class="tool-feature">CC BY-NC 3.0</span>
+          </div>
+        </div>
+        <div class="tool-card-footer">
+          <a href="https://github.com/s31db/liberating-structures-color-icons" class="btn btn-primary" target="_blank">GitHub →</a>
+          <a href="outils.html#ls-icons" class="btn btn-ghost">Détails →</a>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section id="livres">
+  <div class="wrap">
+    <p class="section-label">Publications</p>
+    <h2>Livres</h2>
+    <p style="margin-bottom:1.5rem">
+      <a href="histoires.html" class="link-arrow">Voir tous les livres avec extraits audio & vidéo →</a>
+    </p>
+    <div class="books-grid">
+      <div class="book-card">
+        <h3>LLM-Assisted Software Design</h3>
+        <p>Un langage de motifs pour concevoir des logiciels à l'ère des LLM — intégrer l'IA dans ses pratiques, de manière structurée et éthique.</p>
+        <div style="display:flex;gap:.75rem;flex-wrap:wrap;align-items:center">
+          <a href="https://leanpub.com/llm_assisted_software_design" target="_blank" rel="noopener" class="link-arrow">Lire sur Leanpub →</a>
+          <a href="https://www.amazon.fr/dp/B0GPNXMHBP" target="_blank" rel="noopener" class="link-arrow" style="color:var(--warm,#8c5c2a)">📦 Édition papier Amazon →</a>
+        </div>
+      </div>
+      <div class="book-card">
+        <h3>Le jour où j'ai tué Agile</h3>
+        <p>Un récit choral sur la mort silencieuse d'Agile, à travers les voix de ceux qui l'ont incarné… puis abandonné.</p>
+        <a href="https://leanpub.com/tuer-agile" target="_blank" rel="noopener" class="link-arrow">Lire sur Leanpub →</a>
+      </div>
+      <div class="book-card">
+        <h3>Le jour où j'ai tué le Scrum Master</h3>
+        <p>Une fiction noire sur l'effacement d'un Scrum Master, racontée par son équipe. Huis clos agile, tensions et complicité collective.</p>
+        <a href="https://leanpub.com/tuer-scrummaster" target="_blank" rel="noopener" class="link-arrow">Lire sur Leanpub →</a>
+      </div>
+      <div class="book-card">
+        <h3>Le jour où le Scrum Master revient d'outre-tombe</h3>
+        <p>Le Scrum Master revient. Plus discret. Plus humain. Sur l'équipe, le doute, et ce qui reste quand l'agilité cesse de faire semblant.</p>
+        <a href="https://leanpub.com/retour-scrummaster" target="_blank" rel="noopener" class="link-arrow">Lire sur Leanpub →</a>
+      </div>
+      <div class="book-card">
+        <h3>Le jour où j'ai facilité pour la dernière fois</h3>
+        <p>Un récit choral sur comment un collectif se lève et s'organise sans leader — méditation sur l'art de créer de l'espace et de disparaître.</p>
+        <a href="https://leanpub.com/jour-facilitateur" target="_blank" rel="noopener" class="link-arrow">Lire sur Leanpub →</a>
+      </div>
+      <div class="book-card">
+        <h3>Le jour où j'ai cru pouvoir rejouer la magie</h3>
+        <p>Une facilitatrice tente de reproduire un succès passé — et rencontre le syndrome du cargo cult. Fiction sur l'échec, le doute, et la transformation.</p>
+        <a href="https://leanpub.com/jour-facilitateur2" target="_blank" rel="noopener" class="link-arrow">Lire sur Leanpub →</a>
+      </div>
+      <div class="book-card">
+        <h3>Le jour où l'IA et la robotique m'ont grand remplacé</h3>
+        <p>Journal d'un auteur augmenté malgré lui — fiction sur le remplacement par l'IA et le dernier geste humain : écrire, même remplacé.</p>
+        <a href="https://leanpub.com/ia-grand-remplacement" target="_blank" rel="noopener" class="link-arrow">Lire sur Leanpub →</a>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section>
+  <div class="wrap">
+    <p class="section-label">Inspirations</p>
+    <h2>Références &amp; ressources</h2>
+    <div class="refs-grid">
+      <div class="ref-card">
+        <h3>Manifesto for Agile Software Development (2001)</h3>
+        <p>Les principes fondateurs — sens, interactions, feedback rapide.</p>
+        <a href="https://agilemanifesto.org/" target="_blank" rel="noopener">agilemanifesto.org →</a>
+      </div>
+      <div class="ref-card">
+        <h3>Liberating Structures</h3>
+        <p>Une boîte à outils pour des interactions puissantes et inclusives.</p>
+        <a href="http://www.liberatingstructures.com/" target="_blank" rel="noopener">liberatingstructures.com →</a>
+      </div>
+      <div class="ref-card">
+        <h3>Manifesto for Software Craftsmanship (2009)</h3>
+        <p>Élever le niveau — artisanat logiciel et professionnalisme.</p>
+        <a href="https://manifesto.softwarecraftsmanship.org/#/fr-fr" target="_blank" rel="noopener">softwarecraftsmanship.org →</a>
+      </div>
+      <div class="ref-card">
+        <h3>Management 3.0 — Jurgen Appelo</h3>
+        <p>Complexité, leadership distribué et pratiques managériales adaptatives.</p>
+        <a href="https://management30.com/" target="_blank" rel="noopener">management30.com →</a>
+      </div>
+      <div class="ref-card">
+        <h3>Le jour où j'ai tué Agile — Samuel Bastiat</h3>
+        <p>Une réflexion critique et narrative sur les dévoiements de l'agilité en entreprise.</p>
+        <a href="https://leanpub.com/tuer-agile" target="_blank" rel="noopener">Lire sur Leanpub →</a>
+      </div>
+      <div class="ref-card">
+        <h3>LLM-Assisted Software Design — Samuel Bastiat</h3>
+        <p>Design logiciel assisté par modèles de langage — motifs et pratiques.</p>
+        <a href="https://leanpub.com/llm_assisted_software_design" target="_blank" rel="noopener">Lire sur Leanpub →</a>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section id="apropos">
+  <div class="wrap">
+    <p class="section-label">À propos</p>
+    <div class="apropos-grid">
+      <div class="apropos-avatar">SB</div>
+      <div>
+        <h2 style="margin-bottom:.75rem">Samuel Bastiat</h2>
+        <p class="apropos-bio">
+          Développeur depuis 20 ans, agiliste et coach depuis 10 ans. Fondateur de
+          <a href="https://logibla.fr" style="color:var(--accent-logibla);font-weight:600;text-decoration:none">Logibla</a> —
+          des outils conçus pour que les TPE, les freelances et les chercheurs d'emploi
+          retrouvent de la clarté dans leur quotidien.
+        </p>
+        <p class="apropos-bio">
+          Auteur de pluisuers ouvrages (Leanpub, amazon), conférencier, facilitateur d'ateliers agiles.
+          Basé à Toulouse.
+        </p>
+        <div class="apropos-links">
+          <a href="https://www.linkedin.com/in/samuel-bastiat" target="_blank" class="btn btn-primary">LinkedIn</a>
+          <a href="mailto:s31db.github@gmail.com" class="btn btn-ghost">Me contacter</a>
+          <a href="https://github.com/s31db" target="_blank" class="btn btn-ghost">GitHub</a>
+          <a href="https://leanpub.com/u/s31db" target="_blank" class="btn btn-ghost">Leanpub</a>
+        </div>
+      </div>
+    </div>
+  </div>
 </section>
 
 <footer>
-    © 2026 Samuel Bastiat — Libérer l’Agilité | <a href="https://leanpub.com/u/s31db">Livre (Leanpub)</a>
+  © 2026 Samuel Bastiat —
+  <a href="https://logibla.fr">Logibla</a> ·
+  <a href="histoires.html">Histoires</a> ·
+  <a href="outils.html">Outils</a> ·
+  <a href="ateliers.html">Ateliers</a>
 </footer>
+
 </body>
 </html>
