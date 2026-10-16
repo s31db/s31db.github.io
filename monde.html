@@ -1,0 +1,438 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="icon" href="favicon.ico" type="image/x-icon">
+  <title>Le bureau de Samuel</title>
+  <meta name="description" content="Entrez dans le bureau de Samuel Bastiat : ses livres, ses émissions, son travail, en 3D.">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@600;700&family=Source+Serif+4:wght@400;600&display=swap">
+  <script data-goatcounter="https://s31db.goatcounter.com/count" async src="/js/count.js"></script>
+  <!-- Généré depuis logibla_fps/monde/monde.html (npm run build:monde) : modifier la source, pas cette copie. -->
+  <script>
+    // Jour ou nuit choisi à la dernière visite (cf. monde/theme.ts), appliqué avant l'affichage
+    try {
+      var t = localStorage.getItem('monde-theme');
+      if (t === 'light' || t === 'dark') document.documentElement.dataset.theme = t;
+    } catch (e) {}
+  </script>
+  <style>
+    /* Couleurs du site en clair ; en sombre, le bureau le soir (la scène suit, cf. monde.ts).
+       data-theme="light" ou "dark" sur <html> force l'un ou l'autre. */
+    :root {
+      color-scheme: light;
+      --bg: #faf9f6;
+      --text: #1e1c1a;
+      --muted: #6b6560;
+      --border: #e4e0da;
+      --accent: #2d4a5a;
+      --bar: rgba(250, 249, 246, 0.88);
+      --room: #e9e4da;
+    }
+    @media (prefers-color-scheme: dark) {
+      :root:not([data-theme="light"]) {
+        color-scheme: dark;
+        --bg: #1a1816;
+        --text: #f1ece4;
+        --muted: #b3aba1;
+        --border: #3a3530;
+        --accent: #8fc1d6;
+        --bar: rgba(26, 24, 22, 0.86);
+        --room: #24201c;
+      }
+    }
+    :root[data-theme="dark"] {
+      color-scheme: dark;
+      --bg: #1a1816;
+      --text: #f1ece4;
+      --muted: #b3aba1;
+      --border: #3a3530;
+      --accent: #8fc1d6;
+      --bar: rgba(26, 24, 22, 0.86);
+      --room: #24201c;
+    }
+    * { box-sizing: border-box; margin: 0; padding: 0; }
+    html, body { height: 100%; }
+    body {
+      font-family: 'Source Serif 4', Georgia, serif;
+      background: var(--room);
+      color: var(--text);
+      overflow: hidden;
+    }
+    #monde { position: fixed; inset: 0; }
+    #monde canvas { display: block; width: 100%; height: 100%; touch-action: none; }
+
+    .monde-bar {
+      position: fixed;
+      top: 0;
+      left: 0;
+      right: 0;
+      z-index: 10;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 1rem;
+      padding: .6rem 1rem;
+      background: var(--bar);
+      backdrop-filter: blur(8px);
+      border-bottom: 1px solid var(--border);
+    }
+    .monde-bar a {
+      color: var(--accent);
+      font-weight: 600;
+      text-decoration: none;
+      font-size: .95rem;
+    }
+    .monde-bar a:hover, .monde-bar a:focus-visible { color: var(--text); text-decoration: underline; }
+    .monde-title {
+      font-family: 'Playfair Display', Georgia, serif;
+      font-size: 1.05rem;
+      font-weight: 700;
+      white-space: nowrap;
+      overflow: hidden;
+      text-overflow: ellipsis;
+    }
+
+    .monde-actions { display: flex; align-items: center; gap: .75rem; min-width: 0; }
+    /* Bascule jour/nuit (comme l'horloge murale de la scène) : soleil le jour, croissant la nuit */
+    #monde-theme {
+      flex: none;
+      display: grid;
+      place-items: center;
+      width: 2.25rem;
+      height: 2.25rem;
+      border: 1px solid var(--border);
+      border-radius: 50%;
+      background: transparent;
+      color: var(--text);
+      cursor: pointer;
+    }
+    #monde-theme:hover, #monde-theme:focus-visible { border-color: var(--accent); color: var(--accent); }
+    #monde-theme svg { width: 1.2rem; height: 1.2rem; }
+    #monde-theme .moon, #monde-theme[data-mode="dark"] .sun { display: none; }
+    #monde-theme[data-mode="dark"] .moon { display: block; }
+
+    /* Boutons des livres : transparents, recalés sur chaque tranche (cf. monde/overlay.ts) */
+    #monde-books { position: fixed; inset: 0; z-index: 3; pointer-events: none; }
+    .monde-book {
+      position: absolute;
+      top: 0;
+      left: 0;
+      pointer-events: auto;
+      background: transparent;
+      border: 0;
+      border-radius: 3px;
+      cursor: pointer;
+    }
+    .monde-book:focus-visible { outline: 2px solid #ff8a2a; outline-offset: 2px; }
+    #monde-hover {
+      position: fixed;
+      top: 0;
+      left: 0;
+      z-index: 6;
+      max-width: 18rem;
+      padding: .3rem .6rem;
+      border-radius: .4rem;
+      background: var(--text);
+      color: var(--bg);
+      font-size: .85rem;
+      pointer-events: none;
+    }
+    #monde-hover[hidden] { display: none; }
+
+    /* Légende du livre choisi : en bas à droite, en bas en pleine largeur sur téléphone */
+    #monde-caption {
+      position: fixed;
+      right: 1rem;
+      bottom: 4.5rem;
+      z-index: 7;
+      width: min(24rem, calc(100vw - 2rem));
+      padding: 1rem 1.1rem;
+      border: 1px solid var(--border);
+      border-radius: .75rem;
+      background: var(--bar);
+      backdrop-filter: blur(10px);
+      line-height: 1.5;
+    }
+    #monde-caption[hidden] { display: none; }
+    #monde-caption h2 { font-family: 'Playfair Display', Georgia, serif; font-size: 1.2rem; line-height: 1.25; }
+    #monde-caption p { margin-top: .4rem; font-size: .95rem; }
+    .monde-caption-tagline { font-style: italic; color: var(--muted); }
+    .monde-caption-audio { color: var(--muted); }
+    .monde-caption-links { display: flex; flex-wrap: wrap; gap: .4rem 1rem; margin-top: .7rem; }
+    .monde-caption-links a { color: var(--accent); font-weight: 600; text-decoration: none; }
+    .monde-caption-links a:hover, .monde-caption-links a:focus-visible { text-decoration: underline; }
+
+    .monde-primary {
+      margin-top: .8rem;
+      padding: .5rem 1rem;
+      border: 0;
+      border-radius: .5rem;
+      background: var(--accent);
+      color: var(--bg);
+      font: inherit;
+      font-weight: 600;
+      cursor: pointer;
+    }
+    .monde-primary:hover, .monde-primary:focus-visible { filter: brightness(1.1); outline: 2px solid var(--accent); outline-offset: 2px; }
+    .monde-caption-actions { display: flex; flex-wrap: wrap; gap: .5rem; align-items: center; }
+    .monde-secondary {
+      margin-top: .8rem;
+      padding: .5rem .9rem;
+      border: 1px solid var(--border);
+      border-radius: .5rem;
+      background: transparent;
+      color: var(--text);
+      font: inherit;
+      cursor: pointer;
+    }
+    .monde-secondary:hover, .monde-secondary:focus-visible { border-color: var(--accent); color: var(--accent); }
+
+    /* Panneau de lecture : texte complet de la double page ouverte, commandes des pages.
+       Largeur et hauteur suivies par readingArea() dans monde.ts. */
+    #monde-caption.reading {
+      top: 4.5rem;
+      bottom: 4.5rem;
+      width: min(26rem, 42vw);
+      display: flex;
+      flex-direction: column;
+      padding: 0;
+    }
+    .monde-reading-body { flex: 1; overflow-y: auto; padding: 1rem 1.1rem; }
+    .monde-reading-body ol { margin: .5rem 0 0 1.2rem; font-size: .95rem; }
+    .monde-reading-body li { margin-top: .2rem; }
+    .monde-extract, .monde-quote { white-space: pre-line; }
+    .monde-quote { font-style: italic; }
+    .monde-reading-nav {
+      display: flex;
+      flex-wrap: wrap;
+      align-items: center;
+      gap: .4rem;
+      padding: .6rem 1.1rem;
+      border-top: 1px solid var(--border);
+    }
+    .monde-reading-nav button {
+      padding: .35rem .7rem;
+      border: 1px solid var(--border);
+      border-radius: .45rem;
+      background: transparent;
+      color: var(--text);
+      font: inherit;
+      font-size: .85rem;
+      cursor: pointer;
+    }
+    .monde-reading-nav button:disabled { opacity: .4; cursor: default; }
+    .monde-reading-nav button:last-child { margin-left: auto; }
+    .monde-reading-nav button:not(:disabled):hover, .monde-reading-nav button:focus-visible { border-color: var(--accent); color: var(--accent); }
+    .monde-reading-page { font-size: .85rem; color: var(--muted); }
+
+    /* Mini-lecteur de la radio : sous la barre, tant qu'une émission est chargée */
+    #monde-radio {
+      position: fixed;
+      top: 3.6rem;
+      left: 50%;
+      z-index: 9;
+      display: flex;
+      align-items: center;
+      gap: .5rem;
+      max-width: calc(100vw - 1rem);
+      padding: .3rem .4rem .3rem .8rem;
+      transform: translateX(-50%);
+      border: 1px solid var(--border);
+      border-radius: 999px;
+      background: var(--bar);
+      backdrop-filter: blur(8px);
+      font-size: .85rem;
+    }
+    #monde-radio[hidden] { display: none; }
+    #monde-radio [hidden] { display: none; }
+    /* Proposition (rien de chargé, ou émission terminée) : le bouton d'accord est mis en avant */
+    #monde-radio.proposing .monde-radio-tune { background: var(--accent); color: var(--bg); border-color: var(--accent); }
+    .monde-radio-title { overflow: hidden; white-space: nowrap; text-overflow: ellipsis; max-width: 28rem; }
+    .monde-radio-time { color: var(--muted); font-variant-numeric: tabular-nums; white-space: nowrap; }
+    #monde-radio button {
+      width: 2rem;
+      height: 2rem;
+      flex: none;
+      border: 1px solid var(--border);
+      border-radius: 50%;
+      background: transparent;
+      color: var(--text);
+      cursor: pointer;
+    }
+    #monde-radio button:hover, #monde-radio button:focus-visible { border-color: var(--accent); color: var(--accent); }
+
+    /* Accueils (cf. monde/welcome.ts) : le texte est lu aux lecteurs d'écran, jamais affiché en double */
+    /* Bulle de BD de l'accueil D, au-dessus des livres (vue étagère) */
+    .monde-bd {
+      position: fixed;
+      top: 16%;
+      left: 50%;
+      z-index: 6;
+      max-width: min(24rem, calc(100vw - 2rem));
+      min-height: 2.8rem;
+      padding: .8rem 1.2rem;
+      transform: translateX(-50%) rotate(-1.5deg);
+      border: 3px solid #1e1c1a;
+      border-radius: 1.6rem;
+      background: #fffdf6;
+      color: #1e1c1a;
+      font: 1.25rem/1.35 "Comic Sans MS", "Segoe Print", cursive;
+      text-align: center;
+      box-shadow: 4px 5px 0 rgba(0, 0, 0, .25);
+      pointer-events: none;
+    }
+    .monde-bd[hidden] { display: none; }
+    @media (max-width: 600px) { .monde-bd { top: 9%; font-size: 1.05rem; padding: .6rem .9rem; } }
+    /* Pointe de la bulle, vers les livres */
+    .monde-bd::before, .monde-bd::after {
+      content: "";
+      position: absolute;
+      left: 40%;
+      border-style: solid;
+    }
+    .monde-bd::before { bottom: -22px; border-width: 22px 14px 0 0; border-color: #1e1c1a transparent transparent transparent; }
+    .monde-bd::after { bottom: -15px; left: calc(40% + 3px); border-width: 16px 10px 0 0; border-color: #fffdf6 transparent transparent transparent; }
+    .monde-sr { position: absolute; width: 1px; height: 1px; overflow: hidden; clip: rect(0 0 0 0); white-space: nowrap; }
+    .monde-replay {
+      border: 0;
+      background: transparent;
+      color: var(--muted);
+      font: inherit;
+      font-size: .85rem;
+      text-decoration: underline;
+      cursor: pointer;
+      white-space: nowrap;
+    }
+    .monde-replay:hover, .monde-replay:focus-visible { color: var(--accent); }
+    @media (max-width: 520px) { .monde-replay { display: none; } }
+
+    #monde-summary { position: fixed; inset: 0; z-index: 3; pointer-events: none; }
+    #monde-summary[hidden] { display: none; }
+    .monde-sections { display: none; gap: 1rem; font-size: .9rem; }
+    :root[data-sommaire="barre"] .monde-sections { display: flex; }
+    :root[data-sommaire="barre"] .monde-nav-lectern { display: none; }
+    .monde-nav .short { display: none; }
+    @media (max-width: 480px) {
+      .monde-nav button { padding: .4rem .6rem; font-size: .85rem; }
+      .monde-nav .long { display: none; }
+      .monde-nav .short { display: inline; }
+    }
+    @media (max-width: 759px) { :root[data-sommaire="barre"] .monde-sections { display: none; } }
+
+    /* Points de vue */
+    .monde-nav {
+      position: fixed;
+      left: 50%;
+      bottom: 1rem;
+      z-index: 8;
+      display: flex;
+      gap: .25rem;
+      padding: .25rem;
+      transform: translateX(-50%);
+      border: 1px solid var(--border);
+      border-radius: 999px;
+      background: var(--bar);
+      backdrop-filter: blur(8px);
+    }
+    .monde-nav button {
+      padding: .4rem .9rem;
+      border: 0;
+      border-radius: 999px;
+      background: transparent;
+      color: var(--text);
+      font: inherit;
+      font-size: .9rem;
+      cursor: pointer;
+      white-space: nowrap;
+    }
+    .monde-nav button[aria-pressed="true"] { background: var(--accent); color: var(--bg); }
+    .monde-nav button:focus-visible { outline: 2px solid var(--accent); outline-offset: 2px; }
+    @media (max-width: 600px) {
+      #monde-caption { left: 1rem; right: 1rem; width: auto; bottom: 4.25rem; }
+    }
+    @media (max-width: 759px) {
+      /* Écran étroit : le livre en haut, le panneau de lecture en bas (cf. readingArea) */
+      #monde-caption.reading { top: auto; left: .5rem; right: .5rem; width: auto; height: calc(54vh - 4.5rem); bottom: 4.25rem; }
+    }
+
+    .monde-screen {
+      position: fixed;
+      inset: 0;
+      z-index: 5;
+      display: grid;
+      place-items: center;
+      padding: 1rem;
+      text-align: center;
+      background: var(--bg);
+      color: var(--muted);
+    }
+    .monde-screen p { max-width: 28rem; line-height: 1.6; }
+    .monde-screen a { color: var(--accent); font-weight: 600; }
+    .monde-screen[hidden] { display: none; }
+  </style>
+</head>
+<body>
+  <header class="monde-bar">
+    <a href="index.html">← Retour au site</a>
+    <!-- Variante A (?sommaire=0) : les sections du site, à la place du grand livre-sommaire -->
+    <nav class="monde-sections" aria-label="Sections du site">
+      <a href="index.html#manifeste">Manifeste</a>
+      <a href="outils.html">Outils</a>
+      <a href="ateliers.html">Ateliers</a>
+      <a href="https://logibla.fr" target="_blank" rel="noopener">Logibla ↗</a>
+    </nav>
+    <div class="monde-actions">
+      <button type="button" id="monde-replay" class="monde-replay">Revoir l'accueil</button>
+      <span class="monde-title">Le bureau de Samuel</span>
+      <button id="monde-theme" type="button" aria-label="Passer à la nuit" title="Passer à la nuit">
+        <svg class="sun" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" aria-hidden="true">
+          <circle cx="12" cy="12" r="4.2" fill="currentColor"/>
+          <path d="M12 2v2.5M12 19.5V22M2 12h2.5M19.5 12H22M4.9 4.9l1.8 1.8M17.3 17.3l1.8 1.8M4.9 19.1l1.8-1.8M17.3 6.7l1.8-1.8"/>
+        </svg>
+        <svg class="moon" viewBox="0 0 24 24" aria-hidden="true">
+          <path d="M20.5 14.2A8.5 8.5 0 0 1 9.8 3.5a8.5 8.5 0 1 0 10.7 10.7z" fill="currentColor"/>
+        </svg>
+      </button>
+    </div>
+  </header>
+
+  <main id="monde" aria-label="Le bureau de Samuel, en 3D"></main>
+  <div id="monde-books" role="group" aria-label="Les livres de l'étagère"></div>
+  <div id="monde-summary" class="monde-overlay-layer" role="group" aria-label="Sommaire du bureau"></div>
+  <div id="monde-hover" hidden></div>
+  <section id="monde-caption" aria-live="polite" hidden></section>
+  <p id="monde-welcome-live" class="monde-sr" aria-live="polite"></p>
+  <div id="monde-radio" role="region" aria-label="Émission en cours" hidden>
+    <span class="monde-radio-icon" aria-hidden="true">📻</span>
+    <span class="monde-radio-title"></span>
+    <span class="monde-radio-time"></span>
+    <button type="button" data-radio="tune" class="monde-radio-tune" aria-label="Tourner le bouton : changer d'émission" title="Changer d'émission">⏭</button>
+    <button type="button" data-radio="toggle" aria-label="Mettre l'émission en pause">⏸</button>
+    <button type="button" data-radio="stop" aria-label="Arrêter l'émission">■</button>
+  </div>
+  <nav class="monde-nav" aria-label="Points de vue">
+    <button type="button" data-view="overview" aria-pressed="true"><span class="long">Vue d'ensemble</span><span class="short">Bureau</span></button>
+    <button type="button" data-view="shelf" aria-pressed="false"><span class="long">L'étagère</span><span class="short">Étagère</span></button>
+    <button type="button" data-view="armchair" aria-pressed="false"><span class="long">Le fauteuil</span><span class="short">Fauteuil</span></button>
+    <button type="button" data-view="lectern" aria-pressed="false" class="monde-nav-lectern"><span class="long">Le sommaire</span><span class="short">Sommaire</span></button>
+  </nav>
+
+  <div id="monde-loader" class="monde-screen" role="status">
+    <p>On ouvre la porte du bureau…</p>
+  </div>
+  <div id="monde-fallback" class="monde-screen" hidden>
+    <p>Ce navigateur n'affiche pas la 3D. Tout le contenu reste disponible sur
+      <a href="index.html">le site</a> : <a href="histoires.html">les livres et leurs émissions</a>,
+      <a href="outils.html">les outils</a>, <a href="ateliers.html">les ateliers</a>.</p>
+  </div>
+  <noscript>
+    <div class="monde-screen">
+      <p>Le bureau 3D a besoin de JavaScript. Tout le contenu est sur <a href="index.html">le site</a>.</p>
+    </div>
+  </noscript>
+
+  <script src="monde/monde3d.js" defer></script>
+</body>
+</html>

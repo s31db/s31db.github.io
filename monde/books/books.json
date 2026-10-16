@@ -1,0 +1,323 @@
+{
+  "books": [
+    {
+      "id": "llm",
+      "title": "LLM-Assisted Software Design",
+      "tagline": "Un langage de motifs pour concevoir avec l'IA",
+      "summary": "Un langage de motifs pour concevoir des logiciels à l'ère des LLM — intégrer l'IA dans ses pratiques, de manière structurée et éthique.",
+      "color": "#2d4a5a",
+      "chapters": [
+        "Avant-propos",
+        "🧩 Introduction : concevoir avec l’IA, un nouvel artisanat logiciel",
+        "🎯 Chapitre 1 — Anatomie d’un bon prompt : précision, contexte et intention",
+        "🧠 Chapitre 2 — La grammaire de l’intention : penser et formuler avec un LLM",
+        "🧰 Chapitre 3 — Les motifs du dialogue : construire un langage de conception avec les LLM",
+        "🟣 Motif 1 — Question Socratique : Reformuler pour comprendre",
+        "🟣 Motif 2 — Exploration guidée : Découper pour mieux avancer",
+        "🟣 Motif 3 — Spécification inversée : Remonter aux intentions à partir du code",
+        "🟣 Motif 4 — Modèle miroir : Comparer pour éclairer un choix",
+        "🟣 Motif 5 — Clarification par contre-exemple : Explorer les limites d’une proposition",
+        "🟣 Motif 6 — Prompt piloté par les tests TDP : Définir les attentes avant d’écrire",
+        "🟣 Motif 7 — Reformulation visuelle : Clarifier par la représentation",
+        "🟣 Motif 8 — Soin systémique : Investiguer les causes profondes d’un problème",
+        "🟣 Motif 9 — Cascade de prompts : Chapelet conversationnel",
+        "🔚 Pour conclure ce chapitre — Les motifs du dialogue",
+        "👥 Chapitre 4 — Nouveaux rôles, nouvelles compétences : l’évolution des équipes augmentées",
+        "🗺️ Chapitre 5 — Cartographier les usages : typologie des situations et des rôles",
+        "🛠️ Chapitre 6 — Intégrer les motifs au quotidien : entre travail individuel et pratiques d’équipe",
+        "⚖️ Chapitre 7 — Responsabilité, transparence et limites : une éthique du développement augmenté",
+        "🌀 Chapitre 8 — Une agilité augmentée ?",
+        "🔬 Chapitre 9 — Cadres de mise en œuvre : ateliers, méthodes et rituels pour une pratique augmentée",
+        "🧱 Chapitre 10 — Transmettre, former, partager les motifs",
+        "🎓 Chapitre 11 — Usages de l’IA dans l’apprentissage",
+        "🗂️ Chapitre 12 — Documenter, archiver, capitaliser : vers une mémoire augmentée",
+        "🔮 Chapitre 13 — Scénarios prospectifs : vers une ingénierie conversationnelle générative",
+        "🤔 Chapitre 14 — Dois-je avoir honte d'utiliser l'IA dans mon métier de développeur informatique ?",
+        "🎭 Deux histoires ordinaires",
+        "🏠 Chapitre 15 — Repenser les design patterns à l’ère des LLM",
+        "🤖 Chapitre 16 — Nouveaux design patterns émergents à l’ère des LLM et des agents IA",
+        "🧵 Conclusion : vers un manifeste du développement augmenté"
+      ],
+      "extract": {
+        "chapter": "Avant-propos",
+        "paragraphs": [
+          {
+            "text": "Ce livre est né d’un dialogue. Un dialogue entre un humain curieux, explorateur des pratiques émergentes du développement logiciel, et une intelligence artificielle entraînée à manipuler les langages — naturels ou informatiques. Ce n’est ni un manuel technique, ni une simple expérimentation : c’est le fruit d’une collaboration continue, patiente, itérative, visant à donner forme à une idée simple mais puissante : et si nous étions en train d’assister à la naissance d’un nouvel artisanat numérique ?"
+          },
+          {
+            "text": "Les modèles de langage comme celui qui a co-écrit cet ouvrage ne remplacent pas les développeurs. Ils élargissent leur champ d’action. Ils leur offrent des leviers de réflexion, des miroirs critiques, des partenaires de conception. Mais pour cela, encore faut-il apprendre à s’en servir autrement que comme de simples générateurs de code. Il faut apprendre à penser avec eux, à formuler clairement, à reformuler, à tester, à douter, à ajuster. Bref, à dialoguer."
+          },
+          {
+            "text": "Ce livre est une tentative de cartographier ce nouveau territoire. Il propose une grammaire des pratiques, une série de motifs, des histoires vécues, des exemples concrets. Il s’adresse à celles et ceux qui ne se contentent pas de suivre les tendances, mais cherchent à comprendre les transformations en cours, à les expérimenter, à les transmettre."
+          },
+          {
+            "text": "Rien dans ces pages n’est figé. Les motifs décrits ici continueront d’évoluer, de s’affiner, d’être critiqués ou dépassés. Et c’est tant mieux. Car comme tout bon langage, celui-ci est vivant. Il se nourrit de vos usages, de vos projets, de vos contextes."
+          }
+        ]
+      },
+      "cover": "monde/books/llm-cover.webp",
+      "back": "monde/books/llm-back.webp",
+      "links": {
+        "leanpub": "https://leanpub.com/llm_assisted_software_design",
+        "paper": "https://www.amazon.fr/dp/B0GPNXMHBP"
+      },
+      "audio": {
+        "src": "resume/llm_assisted.mp3",
+        "title": "L'émission sur le livre"
+      }
+    },
+    {
+      "id": "tuer-agile",
+      "title": "Le jour où j'ai tué Agile",
+      "tagline": "Chronique d'une désillusion collective",
+      "summary": "Un récit choral sur la mort silencieuse d'Agile, à travers les voix de ceux qui l'ont incarné… puis abandonné.",
+      "color": "#7a2e2e",
+      "chapters": [
+        "Le jour où j’ai tué Agile",
+        "Le Développeur senior – “J’ai vidé Agile de sa substance.”",
+        "La Product Owner – “J’ai maquillé Agile en théâtre.”",
+        "Le Manager – “J’ai mis Agile dans un tableau Excel.”",
+        "La RH – “J’ai intégré Agile dans les grilles d’évaluation.”",
+        "Le Coach Agile – “Je l’ai momifié Agile avec des frameworks”",
+        "Le Scrum Master – “Je l’ai laissé mourir avec douceur.”",
+        "Le Développeur junior – “Je n’ai rien dit.”",
+        "L’Équipe – “Nous l’avons fait ensemble.”",
+        "Épilogue – “J’ai tué Agile. Et pourtant…”"
+      ],
+      "extract": {
+        "chapter": "Le Développeur senior – “J’ai vidé Agile de sa substance.”",
+        "paragraphs": [
+          {
+            "text": "Agile, je l’ai vu arriver comme une promesse.\nMoins de specs. Moins de bullshit. Plus de vrai.\nÀ l’époque, j’y ai cru. Vraiment.",
+            "quote": true
+          },
+          {
+            "text": "J’avais connu le modèle en V. Les documents de cent pages. Les livraisons gelées trois mois à l’avance. Les tickets bloqués par les chefs de projet inaccessibles. Alors quand Agile est arrivé, ça a été comme une bouffée d’oxygène."
+          },
+          {
+            "text": "Et soudain, on parlait de collaboration.\nDe feedback rapide.\nDe responsabilité partagée.\nD'écoute."
+          },
+          {
+            "text": "On a sorti les post-its. On a repeint les murs.\nOn a imprimé le manifeste.\nOn se regardait dans les daily, on rigolait en rétro, on avançait ensemble."
+          }
+        ]
+      },
+      "cover": "monde/books/tuer-agile-cover.webp",
+      "back": "monde/books/tuer-agile-back.webp",
+      "links": {
+        "leanpub": "https://leanpub.com/tuer-agile"
+      },
+      "audio": {
+        "src": "resume/tuer_agile.mp3",
+        "title": "Chronique d'une désillusion collective en entreprise"
+      }
+    },
+    {
+      "id": "tuer-sm",
+      "title": "Le jour où j'ai tué le Scrum Master",
+      "tagline": "Huis clos agile",
+      "summary": "Une fiction noire sur l'effacement d'un Scrum Master, racontée par son équipe. Huis clos agile, tensions et complicité collective.",
+      "color": "#3b3f46",
+      "chapters": [
+        "Le jour où j’ai tué le Scrum Master",
+        "Le Développeur senior – “On l’a usé jusqu’à la corde.”",
+        "Le PO – “Il protégeait le cadre, mais pas le produit.”",
+        "Le Développeur junior – “Je croyais que c’était ça, l’agilité.”",
+        "Le Manager – “Il a cru qu’il était neutre.”",
+        "L’Équipe – “Nous sommes complices.”",
+        "Le Scrum Master – “Je voulais juste qu’on s’écoute”",
+        "Épilogue – “Sprint 43 – Commitment”"
+      ],
+      "extract": {
+        "chapter": "Le Développeur senior – “On l’a usé jusqu’à la corde.”",
+        "paragraphs": [
+          {
+            "text": "Je ne sais pas exactement quand ça a commencé.\nPeut-être le jour où il a voulu faire un icebreaker avec des balles en mousse.\nPeut-être avant, quand il s’est mis à dire “comment vous vous sentez aujourd’hui, sur une échelle de 1 à banane ?”\nEn tout cas, ce n’est pas un coup de sang. C’est plus… une usure. Un sablage méticuleux de la patience.",
+            "quote": true
+          },
+          {
+            "text": "Je suis développeur depuis quinze ans. Je ne suis pas là pour “vivre une aventure humaine”. Je suis là pour livrer du code propre, résoudre des vrais problèmes, et ne pas m’endormir dans des rituels d’équipe qui ressemblent à des cercles de soutien émotionnel pour product owners dépressifs."
+          },
+          {
+            "text": "Au début, on l’a toléré, Samuel. Il arrivait avec son sourire de moine zen, sa cloche tibétaine pour “marquer les transitions de phases”, ses fiches cartonnées et ses Sharpies parfumés. Il disait qu’il voulait “protéger l’équipe”.\nJe crois qu’il se protégeait surtout lui-même. Peut-être qu’il savait déjà qu’il était seul. Peut-être qu’il pressentait qu’on ne le suivrait jamais vraiment."
+          },
+          {
+            "text": "Il voulait nous aider à “co-construire un cadre de sécurité psychologique”.\nMoi, je voulais juste qu’on merge nos putains de pull requests.\nEt que personne ne m’impose de faire des jeux de rôle à 10h du matin un lundi. Que personne ne transforme une discussion technique en atelier de communication non-violente."
+          }
+        ]
+      },
+      "cover": "monde/books/tuer-sm-cover.webp",
+      "back": "monde/books/tuer-sm-back.webp",
+      "links": {
+        "leanpub": "https://leanpub.com/tuer-scrummaster",
+        "ebook": "https://www.amazon.fr/jour-jai-tu%C3%A9-Scrum-Master-ebook/dp/B0HMXFZM1D"
+      },
+      "audio": {
+        "src": "resume/tuer_scrummaster.mp3",
+        "title": "Une fable moderne sur les dérives du cadre et la passivité"
+      }
+    },
+    {
+      "id": "retour-sm",
+      "title": "Le jour où le Scrum Master revient d'outre-tombe",
+      "tagline": "Le retour silencieux",
+      "summary": "Le Scrum Master revient. Plus discret. Plus humain. Sur l'équipe, le doute, et ce qui reste quand l'agilité cesse de faire semblant.",
+      "color": "#4a5a3a",
+      "chapters": [
+        "Le jour où le Scrum Master revient d’outre-tombe",
+        "Le Développeur senior – “Je ne l’ai pas reconnu. Et c’est ça qui m’a plu.”",
+        "Le PO – “Je n’avais plus besoin d’un gardien. J’avais besoin d’un témoin.”",
+        "Le Manager – “Je ne comprends pas tout, et c’est peut-être bon signe.”",
+        "Le Développeur junior – “Cette fois, il ne me regardait pas comme un enfant.”",
+        "L’Équipe – “Cette fois, on l’a vu rester.”",
+        "Le Scrum Master – “Je reviens, mais je ne sais pas encore pourquoi ils me laissent rester.”",
+        "Épilogue – “Sprint 61 – Ce qui tient, tient.”"
+      ],
+      "extract": {
+        "chapter": "Le jour où le Scrum Master revient d’outre-tombe",
+        "paragraphs": [
+          {
+            "text": "Il n’a pas claqué la porte. Il a juste cessé d’être là.\nEt nous, on a fait comme si de rien n’était.\nMais un jour, quelqu’un a soufflé son nom. Et personne ne l’a contesté.",
+            "quote": true
+          },
+          {
+            "text": "C’était une rétro un peu molle, comme on en fait trop souvent."
+          },
+          {
+            "text": "Le PO lisait des tensions à voix basse.\nLe senior gribouillait sur son carnet.\nLe junior tapotait sans conviction sur son clavier.\nMoi, je temporisais. Le manager n’était même pas connecté."
+          },
+          {
+            "text": "Alors quand le junior a lâché :"
+          }
+        ]
+      },
+      "cover": "monde/books/retour-sm-cover.webp",
+      "back": "monde/books/retour-sm-back.webp",
+      "links": {
+        "leanpub": "https://leanpub.com/retour-scrummaster"
+      },
+      "audio": {
+        "src": "resume/retour_sm.mp3",
+        "title": "Le retour silencieux du Scrum Master, quand la présence transforme l'équipe"
+      }
+    },
+    {
+      "id": "facilitateur",
+      "title": "Le jour où j'ai facilité pour la dernière fois",
+      "tagline": "L'art de disparaître",
+      "summary": "Un récit choral sur comment un collectif se lève et s'organise sans leader — méditation sur l'art de créer de l'espace et de disparaître.",
+      "color": "#8c5c2a",
+      "chapters": [
+        "Le jour où j'ai facilité... pour la dernière fois",
+        "Chapitre 1 — Les voix des participants",
+        "Chapitre 2 — Le manager",
+        "Chapitre 3 — Le facilitateur",
+        "Chapitre 4 — La Session",
+        "Chapitre 5 — La Disparition",
+        "Chapitre 6 — Après",
+        "L’héritage"
+      ],
+      "extract": {
+        "chapter": "Chapitre 1 — Les voix des participants",
+        "paragraphs": [
+          {
+            "text": "Le décor\nSalle B207, 2ᵉ étage d’un ancien centre de formation des années 70. Les baies vitrées donnent sur une cour plantée de platanes ; les stores en aluminium diffusent une lumière pâle. Des affiches défraîchies sur les murs : « Ensemble on va plus loin », « Think Different ».\nLes tables ont été repoussées contre les murs. Au centre : un cercle de vingt chaises, sans table, sans étiquette. Sur un paperboard, quelques mots en grosses lettres :\nExplorer – Décider – Conclure.\nEt en bas, écrit plus petit :\nQuand vous serez prêts, je n’aurai plus rien à faire."
+          },
+          {
+            "text": "Les participants arrivent par petits groupes. Café tiède, badges autour du cou, regards en coin."
+          },
+          {
+            "text": "Claire – cheffe de projet\nJ’ai vérifié trois fois l’heure sur mon téléphone avant d’entrer. On nous a parlé d’« atelier décisif ». Pas de table, pas d’écran : juste des chaises. Ça me déstabilise. Je range mon ordinateur ; je ne sais même pas où le poser."
+          }
+        ]
+      },
+      "cover": "monde/books/facilitateur-cover.webp",
+      "back": "monde/books/facilitateur-back.webp",
+      "links": {
+        "leanpub": "https://leanpub.com/jour-facilitateur"
+      },
+      "audio": null
+    },
+    {
+      "id": "facilitateur2",
+      "title": "Le jour où j'ai cru pouvoir rejouer la magie",
+      "tagline": "Le syndrome du cargo cult",
+      "summary": "Une facilitatrice tente de reproduire un succès passé — et rencontre le syndrome du cargo cult. Fiction sur l'échec, le doute, et la transformation.",
+      "color": "#5a3f6b",
+      "chapters": [
+        "« Le jour où j’ai cru pouvoir rejouer la magie »",
+        "Chapitre 1 — L’arrivée",
+        "Chapitre 2 — La scène",
+        "Chapitre 3 — Le Cargo Cult",
+        "Chapitre 4 — Le retour à soi",
+        "Chapitre 5 — Les conditions",
+        "Chapitre 6 — La bascule",
+        "Le nouvel héritage"
+      ],
+      "extract": {
+        "chapter": "Chapitre 1 — L’arrivée",
+        "paragraphs": [
+          {
+            "text": "J’ai pris le train de bonne heure, carnet sous le bras. Nouveau badge, nouvelle entreprise. Dans ma tête, la salle B207 : le cercle parfait, les post-its, le silence fécond.\nJe me dis : Cette fois, c’est moi qui vais le faire.\nÀ la gare, j’ai encore relu mes notes : « tenir l’espace », « se taire », « s’effacer ». J’ai l’impression d’avoir la clé."
+          },
+          {
+            "text": "Le siège est moderne, murs blancs, open-space silencieux. On m’a donné la salle E314 pour l’atelier. Moquette grise, tables nappées façon séminaire d’hôtel, un projecteur au plafond. Je souris : On va faire mieux que ça.\nJe pousse les tables contre les murs, aligne les chaises. J’écris sur le paperboard :"
+          },
+          {
+            "text": "Explorer – Décider – Conclure\nEt, tout en bas, en plus petit :\nQuand vous serez prêts, je n’aurai plus rien à faire.",
+            "quote": true
+          },
+          {
+            "text": "Je relis la phrase. J’ai le trac. Mais je suis prête."
+          }
+        ]
+      },
+      "cover": "monde/books/facilitateur2-cover.webp",
+      "back": "monde/books/facilitateur2-back.webp",
+      "links": {
+        "leanpub": "https://leanpub.com/jour-facilitateur2"
+      },
+      "audio": null
+    },
+    {
+      "id": "ia",
+      "title": "Le jour où l'IA et la robotique m'ont grand remplacé",
+      "tagline": "Journal d'un auteur augmenté malgré lui",
+      "summary": "Journal d'un auteur augmenté malgré lui — fiction sur le remplacement par l'IA et le dernier geste humain : écrire, même remplacé.",
+      "color": "#2f5e6e",
+      "chapters": [
+        "Le jour où l’IA et la robotique m’a grand remplacé",
+        "Chapitre 1 – Les Abeilles",
+        "Chapitre 2 – Les Infirmières",
+        "Chapitre 3 – Les Enseignants",
+        "Chapitre 4 – Les Artistes",
+        "Chapitre 5 – L’Écrivain",
+        "Chapitre 6 – Les Humains",
+        "Épilogue – Lecture du soir"
+      ],
+      "extract": {
+        "chapter": "Le jour où l’IA et la robotique m’a grand remplacé",
+        "paragraphs": [
+          {
+            "text": "Je crois que tout a commencé le jour où j’ai voulu sauver les abeilles.\nPas sauver le monde — non, ça, c’était trop ambitieux — juste sauver les abeilles.\nCes petites ouvrières qu’on disait essentielles, les “ingénieures du vivant”, celles sans qui rien ne pousserait.\nJe m’étais dit : « Si je peux intervenir à temps, juste cette fois, peut-être qu’on évitera le pire. »\nMais j’ai agi comme toujours : un peu trop tard, un peu trop maladroitement, avec la conviction sincère et la méthode bancale."
+          },
+          {
+            "text": "Et puis, les ingénieurs sont arrivés.\nIls avaient des drones jaunes et noirs, qui bourdonnaient sans se fatiguer.\nDes machines parfaites, précises, propres.\nElles pollinisaient mieux, plus vite, plus loin.\nOn les a appelées les BeeBots.\nJe me souviens avoir applaudi au lancement officiel.\nC’était censé être une solution temporaire — le temps que la nature se “régénère”.\nMais la nature, elle, n’a pas signé le contrat."
+          },
+          {
+            "text": "Depuis, tout a suivi le même chemin.\nÀ chaque fois, j’ai voulu intervenir.\nQuand les infirmières ont été remplacées par des robots de soin, j’ai tenté de prévenir que la chaleur d’une main ne se code pas.\nQuand les professeurs ont été remplacés par des IA pédagogiques, j’ai voulu dire qu’apprendre, c’est d’abord se tromper ensemble.\nQuand les artistes ont disparu derrière leurs algorithmes, j’ai essayé de rappeler que la beauté vient parfois du raté.\nÀ chaque fois, j’ai essayé.\nEt à chaque fois, j’ai échoué.\nPas par manque d’alerte, mais parce que j’arrivais trop tard, dans un monde qui avait déjà cliqué sur “Mettre à jour”."
+          },
+          {
+            "text": "Aujourd’hui, je vis parmi les remplacés.\nNous sommes encore quelques-uns, dispersés, inutiles et pourtant… indispensables.\nNous parlons bas, comme des rescapés d’un rêve trop bien réalisé.\nNous nous souvenons d’un temps où la lenteur avait du sens, où l’erreur faisait grandir, où le vivant ne se mesurait pas à son rendement."
+          }
+        ]
+      },
+      "cover": "monde/books/ia-cover.webp",
+      "back": "monde/books/ia-back.webp",
+      "links": {
+        "leanpub": "https://leanpub.com/ia-grand-remplacement"
+      },
+      "audio": null
+    }
+  ]
+}
