@@ -1,0 +1,54 @@
+{
+  "decks": [
+    {
+      "id": "melee-2026",
+      "title": "LLM-Assisted Software Design",
+      "subtitle": "Et si concevoir devenait un art du dialogue ?",
+      "event": "Mêlée Numérique 2026",
+      "date": "2026-10-02",
+      "color": "#5a3f6b",
+      "slides": [
+        {
+          "image": "monde/decks/melee-2026-1.webp",
+          "note": "Bonjour ! Je suis Samuel Bastiat : vingt ans de développement, dix ans à accompagner des équipes agiles, et aujourd'hui je construis Logibla, seul… mais pas vraiment seul, on y reviendra. Ceci est un atelier, pas une conférence : dans quelques minutes, c'est vous qui travaillez."
+        },
+        {
+          "image": "monde/decks/melee-2026-2.webp",
+          "note": "Un échange que vous avez sûrement déjà eu. Je demande à un LLM : « Crée un script d'alerte. » Et il me répond… ça. Techniquement, il a répondu : du Python valide. Et pourtant, inutilisable. Qu'est-ce qui manque ? Prenez quelques secondes. Quelle alerte, pour qui, déclenchée par quoi, envoyée où ? Le LLM ne pouvait pas le savoir. Moi non plus, quand j'ai tapé la phrase : je ne savais pas encore ce que je voulais."
+        },
+        {
+          "image": "monde/decks/melee-2026-3.webp",
+          "note": "C'est l'idée centrale de mon livre, LLM-Assisted Software Design, écrit lui-même en dialogue avec un LLM. Un prompt n'est pas une requête : c'est un tour dans un dialogue. Le logiciel a toujours été un dialogue, entre l'intention et l'implémentation, entre le client et l'équipe. Le LLM ajoute un interlocuteur. Certaines situations reviennent sans cesse, et certaines façons d'y répondre marchent mieux que d'autres."
+        },
+        {
+          "image": "monde/decks/melee-2026-4.webp",
+          "note": "Ces façons de faire qui marchent, je les appelle des motifs, au sens des design patterns : un contexte, un problème, une solution, des conséquences. Avec ce qu'on vient de voir : le besoin est flou, alors le LLM comble les vides avec ses propres hypothèses. Au lieu d'attendre une réponse, demandez-lui de vous poser des questions. C'est la Question socratique. Un motif ne dicte pas quoi faire : il donne un cadre pour bien faire."
+        },
+        {
+          "image": "monde/decks/melee-2026-5.webp",
+          "note": "Le livre en décrit neuf. Dans cet atelier, on en pratique deux : le 1 et le 5. Clarifier un besoin, puis casser la solution. Les neuf sont dans le livre ; à la fin, je vous montre ce qu'ils deviennent quand on les pratique tous les jours."
+        },
+        {
+          "image": "monde/decks/melee-2026-6.webp",
+          "note": "À vous ! Essayez avec un collègue. L'un joue l'humain, l'autre le LLM. L'humain décrit un besoin flou ; pas d'idée ? Piochez un numéro sur la diapositive. Le LLM n'a qu'une règle : interdiction de proposer une solution, il ne fait que poser des questions. Au bout de cinq minutes, l'humain dit son besoin en une phrase précise."
+        },
+        {
+          "image": "monde/decks/melee-2026-7.webp",
+          "note": "Puis inversez les rôles. Le nouvel humain propose une solution, en une phrase, au besoin que vous venez de clarifier. Le nouveau LLM cherche un cas qui la fait échouer : « Et si le fichier est vide ? Et si l'utilisateur n'a pas de compte ? Et si ça arrive à 3 h du matin ? » Pour finir : quelle hypothèse cachée ce contre-exemple révèle-t-il ?"
+        },
+        {
+          "image": "monde/decks/melee-2026-8.webp",
+          "note": "En salle, j'écoute ici trois binômes, une phrase chacun, et je nomme le motif à chaque fois : « Ça, c'est exactement la Question socratique », « Voilà l'hypothèse cachée ». Et vous ? Quelle question a tout débloqué ? Qu'avez-vous ressenti en jouant le LLM ?"
+        },
+        {
+          "image": "monde/decks/melee-2026-9.webp",
+          "note": "Ce que vous venez de faire à deux, je le fais tous les jours. Logibla, c'est un fondateur seul et un écosystème d'apps, du CRM au jeu de société. Mais je ne conçois rien seul : chaque décision passe par un dialogue avec 23 agents IA spécialisés. Charles challenge chaque demande avant qu'on écrive une ligne : le contre-exemple devenu un poste permanent. Paul orchestre les agents un par un, avec ma validation entre chaque étape : la cascade de prompts. Vesta, avant de dessiner une base de données, me pose d'abord des questions : la Question socratique. Et le livre révèle aussi mes manques : je n'applique pas moi-même le prompt piloté par les tests, et si Charles n'est pas sollicité, personne ne challenge. Le livre n'est pas la preuve de Logibla : c'est un vocabulaire pour une pratique qui existait déjà."
+        },
+        {
+          "image": "monde/decks/melee-2026-10.webp",
+          "note": "Ce que ça change le plus, ce n'est pas la vitesse. On ne révise plus seulement le code : on révise le chemin de pensée qui y mène. Je vous laisse avec une question plutôt qu'une réponse : où est la limite entre dialoguer avec une IA et lui déléguer la pensée ? Le livre est en ligne, avec tous ses liens. Merci !"
+        }
+      ]
+    }
+  ]
+}

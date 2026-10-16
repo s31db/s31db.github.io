@@ -1,0 +1,251 @@
+{
+  "cardAspect": 0.6137640449438202,
+  "cards": [
+    {
+      "id": "1-2-4-all",
+      "title": "1-2-4-Tous",
+      "front": "monde/tools/cards/1-2-4-all-front.webp",
+      "back": "monde/tools/cards/1-2-4-all-back.webp"
+    },
+    {
+      "id": "15-percent-solutions",
+      "title": "15% Solutions",
+      "front": "monde/tools/cards/15-percent-solutions-front.webp",
+      "back": "monde/tools/cards/15-percent-solutions-back.webp"
+    },
+    {
+      "id": "25-10-crowd-sourcing",
+      "title": "25/10 Crowd Sourcing",
+      "front": "monde/tools/cards/25-10-crowd-sourcing-front.webp",
+      "back": "monde/tools/cards/25-10-crowd-sourcing-back.webp"
+    },
+    {
+      "id": "agreement-certainty-matrix",
+      "title": "Agreement-Certainty Matrix",
+      "front": "monde/tools/cards/agreement-certainty-matrix-front.webp",
+      "back": "monde/tools/cards/agreement-certainty-matrix-back.webp"
+    },
+    {
+      "id": "appreciative-interviews",
+      "title": "Appreciative Interviews",
+      "front": "monde/tools/cards/appreciative-interviews-front.webp",
+      "back": "monde/tools/cards/appreciative-interviews-back.webp"
+    },
+    {
+      "id": "celebrity-interview",
+      "title": "Celebrity Interview",
+      "front": "monde/tools/cards/celebrity-interview-front.webp",
+      "back": "monde/tools/cards/celebrity-interview-back.webp"
+    },
+    {
+      "id": "conversation-cafe",
+      "title": "Conversation Cafe",
+      "front": "monde/tools/cards/conversation-cafe-front.webp",
+      "back": "monde/tools/cards/conversation-cafe-back.webp"
+    },
+    {
+      "id": "critical-uncertainties",
+      "title": "Incertitudes critiques",
+      "front": "monde/tools/cards/critical-uncertainties-front.webp",
+      "back": "monde/tools/cards/critical-uncertainties-back.webp"
+    },
+    {
+      "id": "design-storyboards",
+      "title": "Design Storyboards",
+      "front": "monde/tools/cards/design-storyboards-front.webp",
+      "back": "monde/tools/cards/design-storyboards-back.webp"
+    },
+    {
+      "id": "discovery-and-action-dialog",
+      "title": "Dialogue sur la Découverte et l'Action",
+      "front": "monde/tools/cards/discovery-and-action-dialog-front.webp",
+      "back": "monde/tools/cards/discovery-and-action-dialog-back.webp"
+    },
+    {
+      "id": "drawing-together",
+      "title": "Dessinons Ensemble",
+      "front": "monde/tools/cards/drawing-together-front.webp",
+      "back": "monde/tools/cards/drawing-together-back.webp"
+    },
+    {
+      "id": "ecocycle-planning",
+      "title": "Ecocycle Planning",
+      "front": "monde/tools/cards/ecocycle-planning-front.webp",
+      "back": "monde/tools/cards/ecocycle-planning-back.webp"
+    },
+    {
+      "id": "generative-relationships",
+      "title": "Relations Génératrices",
+      "front": "monde/tools/cards/generative-relationships-front.webp",
+      "back": "monde/tools/cards/generative-relationships-back.webp"
+    },
+    {
+      "id": "heard-seen-respected",
+      "title": "Entendu, Vu, Respecté (EVR)",
+      "front": "monde/tools/cards/heard-seen-respected-front.webp",
+      "back": "monde/tools/cards/heard-seen-respected-back.webp"
+    },
+    {
+      "id": "helping-heuristics",
+      "title": "Helping Heuristics",
+      "front": "monde/tools/cards/helping-heuristics-front.webp",
+      "back": "monde/tools/cards/helping-heuristics-back.webp"
+    },
+    {
+      "id": "impromptu-networking",
+      "title": "Mise en Réseau Improvisée",
+      "front": "monde/tools/cards/impromptu-networking-front.webp",
+      "back": "monde/tools/cards/impromptu-networking-back.webp"
+    },
+    {
+      "id": "improv-prototyping",
+      "title": "Prototypage Improvisé",
+      "front": "monde/tools/cards/improv-prototyping-front.webp",
+      "back": "monde/tools/cards/improv-prototyping-back.webp"
+    },
+    {
+      "id": "integrated-autonomy",
+      "title": "Autonomie intégrée",
+      "front": "monde/tools/cards/integrated-autonomy-front.webp",
+      "back": "monde/tools/cards/integrated-autonomy-back.webp"
+    },
+    {
+      "id": "main",
+      "title": "Liberating Structures Cartes FR",
+      "front": "monde/tools/cards/main-front.webp",
+      "back": "monde/tools/cards/main-back.webp"
+    },
+    {
+      "id": "min-specs",
+      "title": "Min Specs",
+      "front": "monde/tools/cards/min-specs-front.webp",
+      "back": "monde/tools/cards/min-specs-back.webp"
+    },
+    {
+      "id": "nine-whys",
+      "title": "Neuf Pourquoi",
+      "front": "monde/tools/cards/nine-whys-front.webp",
+      "back": "monde/tools/cards/nine-whys-back.webp"
+    },
+    {
+      "id": "open-space-technology",
+      "title": "Open Space Technology",
+      "front": "monde/tools/cards/open-space-technology-front.webp",
+      "back": "monde/tools/cards/open-space-technology-back.webp"
+    },
+    {
+      "id": "panarchy",
+      "title": "Panarchie",
+      "front": "monde/tools/cards/panarchy-front.webp",
+      "back": "monde/tools/cards/panarchy-back.webp"
+    },
+    {
+      "id": "purpose-to-practice",
+      "title": "Purpose-To-Practice (P2P)",
+      "front": "monde/tools/cards/purpose-to-practice-front.webp",
+      "back": "monde/tools/cards/purpose-to-practice-back.webp"
+    },
+    {
+      "id": "shift-and-share",
+      "title": "Partager et faire bouger",
+      "front": "monde/tools/cards/shift-and-share-front.webp",
+      "back": "monde/tools/cards/shift-and-share-back.webp"
+    },
+    {
+      "id": "simple-ethnography",
+      "title": "Simple Ethnography",
+      "front": "monde/tools/cards/simple-ethnography-front.webp",
+      "back": "monde/tools/cards/simple-ethnography-back.webp"
+    },
+    {
+      "id": "social-network-webbing",
+      "title": "Social Network Webbing",
+      "front": "monde/tools/cards/social-network-webbing-front.webp",
+      "back": "monde/tools/cards/social-network-webbing-back.webp"
+    },
+    {
+      "id": "triz",
+      "title": "TRIZ",
+      "front": "monde/tools/cards/triz-front.webp",
+      "back": "monde/tools/cards/triz-back.webp"
+    },
+    {
+      "id": "troika-consulting",
+      "title": "Troïka Consulting",
+      "front": "monde/tools/cards/troika-consulting-front.webp",
+      "back": "monde/tools/cards/troika-consulting-back.webp"
+    },
+    {
+      "id": "user-experience-fishbowl",
+      "title": "Expérience Utilisateur",
+      "front": "monde/tools/cards/user-experience-fishbowl-front.webp",
+      "back": "monde/tools/cards/user-experience-fishbowl-back.webp"
+    },
+    {
+      "id": "what-3",
+      "title": "What? So What? Now What? W³",
+      "front": "monde/tools/cards/what-3-front.webp",
+      "back": "monde/tools/cards/what-3-back.webp"
+    },
+    {
+      "id": "what-i-need-from-you",
+      "title": "Ce Que j'Attends De Vous (WINFY)",
+      "front": "monde/tools/cards/what-i-need-from-you-front.webp",
+      "back": "monde/tools/cards/what-i-need-from-you-back.webp"
+    },
+    {
+      "id": "wicked-questions",
+      "title": "Questions Percutantes",
+      "front": "monde/tools/cards/wicked-questions-front.webp",
+      "back": "monde/tools/cards/wicked-questions-back.webp"
+    },
+    {
+      "id": "wise-crowds",
+      "title": "Wise Crowds",
+      "front": "monde/tools/cards/wise-crowds-front.webp",
+      "back": "monde/tools/cards/wise-crowds-back.webp"
+    }
+  ],
+  "colors": [
+    {
+      "id": "noir",
+      "ink": "#222222",
+      "icons": "monde/tools/icons-noir.webp"
+    },
+    {
+      "id": "rouge",
+      "ink": "#e53935",
+      "icons": "monde/tools/icons-rouge.webp"
+    },
+    {
+      "id": "orange",
+      "ink": "#fb8c00",
+      "icons": "monde/tools/icons-orange.webp"
+    },
+    {
+      "id": "jaune",
+      "ink": "#f2c200",
+      "icons": "monde/tools/icons-jaune.webp"
+    },
+    {
+      "id": "vert",
+      "ink": "#43a047",
+      "icons": "monde/tools/icons-vert.webp"
+    },
+    {
+      "id": "bleu",
+      "ink": "#1e88e5",
+      "icons": "monde/tools/icons-bleu.webp"
+    },
+    {
+      "id": "indigo",
+      "ink": "#3949ab",
+      "icons": "monde/tools/icons-indigo.webp"
+    },
+    {
+      "id": "violet",
+      "ink": "#8e24aa",
+      "icons": "monde/tools/icons-violet.webp"
+    }
+  ]
+}

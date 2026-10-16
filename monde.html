@@ -188,6 +188,27 @@
       cursor: pointer;
     }
     .monde-secondary:hover, .monde-secondary:focus-visible { border-color: var(--accent); color: var(--accent); }
+    /* Liens présentés en boutons (panneau des salles voisines) */
+    a.monde-primary, a.monde-secondary { display: inline-block; text-decoration: none; }
+    /* Présentation à vivre : ce que dit Samuel (défile s'il est long), pastilles, navigation */
+    #monde-caption.presenting { display: flex; flex-direction: column; max-height: calc(100vh - 9.5rem); }
+    #monde-caption.presenting[hidden] { display: none; }
+    .monde-presenting-body { overflow-y: auto; min-height: 0; }
+    .monde-dots { display: flex; flex-wrap: wrap; gap: .3rem; margin-top: .7rem; }
+    .monde-dots button { min-width: 1.9rem; height: 1.9rem; border: 1px solid var(--border); border-radius: 999px; background: transparent; color: var(--text); font: inherit; font-size: .8rem; cursor: pointer; }
+    .monde-dots button[aria-current=true] { background: var(--accent); color: var(--bg); border-color: var(--accent); }
+    .monde-dots button:hover, .monde-dots button:focus-visible { border-color: var(--accent); }
+    /* Téléphone : le panneau, plus bas, laisse voir la diapositive ; précédente et suivante suffisent */
+    @media (max-width: 759px) { #monde-caption.presenting { max-height: 38vh; } .monde-dots { display: none; } }
+    /* Mini-atelier : réponses au choix, une par ligne */
+    .monde-choices { display: flex; flex-direction: column; gap: .4rem; margin-top: .7rem; }
+    .monde-choices button { padding: .55rem .8rem; border: 1px solid var(--border); border-radius: .5rem; background: transparent; color: var(--text); font: inherit; text-align: left; cursor: pointer; }
+    .monde-choices button:hover, .monde-choices button:focus-visible { border-color: var(--accent); color: var(--accent); }
+    .monde-dialogue + .monde-caption-actions { margin-top: .4rem; }
+    .monde-choices.many { display: grid; grid-template-columns: 1fr 1fr; }
+    .monde-choices.many button { padding: .4rem .6rem; font-size: .9rem; }
+    /* Navigation des diapositives sous les liens d'une salle */
+    #monde-caption .monde-room-nav { margin: .8rem -1.1rem -1rem; }
 
     /* Panneau de lecture : texte complet de la double page ouverte, commandes des pages.
        Largeur et hauteur suivies par readingArea() dans monde.ts. */
@@ -320,6 +341,28 @@
       .monde-nav .short { display: inline; }
     }
     @media (max-width: 759px) { :root[data-sommaire="barre"] .monde-sections { display: none; } }
+    /* Boutons du bas : ceux du bureau, ou ceux de l'aile voisine (cf. monde/wing.ts) */
+    :root[data-lieu="aile"] .monde-nav-office, :root:not([data-lieu="aile"]) .monde-nav-wing { display: none; }
+
+    /* Lecteur vidéo posé sur le mini-écran de la radio (cf. monde.ts, recalé à chaque image) */
+    #monde-video { position: fixed; top: 0; left: 0; z-index: 3; background: #000; }
+    #monde-video[hidden] { display: none; }
+    #monde-video iframe { display: block; width: 100%; height: 100%; border: 0; }
+    /* Écran de fin, sur la vidéo : les autres vidéos et « Revoir » */
+    .monde-video-end { position: absolute; inset: 0; display: flex; flex-direction: column; align-items: center; justify-content: center; gap: 4%; padding: 4%; background: rgba(10, 10, 12, .96); color: #fff; font: inherit; }
+    .monde-video-end p { font-size: clamp(.8rem, 2.4vw, 1.1rem); font-weight: 600; }
+    .monde-video-list { display: flex; gap: 4%; justify-content: center; width: 100%; }
+    .monde-video-list button { flex: 0 1 45%; display: flex; flex-direction: column; gap: .3rem; padding: 0; border: 0; background: none; color: #fff; font: inherit; font-size: clamp(.7rem, 1.8vw, .9rem); text-align: left; cursor: pointer; }
+    .monde-video-list img { width: 100%; aspect-ratio: 16 / 9; object-fit: cover; border-radius: .3rem; outline: 2px solid transparent; }
+    .monde-video-list button:hover img, .monde-video-list button:focus-visible img { outline-color: #8fc1d6; }
+    .monde-video-again { padding: .3rem .8rem; border: 1px solid rgba(255,255,255,.5); border-radius: 999px; background: none; color: #fff; font: inherit; font-size: clamp(.7rem, 1.8vw, .9rem); cursor: pointer; }
+    /* Fondu au noir (couleur de la pièce) quand la caméra passe d'une pièce à l'autre sans vol */
+    #monde-fade { position: fixed; inset: 0; z-index: 4; background: var(--room); opacity: 0; pointer-events: none; transition: opacity .2s ease; }
+    #monde-fade.on { opacity: 1; }
+    /* Pendant un trajet derrière Samuel : comment passer */
+    #monde-skip { position: fixed; left: 50%; bottom: 4.6rem; z-index: 8; transform: translateX(-50%); padding: .35rem .9rem; border: 1px solid var(--border); border-radius: 999px; background: var(--bar); backdrop-filter: blur(8px); color: var(--muted); font: inherit; font-size: .85rem; cursor: pointer; }
+    #monde-skip[hidden] { display: none; }
+    #monde-skip:hover, #monde-skip:focus-visible { color: var(--accent); border-color: var(--accent); }
 
     /* Points de vue */
     .monde-nav {
@@ -401,6 +444,7 @@
   <main id="monde" aria-label="Le bureau de Samuel, en 3D"></main>
   <div id="monde-books" role="group" aria-label="Les livres de l'étagère"></div>
   <div id="monde-summary" class="monde-overlay-layer" role="group" aria-label="Sommaire du bureau"></div>
+  <div id="monde-video" hidden></div>
   <div id="monde-hover" hidden></div>
   <section id="monde-caption" aria-live="polite" hidden></section>
   <p id="monde-welcome-live" class="monde-sr" aria-live="polite"></p>
@@ -413,11 +457,18 @@
     <button type="button" data-radio="stop" aria-label="Arrêter l'émission">■</button>
   </div>
   <nav class="monde-nav" aria-label="Points de vue">
-    <button type="button" data-view="overview" aria-pressed="true"><span class="long">Vue d'ensemble</span><span class="short">Bureau</span></button>
-    <button type="button" data-view="shelf" aria-pressed="false"><span class="long">L'étagère</span><span class="short">Étagère</span></button>
-    <button type="button" data-view="armchair" aria-pressed="false"><span class="long">Le fauteuil</span><span class="short">Fauteuil</span></button>
-    <button type="button" data-view="lectern" aria-pressed="false" class="monde-nav-lectern"><span class="long">Le sommaire</span><span class="short">Sommaire</span></button>
+    <button type="button" data-view="overview" aria-pressed="true" class="monde-nav-office"><span class="long">Vue d'ensemble</span><span class="short">Bureau</span></button>
+    <button type="button" data-view="shelf" aria-pressed="false" class="monde-nav-office"><span class="long">L'étagère</span><span class="short">Étagère</span></button>
+    <button type="button" data-view="armchair" aria-pressed="false" class="monde-nav-office"><span class="long">Le fauteuil</span><span class="short">Fauteuil</span></button>
+    <button type="button" data-view="lectern" aria-pressed="false" class="monde-nav-office monde-nav-lectern"><span class="long">Le sommaire</span><span class="short">Sommaire</span></button>
+    <button type="button" data-view="overview" aria-pressed="false" class="monde-nav-wing"><span class="long">← Le bureau</span><span class="short">← Bureau</span></button>
+    <button type="button" data-view="outils" aria-pressed="false" class="monde-nav-wing"><span class="long">Outils</span><span class="short">Outils</span></button>
+    <button type="button" data-view="ateliers" aria-pressed="false" class="monde-nav-wing"><span class="long">Ateliers</span><span class="short">Ateliers</span></button>
+    <button type="button" data-view="conferences" aria-pressed="false" class="monde-nav-wing"><span class="long">Conférences</span><span class="short">Conf.</span></button>
   </nav>
+
+  <button type="button" id="monde-skip" hidden>Toucher pour arriver tout de suite</button>
+  <div id="monde-fade" aria-hidden="true"></div>
 
   <div id="monde-loader" class="monde-screen" role="status">
     <p>On ouvre la porte du bureau…</p>
@@ -425,7 +476,7 @@
   <div id="monde-fallback" class="monde-screen" hidden>
     <p>Ce navigateur n'affiche pas la 3D. Tout le contenu reste disponible sur
       <a href="index.html">le site</a> : <a href="histoires.html">les livres et leurs émissions</a>,
-      <a href="outils.html">les outils</a>, <a href="ateliers.html">les ateliers</a>.</p>
+      <a href="outils.html">les outils</a>, <a href="ateliers.html">les ateliers et conférences</a>.</p>
   </div>
   <noscript>
     <div class="monde-screen">
