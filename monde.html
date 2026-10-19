@@ -200,6 +200,21 @@
     .monde-dots button:hover, .monde-dots button:focus-visible { border-color: var(--accent); }
     /* Téléphone : le panneau, plus bas, laisse voir la diapositive ; précédente et suivante suffisent */
     @media (max-width: 759px) { #monde-caption.presenting { max-height: 38vh; } .monde-dots { display: none; } }
+    /* Album du jukebox : l'histoire de l'album, puis les pistes (en toucher une la lance) */
+    .monde-album-story { white-space: pre-line; color: var(--muted); font-size: .9rem; }
+    details.monde-album-story { margin-top: .4rem; }
+    details.monde-album-story summary { cursor: pointer; color: var(--accent); font-weight: 600; white-space: normal; }
+    .monde-tracks { margin: .6rem 0 0; padding: 0; list-style: none; counter-reset: piste; }
+    .monde-tracks li { counter-increment: piste; }
+    .monde-tracks button { display: flex; gap: .5rem; align-items: baseline; width: 100%; padding: .3rem .4rem; border: 0; border-radius: .4rem; background: transparent; color: var(--text); font: inherit; font-size: .92rem; text-align: left; cursor: pointer; }
+    .monde-tracks button::before { content: counter(piste) '.'; min-width: 1.4rem; color: var(--muted); font-variant-numeric: tabular-nums; }
+    .monde-tracks button:hover, .monde-tracks button:focus-visible { background: color-mix(in srgb, var(--accent) 12%, transparent); }
+    .monde-tracks button[aria-current=true] { color: var(--accent); font-weight: 700; }
+    .monde-tracks button[aria-current=true]::before { content: '♪'; color: var(--accent); }
+    .monde-holo-modes { display: flex; gap: .3rem; margin-top: .6rem; }
+    .monde-holo-modes button { flex: 1; padding: .3rem .4rem; border: 1px solid var(--border); border-radius: 999px; background: transparent; color: var(--text); font: inherit; font-size: .8rem; cursor: pointer; }
+    .monde-holo-modes button[aria-pressed=true] { background: var(--accent); color: var(--bg); border-color: var(--accent); }
+    .monde-track-badge { margin-left: auto; padding: 0 .4rem; border: 1px solid var(--border); border-radius: 999px; color: var(--muted); font-size: .72rem; font-weight: 400; }
     /* Mini-atelier : réponses au choix, une par ligne */
     .monde-choices { display: flex; flex-direction: column; gap: .4rem; margin-top: .7rem; }
     .monde-choices button { padding: .55rem .8rem; border: 1px solid var(--border); border-radius: .5rem; background: transparent; color: var(--text); font: inherit; text-align: left; cursor: pointer; }
@@ -331,6 +346,8 @@
 
     #monde-summary { position: fixed; inset: 0; z-index: 3; pointer-events: none; }
     #monde-summary[hidden] { display: none; }
+    #monde-jukebox { position: fixed; inset: 0; z-index: 3; pointer-events: none; }
+    #monde-jukebox[hidden] { display: none; }
     .monde-sections { display: none; gap: 1rem; font-size: .9rem; }
     :root[data-sommaire="barre"] .monde-sections { display: flex; }
     :root[data-sommaire="barre"] .monde-nav-lectern { display: none; }
@@ -444,6 +461,7 @@
   <main id="monde" aria-label="Le bureau de Samuel, en 3D"></main>
   <div id="monde-books" role="group" aria-label="Les livres de l'étagère"></div>
   <div id="monde-summary" class="monde-overlay-layer" role="group" aria-label="Sommaire du bureau"></div>
+  <div id="monde-jukebox" class="monde-overlay-layer" role="group" aria-label="Albums du jukebox" hidden></div>
   <div id="monde-video" hidden></div>
   <div id="monde-hover" hidden></div>
   <section id="monde-caption" aria-live="polite" hidden></section>
