@@ -112,6 +112,119 @@
     #monde-theme svg { width: 1.2rem; height: 1.2rem; }
     #monde-theme .moon, #monde-theme[data-mode="dark"] .sun { display: none; }
     #monde-theme[data-mode="dark"] .moon { display: block; }
+    /* Partager le lieu (cf. monde/sharePanel.ts) : même pastille que le jour/nuit */
+    #monde-share {
+      flex: none;
+      display: grid;
+      place-items: center;
+      width: 2.25rem;
+      height: 2.25rem;
+      border: 1px solid var(--border);
+      border-radius: 50%;
+      background: transparent;
+      color: var(--text);
+      cursor: pointer;
+    }
+    #monde-share:hover, #monde-share:focus-visible, #monde-share[aria-expanded="true"] { border-color: var(--accent); color: var(--accent); }
+    #monde-share[hidden] { display: none; }
+    /* Panneau réduit / rouvert (cf. monde/overlay.ts) : même pastille ; un point quand il a du nouveau */
+    #monde-panel {
+      position: relative;
+      flex: none;
+      display: grid;
+      place-items: center;
+      width: 2.25rem;
+      height: 2.25rem;
+      border: 1px solid var(--border);
+      border-radius: 50%;
+      background: transparent;
+      color: var(--text);
+      cursor: pointer;
+    }
+    #monde-panel[hidden] { display: none; }
+    #monde-panel:hover, #monde-panel:focus-visible { border-color: var(--accent); color: var(--accent); }
+    #monde-panel[aria-expanded="false"] { background: var(--accent); border-color: var(--accent); color: var(--bg); }
+    #monde-panel svg { width: 1.15rem; height: 1.15rem; }
+    #monde-panel[data-news]::after {
+      content: '';
+      position: absolute;
+      top: -.1rem;
+      right: -.1rem;
+      width: .6rem;
+      height: .6rem;
+      border: 2px solid var(--bg);
+      border-radius: 50%;
+      background: #d9822b;
+    }
+    #monde-caption.minimized { display: none !important; }
+    .monde-caption-reduce {
+      position: absolute;
+      top: .35rem;
+      right: .35rem;
+      z-index: 1;
+      width: 1.9rem;
+      height: 1.9rem;
+      border: 0;
+      border-radius: 50%;
+      background: transparent;
+      color: var(--muted);
+      font: inherit;
+      font-size: 1.3rem;
+      line-height: 1;
+      cursor: pointer;
+    }
+    .monde-caption-reduce:hover, .monde-caption-reduce:focus-visible { color: var(--accent); background: var(--border); }
+    /* Le titre ou la première ligne ne passent pas sous « Réduire » */
+    #monde-caption > .monde-caption-reduce + * { padding-right: 1.8rem; }
+    #monde-share svg { width: 1.15rem; height: 1.15rem; }
+    #monde-share-panel {
+      position: fixed;
+      top: 3.6rem;
+      right: 1rem;
+      z-index: 11;
+      width: min(24rem, calc(100vw - 2rem));
+      padding: 1rem 1.1rem;
+      border: 1px solid var(--border);
+      border-radius: .75rem;
+      background: var(--bar);
+      backdrop-filter: blur(10px);
+      line-height: 1.5;
+    }
+    #monde-share-panel[hidden] { display: none; }
+    #monde-share-panel h2 { font-family: 'Playfair Display', Georgia, serif; font-size: 1.1rem; padding-right: 2rem; }
+    .monde-share-what { margin-top: .3rem; font-size: .95rem; font-style: italic; color: var(--muted); }
+    .monde-share-at { display: flex; gap: .5rem; align-items: center; margin-top: .5rem; font-size: .9rem; }
+    .monde-share-at[hidden] { display: none; }
+    #monde-share-panel textarea, .monde-share-url {
+      display: block;
+      width: 100%;
+      margin-top: .6rem;
+      padding: .5rem .6rem;
+      border: 1px solid var(--border);
+      border-radius: .5rem;
+      background: var(--bg);
+      color: var(--text);
+      font: inherit;
+      font-size: .95rem;
+    }
+    #monde-share-panel textarea { resize: vertical; min-height: 4.5rem; }
+    .monde-share-url { font-family: ui-monospace, Consolas, monospace; font-size: .8rem; color: var(--muted); }
+    .monde-share-done { margin-top: .5rem; font-size: .9rem; color: var(--accent); }
+    .monde-share-done:empty { display: none; }
+    .monde-share-close {
+      position: absolute;
+      top: .6rem;
+      right: .6rem;
+      width: 2rem;
+      height: 2rem;
+      border: 0;
+      border-radius: 50%;
+      background: transparent;
+      color: var(--muted);
+      font-size: 1.3rem;
+      cursor: pointer;
+    }
+    .monde-share-close:hover, .monde-share-close:focus-visible { color: var(--accent); }
 
     /* Boutons des livres : transparents, recalés sur chaque tranche (cf. monde/overlay.ts) */
     #monde-books { position: fixed; inset: 0; z-index: 3; pointer-events: none; }
@@ -446,6 +559,18 @@
     <div class="monde-actions">
       <button type="button" id="monde-replay" class="monde-replay">Revoir l'accueil</button>
       <span class="monde-title">Le bureau de Samuel</span>
+      <button id="monde-panel" type="button" hidden aria-label="Réduire le panneau" title="Réduire le panneau" aria-expanded="true" aria-controls="monde-caption">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+          <rect x="3.5" y="4.5" width="17" height="15" rx="2"/>
+          <path d="M14 4.5v15M16.5 9h1.5M16.5 12h1.5"/>
+        </svg>
+      </button>
+      <button id="monde-share" type="button" hidden aria-label="Partager ce lieu" title="Partager ce lieu" aria-expanded="false" aria-controls="monde-share-panel">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+          <path d="M12 3v12M7.5 7.5 12 3l4.5 4.5"/>
+          <path d="M8 10.5H6a1.5 1.5 0 0 0-1.5 1.5v7.5A1.5 1.5 0 0 0 6 21h12a1.5 1.5 0 0 0 1.5-1.5V12a1.5 1.5 0 0 0-1.5-1.5h-2"/>
+        </svg>
+      </button>
       <button id="monde-theme" type="button" aria-label="Passer à la nuit" title="Passer à la nuit">
         <svg class="sun" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" aria-hidden="true">
           <circle cx="12" cy="12" r="4.2" fill="currentColor"/>
@@ -457,6 +582,20 @@
       </button>
     </div>
   </header>
+
+  <section id="monde-share-panel" role="dialog" aria-labelledby="monde-share-title" hidden>
+    <h2 id="monde-share-title">Partager ce lieu</h2>
+    <p class="monde-share-what"></p>
+    <label class="monde-share-at" hidden><input type="checkbox"> À partir de <span></span></label>
+    <textarea rows="3" maxlength="500" aria-label="Message d'accompagnement"></textarea>
+    <input class="monde-share-url" type="text" readonly aria-label="Lien">
+    <div class="monde-caption-actions">
+      <button type="button" class="monde-primary" data-share="send">Partager…</button>
+      <button type="button" class="monde-secondary" data-share="copy">Copier</button>
+    </div>
+    <p class="monde-share-done" aria-live="polite"></p>
+    <button type="button" class="monde-share-close" data-share="close" aria-label="Fermer">×</button>
+  </section>
 
   <main id="monde" aria-label="Le bureau de Samuel, en 3D"></main>
   <div id="monde-books" role="group" aria-label="Les livres de l'étagère"></div>
