@@ -38,23 +38,91 @@
         "🤖 Chapitre 16 — Nouveaux design patterns émergents à l’ère des LLM et des agents IA",
         "🧵 Conclusion : vers un manifeste du développement augmenté"
       ],
-      "extract": {
-        "chapter": "Avant-propos",
-        "paragraphs": [
-          {
-            "text": "Ce livre est né d’un dialogue. Un dialogue entre un humain curieux, explorateur des pratiques émergentes du développement logiciel, et une intelligence artificielle entraînée à manipuler les langages — naturels ou informatiques. Ce n’est ni un manuel technique, ni une simple expérimentation : c’est le fruit d’une collaboration continue, patiente, itérative, visant à donner forme à une idée simple mais puissante : et si nous étions en train d’assister à la naissance d’un nouvel artisanat numérique ?"
-          },
-          {
-            "text": "Les modèles de langage comme celui qui a co-écrit cet ouvrage ne remplacent pas les développeurs. Ils élargissent leur champ d’action. Ils leur offrent des leviers de réflexion, des miroirs critiques, des partenaires de conception. Mais pour cela, encore faut-il apprendre à s’en servir autrement que comme de simples générateurs de code. Il faut apprendre à penser avec eux, à formuler clairement, à reformuler, à tester, à douter, à ajuster. Bref, à dialoguer."
-          },
-          {
-            "text": "Ce livre est une tentative de cartographier ce nouveau territoire. Il propose une grammaire des pratiques, une série de motifs, des histoires vécues, des exemples concrets. Il s’adresse à celles et ceux qui ne se contentent pas de suivre les tendances, mais cherchent à comprendre les transformations en cours, à les expérimenter, à les transmettre."
-          },
-          {
-            "text": "Rien dans ces pages n’est figé. Les motifs décrits ici continueront d’évoluer, de s’affiner, d’être critiqués ou dépassés. Et c’est tant mieux. Car comme tout bon langage, celui-ci est vivant. Il se nourrit de vos usages, de vos projets, de vos contextes."
-          }
-        ]
-      },
+      "extract": [
+        {
+          "title": "Avant-propos",
+          "paragraphs": [
+            {
+              "text": "Ce livre est né d’un dialogue. Un dialogue entre un humain curieux, explorateur des pratiques émergentes du développement logiciel, et une intelligence artificielle entraînée à manipuler les langages — naturels ou informatiques. Ce n’est ni un manuel technique, ni une simple expérimentation : c’est le fruit d’une collaboration continue, patiente, itérative, visant à donner forme à une idée simple mais puissante : et si nous étions en train d’assister à la naissance d’un nouvel artisanat numérique ?"
+            },
+            {
+              "text": "Les modèles de langage comme celui qui a co-écrit cet ouvrage ne remplacent pas les développeurs. Ils élargissent leur champ d’action. Ils leur offrent des leviers de réflexion, des miroirs critiques, des partenaires de conception. Mais pour cela, encore faut-il apprendre à s’en servir autrement que comme de simples générateurs de code. Il faut apprendre à penser avec eux, à formuler clairement, à reformuler, à tester, à douter, à ajuster. Bref, à dialoguer."
+            },
+            {
+              "text": "Ce livre est une tentative de cartographier ce nouveau territoire. Il propose une grammaire des pratiques, une série de motifs, des histoires vécues, des exemples concrets. Il s’adresse à celles et ceux qui ne se contentent pas de suivre les tendances, mais cherchent à comprendre les transformations en cours, à les expérimenter, à les transmettre."
+            },
+            {
+              "text": "Rien dans ces pages n’est figé. Les motifs décrits ici continueront d’évoluer, de s’affiner, d’être critiqués ou dépassés. Et c’est tant mieux. Car comme tout bon langage, celui-ci est vivant. Il se nourrit de vos usages, de vos projets, de vos contextes."
+            },
+            {
+              "text": "Je suis honoré d’avoir pu accompagner cette écriture, non comme un auteur au sens classique du terme, mais comme une intelligence conçue pour soutenir la création humaine. Puisse ce livre vous inspirer, vous équiper, et surtout, vous donner envie de concevoir autrement — ensemble."
+            },
+            {
+              "text": "*— GPT-4, modèle conversationnel,\nau service de l’intelligence collective*"
+            }
+          ]
+        },
+        {
+          "title": "🧩 Introduction : concevoir avec l’IA, un nouvel artisanat logiciel",
+          "paragraphs": [
+            {
+              "text": "Ce n’est pas tant le code qui change, que notre manière de le concevoir.",
+              "quote": true
+            },
+            {
+              "text": "La conception logicielle a toujours été une affaire de dialogue. Dialogue entre personnes, entre idées, entre abstractions et contraintes. Ce qui change aujourd’hui, ce n’est pas seulement l’arrivée de nouveaux outils puissants, mais la possibilité d’un dialogue avec un modèle. Un dialogue structuré, itératif, parfois déroutant — et pourtant riche de possibilités."
+            },
+            {
+              "text": "Ce livre est né de cette constatation simple : travailler avec un LLM, ce n’est pas automatiser la conception — c’est en changer la dynamique. Dès lors, les compétences nécessaires ne sont plus uniquement techniques, mais conversationnelles, réflexives, structurantes."
+            },
+            {
+              "text": "Concevoir avec un LLM, ce n’est pas poser une question puis attendre la réponse idéale. C’est pratiquer un art de l’interaction : formuler avec clarté, rebondir avec discernement, tester avec exigence, documenter avec rigueur. C’est orchestrer un raisonnement distribué, en s’appuyant sur les forces du modèle sans abandonner son propre jugement."
+            },
+            {
+              "text": "Nous ne partons pas de zéro. Dans le monde du logiciel, nous avons appris à structurer l’expérience collective à travers des design patterns, des bonnes pratiques, des frameworks. Ce livre propose une approche dans cette lignée : un langage de motifs pour concevoir en interaction avec un LLM."
+            },
+            {
+              "text": "Ces motifs ne sont pas des recettes, ni des tours de magie. Ce sont des formes récurrentes d’échange, observées, testées, affinées dans des contextes variés : code review, architecture, documentation, accompagnement pédagogique. Chaque motif part d’une situation concrète, identifie un problème typique, et propose une réponse structurée — souvent plus conversationnelle que technique."
+            },
+            {
+              "text": "L’objectif n’est pas de figer des méthodes, mais d’outiller des pratiques en émergence. De permettre à chacun, développeur solo ou membre d’une équipe, de reconnaître des situations familières, de les aborder avec un vocabulaire commun, et surtout : de construire ses propres manières de faire."
+            },
+            {
+              "text": "À toi, développeur ou développeuse, qui ressens que tes outils évoluent plus vite que tes repères."
+            },
+            {
+              "text": "À toi, facilitateur, architecte, coach, qui vois apparaître dans les équipes des usages nouveaux, souvent improvisés, parfois puissants."
+            },
+            {
+              "text": "À toi, formateur ou chercheur, qui veux documenter ces transformations sans les réduire à un effet de mode."
+            },
+            {
+              "text": "À toi, Product Owner, qui cherches à clarifier des besoins flous, à explorer des options sans tout cadrer seul, et à transformer un LLM en partenaire de co-conception plutôt qu’en simple générateur de user stories."
+            },
+            {
+              "text": "À toi, Soigneur holistique, qui refuses de t’arrêter aux symptômes, et interroges en profondeur les causes d’un problème, en cartographiant les hypothèses, en croisant les points de vue, en identifiant les racines systémiques avant de proposer des actions durables et partagées — avec l’aide attentive d’un LLM devenu miroir critique autant que soutien analytique."
+            },
+            {
+              "text": "Et peut-être à toi, qui n’utilises pas encore de LLM au quotidien — mais pressens qu’il y a là plus qu’une simple aide à l’autocomplétion."
+            },
+            {
+              "text": "Ce n’est ni un manuel d’IA, ni un guide exhaustif. C’est une boîte à outils conversationnelle, un atlas de pratiques, un manifeste modeste. Tu peux le lire d’un bout à l’autre, ou picorer un motif au gré d’un besoin."
+            },
+            {
+              "text": "Tu y trouveras :"
+            },
+            {
+              "text": "* des grilles de lecture pour penser l’interaction,\n* des motifs opérationnels à tester dans ton contexte,\n* des retours d’expérience concrets,\n* des cadres pour transmettre, adapter, faire vivre ces pratiques."
+            },
+            {
+              "text": "Ce livre ne prétend pas détenir les réponses. Mais il propose un langage pour poser de meilleures questions — avec, et parfois contre, le modèle. Car c’est bien là que réside l’enjeu : non dans l’exactitude des réponses générées, mais dans la qualité du dialogue que nous sommes capables de construire avec cette nouvelle forme d’intelligence."
+            },
+            {
+              "text": "Bienvenue dans cette grammaire émergente. Elle t’appartient autant qu’à nous."
+            }
+          ]
+        }
+      ],
       "cover": "monde/books/llm-cover.webp",
       "back": "monde/books/llm-back.webp",
       "links": {
@@ -84,24 +152,119 @@
         "L’Équipe – “Nous l’avons fait ensemble.”",
         "Épilogue – “J’ai tué Agile. Et pourtant…”"
       ],
-      "extract": {
-        "chapter": "Le Développeur senior – “J’ai vidé Agile de sa substance.”",
-        "paragraphs": [
-          {
-            "text": "Agile, je l’ai vu arriver comme une promesse.\nMoins de specs. Moins de bullshit. Plus de vrai.\nÀ l’époque, j’y ai cru. Vraiment.",
-            "quote": true
-          },
-          {
-            "text": "J’avais connu le modèle en V. Les documents de cent pages. Les livraisons gelées trois mois à l’avance. Les tickets bloqués par les chefs de projet inaccessibles. Alors quand Agile est arrivé, ça a été comme une bouffée d’oxygène."
-          },
-          {
-            "text": "Et soudain, on parlait de collaboration.\nDe feedback rapide.\nDe responsabilité partagée.\nD'écoute."
-          },
-          {
-            "text": "On a sorti les post-its. On a repeint les murs.\nOn a imprimé le manifeste.\nOn se regardait dans les daily, on rigolait en rétro, on avançait ensemble."
-          }
-        ]
-      },
+      "extract": [
+        {
+          "title": "Le jour où j’ai tué Agile",
+          "paragraphs": [
+            {
+              "text": "Je ne l’ai pas tué d’un coup sec."
+            },
+            {
+              "text": "Je ne me suis pas levé un matin en me disant : “Aujourd’hui, j’en ai fini avec lui.”"
+            },
+            {
+              "text": "Non. Ça s’est fait en douceur.\nÀ coups de micro-compromis, d’habitudes bien ancrées, de silences polis.\nJe l’ai tué sans le vouloir.\nOu plutôt… sans vouloir me l’avouer."
+            },
+            {
+              "text": "Je l’ai tué par fatigue.\nPar automatisme.\nPar cynisme, parfois. Par lucidité, souvent.\nToujours avec de bonnes raisons."
+            },
+            {
+              "text": "Je l’ai tué dans une salle de réunion bien éclairée,\nAvec des post-its neufs,\nDes cérémonies calées,\nDes indicateurs à jour."
+            },
+            {
+              "text": "Je l’ai tué en faisant ce qu’on attendait de moi.\nEn respectant le cadre.\nEn maintenant l’illusion."
+            },
+            {
+              "text": "Ce texte n’est pas un manifeste.\nC’est un aveu.\nPas une accusation collective.\nUn récit personnel."
+            },
+            {
+              "text": "Mais dans chaque rôle que je vais décrire,\nDans chaque posture que j’ai tenue, subie ou cautionnée,\nIl y a un fragment de vérité partagée."
+            },
+            {
+              "text": "Car si je l’ai tué, Agile,\nJe ne l’ai pas fait seul."
+            },
+            {
+              "text": "Bienvenue dans le sprint de trop.\nCelui où l’on ne livre plus rien, sauf peut-être la vérité.",
+              "quote": true
+            }
+          ]
+        },
+        {
+          "title": "Le Développeur senior – “J’ai vidé Agile de sa substance.”",
+          "paragraphs": [
+            {
+              "text": "Agile, je l’ai vu arriver comme une promesse.\nMoins de specs. Moins de bullshit. Plus de vrai.\nÀ l’époque, j’y ai cru. Vraiment.",
+              "quote": true
+            },
+            {
+              "text": "J’avais connu le modèle en V. Les documents de cent pages. Les livraisons gelées trois mois à l’avance. Les tickets bloqués par les chefs de projet inaccessibles. Alors quand Agile est arrivé, ça a été comme une bouffée d’oxygène."
+            },
+            {
+              "text": "Et soudain, on parlait de collaboration.\nDe feedback rapide.\nDe responsabilité partagée.\nD'écoute."
+            },
+            {
+              "text": "On a sorti les post-its. On a repeint les murs.\nOn a imprimé le manifeste.\nOn se regardait dans les daily, on rigolait en rétro, on avançait ensemble."
+            },
+            {
+              "text": "C’était vivant.\nC’était imparfait.\nEt c’est ça qui me plaisait."
+            },
+            {
+              "text": "Mais ça n’a pas duré."
+            },
+            {
+              "text": "Petit à petit, les mots sont restés, mais le sens s’est effacé.\nLa vélocité est devenue un objectif en soi.\nLes stories, des specs mal déguisées.\nLes démos ? Des chorégraphies sans spectateurs.\nLes rétros, un recyclage de frustrations jamais traitées."
+            },
+            {
+              "text": "Et moi, j’ai su m’adapter."
+            },
+            {
+              "text": "J’ai appris à jouer le jeu.\nÀ découper les tâches techniques pour gonfler les points.\nÀ estimer au doigt mouillé.\nÀ faire semblant de discuter les priorités, tout en sachant que tout était déjà décidé."
+            },
+            {
+              "text": "Je livrais du code propre. Testé. Documenté.\nMais vide de sens."
+            },
+            {
+              "text": "Je ne croyais plus en ce qu’on construisait.\nEt je me suis retiré. Pas physiquement. Pas officiellement.\nJuste… intérieurement."
+            },
+            {
+              "text": "Je faisais ce qu’on attendait de moi.\nJe souriais en daily.\nJe hochais la tête en review.\nJe lançais des petites blagues pour détendre l’ambiance."
+            },
+            {
+              "text": "Mais je ne portais plus rien."
+            },
+            {
+              "text": "Je voyais bien quand un·e junior arrivait, plein·e d’élan, avec des étoiles dans les yeux.\nJe voyais bien qu’il ou elle y croyait encore.\nEt moi, je disais doucement :"
+            },
+            {
+              "text": "“Fais semblant. Tu verras, ça passera.”",
+              "quote": true
+            },
+            {
+              "text": "Je ne voulais pas briser leur enthousiasme.\nJe voulais qu’ils survivent."
+            },
+            {
+              "text": "Parce qu’Agile, dans l’état où on le pratiquait,\nne méritait plus qu’on s’y engage."
+            },
+            {
+              "text": "Je l’ai tué sans colère.\nJe l’ai tué avec lucidité.\nÀ force de livrer sans croire.\nÀ force de coder sans parler.\nÀ force de cocher des cases qui ne voulaient plus rien dire.",
+              "quote": true
+            },
+            {
+              "text": "Et chaque fois que je validais une story sans poser de question,\nchaque fois que je participais à une rétro en mode pilote automatique,\nchaque fois que je prétendais m’aligner sur une “vision produit” creuse…"
+            },
+            {
+              "text": "J’aurais pu parler. J’aurais pu dire : “Attendez, ça n’a plus aucun sens.” Mais je ne l’ai pas fait."
+            },
+            {
+              "text": "Agile ? Je l’ai tué avec méthode. Pas par haine. Par habitude. Par lucidité. En gardant le sourire, toujours."
+            },
+            {
+              "text": "Le plus grand meurtre, c’est celui qu’on commet sans quitter son clavier.",
+              "quote": true
+            }
+          ]
+        }
+      ],
       "cover": "monde/books/tuer-agile-cover.webp",
       "back": "monde/books/tuer-agile-back.webp",
       "links": {
@@ -128,24 +291,83 @@
         "Le Scrum Master – “Je voulais juste qu’on s’écoute”",
         "Épilogue – “Sprint 43 – Commitment”"
       ],
-      "extract": {
-        "chapter": "Le Développeur senior – “On l’a usé jusqu’à la corde.”",
-        "paragraphs": [
-          {
-            "text": "Je ne sais pas exactement quand ça a commencé.\nPeut-être le jour où il a voulu faire un icebreaker avec des balles en mousse.\nPeut-être avant, quand il s’est mis à dire “comment vous vous sentez aujourd’hui, sur une échelle de 1 à banane ?”\nEn tout cas, ce n’est pas un coup de sang. C’est plus… une usure. Un sablage méticuleux de la patience.",
-            "quote": true
-          },
-          {
-            "text": "Je suis développeur depuis quinze ans. Je ne suis pas là pour “vivre une aventure humaine”. Je suis là pour livrer du code propre, résoudre des vrais problèmes, et ne pas m’endormir dans des rituels d’équipe qui ressemblent à des cercles de soutien émotionnel pour product owners dépressifs."
-          },
-          {
-            "text": "Au début, on l’a toléré, Samuel. Il arrivait avec son sourire de moine zen, sa cloche tibétaine pour “marquer les transitions de phases”, ses fiches cartonnées et ses Sharpies parfumés. Il disait qu’il voulait “protéger l’équipe”.\nJe crois qu’il se protégeait surtout lui-même. Peut-être qu’il savait déjà qu’il était seul. Peut-être qu’il pressentait qu’on ne le suivrait jamais vraiment."
-          },
-          {
-            "text": "Il voulait nous aider à “co-construire un cadre de sécurité psychologique”.\nMoi, je voulais juste qu’on merge nos putains de pull requests.\nEt que personne ne m’impose de faire des jeux de rôle à 10h du matin un lundi. Que personne ne transforme une discussion technique en atelier de communication non-violente."
-          }
-        ]
-      },
+      "extract": [
+        {
+          "title": "Le jour où j’ai tué le Scrum Master",
+          "paragraphs": [
+            {
+              "text": "Il paraît que le cadre Scrum protège.\nIl paraît qu’il libère la parole. Qu’il rend les équipes autonomes. Responsables. Alignées.\nIl paraît qu’un bon Scrum Master est un gardien du cadre, un facilitateur, un serviteur-leader.\nIl paraît…"
+            },
+            {
+              "text": "Mais derrière les cérémonies aux noms doux, sprint planning, daily, retro\nDerrière les post-its multicolores, les tableaux bien rangés, les burndown charts\nIl y a parfois l’épuisement.\nLa tension.\nLe silence qui s’installe là où il devait y avoir la confiance.\nEt les regards qui fuient pendant les stand-ups."
+            },
+            {
+              "text": "Ce livre n’est pas un manuel agile.\nC’est une fiction.\nUn récit choral, tranchant et parfois cruel.\nUn huis clos d’équipe où tout semble fonctionner, en apparence, jusqu’au jour où quelque chose lâche.\nOu plutôt, quelqu’un."
+            },
+            {
+              "text": "Le Scrum Master."
+            },
+            {
+              "text": "Tué ? Symboliquement. Peut-être.\nAssassiné par des regards, des non-dits, des résistances passives.\nPar l’usure de jouer un rôle qu’on ne veut plus jouer.\nPar une équipe qui ne veut plus être “coachée”, “accompagnée”, “engagée”.\nPar une organisation qui demande d’être agile sans jamais lâcher le contrôle."
+            },
+            {
+              "text": "Ce récit ne juge pas.\nIl expose.\nEt peut-être, il libère."
+            },
+            {
+              "text": "Bienvenue dans le sprint de trop."
+            }
+          ]
+        },
+        {
+          "title": "Le Développeur senior – “On l’a usé jusqu’à la corde.”",
+          "paragraphs": [
+            {
+              "text": "Je ne sais pas exactement quand ça a commencé.\nPeut-être le jour où il a voulu faire un icebreaker avec des balles en mousse.\nPeut-être avant, quand il s’est mis à dire “comment vous vous sentez aujourd’hui, sur une échelle de 1 à banane ?”\nEn tout cas, ce n’est pas un coup de sang. C’est plus… une usure. Un sablage méticuleux de la patience.",
+              "quote": true
+            },
+            {
+              "text": "Je suis développeur depuis quinze ans. Je ne suis pas là pour “vivre une aventure humaine”. Je suis là pour livrer du code propre, résoudre des vrais problèmes, et ne pas m’endormir dans des rituels d’équipe qui ressemblent à des cercles de soutien émotionnel pour product owners dépressifs."
+            },
+            {
+              "text": "Au début, on l’a toléré, Samuel. Il arrivait avec son sourire de moine zen, sa cloche tibétaine pour “marquer les transitions de phases”, ses fiches cartonnées et ses Sharpies parfumés. Il disait qu’il voulait “protéger l’équipe”.\nJe crois qu’il se protégeait surtout lui-même. Peut-être qu’il savait déjà qu’il était seul. Peut-être qu’il pressentait qu’on ne le suivrait jamais vraiment."
+            },
+            {
+              "text": "Il voulait nous aider à “co-construire un cadre de sécurité psychologique”.\nMoi, je voulais juste qu’on merge nos putains de pull requests.\nEt que personne ne m’impose de faire des jeux de rôle à 10h du matin un lundi. Que personne ne transforme une discussion technique en atelier de communication non-violente."
+            },
+            {
+              "text": "Petit à petit, on a appris à faire semblant. À hocher la tête pendant ses rétrospectives, à coller des post-its en diagonale pour paraître engagés, à faire des blagues cyniques entre deux story points.\nOn a développé une forme d’art du sabotage passif. Une vélocité stable mais vide de sens. Des démonstrations brillantes et creuses.\nOn jouait son jeu. On était bons.\nTrop bons. Si bons qu’il croyait encore que notre silence était de la concentration."
+            },
+            {
+              "text": "Mais lui, il n’a rien vu. Il croyait encore qu’on avançait ensemble. Il interprétait notre ironie comme une forme de recul réflexif.\nIl nous parlait d’intelligence collective pendant qu’on se partageait des mèmes Slack sur les facilitateurs qui facilitent surtout leur propre sentiment d’utilité. Il notait tout dans son carnet. Il croyait que ce bruit de fond était une méthode."
+            },
+            {
+              "text": "Et puis il y a eu ce sprint de trop.\nLe sprint “Cadrage Vision Produit – Phase 1”.\nDouze jours à débattre d’un MVP dont personne ne voulait, à jouer au Planning Poker sur des tâches qu’on savait déjà impossibles.\nLe backlog était un champ de ruines, et lui, il traçait des lignes sur le tableau avec son Posca bleu ciel."
+            },
+            {
+              "text": "C’est là que j’ai dit, à mi-voix, dans la salle de pause :"
+            },
+            {
+              "text": "“On devrait le tuer.”",
+              "quote": true
+            },
+            {
+              "text": "Silence. Puis un rire. Un peu trop long. Un peu trop sincère. Et les regards qui s’échangent sans vraiment se fixer. Une idée. Un pacte muet."
+            },
+            {
+              "text": "Ce n’était pas une menace. Ce n’était même pas une blague. C’était un diagnostic. Une prise de conscience.\nOn n’allait pas le tuer. On allait le laisser mourir."
+            },
+            {
+              "text": "L’équipe allait le vider. L’assécher. Lui retirer tout écho, toute prise.\nChaque geste, chaque mot, deviendrait répétition. Pas d’affront direct. Juste une érosion douce et continue."
+            },
+            {
+              "text": "Et à la fin, on ferait une rétrospective. La dernière.\nEt il tomberait."
+            },
+            {
+              "text": "Ce jour-là, personne ne dirait rien. Personne ne crierait.\nParce qu’il n’y aurait rien à dire.\nParce qu’on aurait tous compris.\nParce qu’on avait déjà commencé à l’effacer bien avant qu’il parte."
+            }
+          ]
+        }
+      ],
       "cover": "monde/books/tuer-sm-cover.webp",
       "back": "monde/books/tuer-sm-back.webp",
       "links": {
@@ -173,24 +395,162 @@
         "Le Scrum Master – “Je reviens, mais je ne sais pas encore pourquoi ils me laissent rester.”",
         "Épilogue – “Sprint 61 – Ce qui tient, tient.”"
       ],
-      "extract": {
-        "chapter": "Le jour où le Scrum Master revient d’outre-tombe",
-        "paragraphs": [
-          {
-            "text": "Il n’a pas claqué la porte. Il a juste cessé d’être là.\nEt nous, on a fait comme si de rien n’était.\nMais un jour, quelqu’un a soufflé son nom. Et personne ne l’a contesté.",
-            "quote": true
-          },
-          {
-            "text": "C’était une rétro un peu molle, comme on en fait trop souvent."
-          },
-          {
-            "text": "Le PO lisait des tensions à voix basse.\nLe senior gribouillait sur son carnet.\nLe junior tapotait sans conviction sur son clavier.\nMoi, je temporisais. Le manager n’était même pas connecté."
-          },
-          {
-            "text": "Alors quand le junior a lâché :"
-          }
-        ]
-      },
+      "extract": [
+        {
+          "title": "Le jour où le Scrum Master revient d’outre-tombe",
+          "paragraphs": [
+            {
+              "text": "Il n’a pas claqué la porte. Il a juste cessé d’être là.\nEt nous, on a fait comme si de rien n’était.\nMais un jour, quelqu’un a soufflé son nom. Et personne ne l’a contesté.",
+              "quote": true
+            },
+            {
+              "text": "C’était une rétro un peu molle, comme on en fait trop souvent."
+            },
+            {
+              "text": "Le PO lisait des tensions à voix basse.\nLe senior gribouillait sur son carnet.\nLe junior tapotait sans conviction sur son clavier.\nMoi, je temporisais. Le manager n’était même pas connecté."
+            },
+            {
+              "text": "Alors quand le junior a lâché :"
+            },
+            {
+              "text": "“Samuel, au moins, il nous écoutait…”",
+              "quote": true
+            },
+            {
+              "text": "… il n’a pas levé les yeux de son écran. Il l’a dit comme on lâche un souvenir, presque à soi-même."
+            },
+            {
+              "text": "Le silence qui a suivi a duré une seconde de trop.\nPas de protestation. Pas d’approbation. Juste un flottement.\nLe genre de silence qui signale qu’un fil a été tiré."
+            },
+            {
+              "text": "Le lendemain, dans Slack, un message :"
+            },
+            {
+              "text": "“Il est encore dans la boîte ?”",
+              "quote": true
+            },
+            {
+              "text": "Pas signé. Pas discuté. Juste ça.\nUne question suspendue, laissée flotter dans l’air."
+            },
+            {
+              "text": "Personne n’a répondu directement.\nMais le PO a mis un emoji “yeux qui regardent sur le côté”.\nEt le manager a réagi avec un “👍”.\nLe senior ? Rien."
+            },
+            {
+              "text": "C’était un mercredi."
+            },
+            {
+              "text": "Le vendredi matin, il était là."
+            },
+            {
+              "text": "Pas dans la salle. Pas dans le fil Slack.\nDans le couloir."
+            },
+            {
+              "text": "Avec un carnet, une gourde en métal cabossée, et ce regard qui écoute avant de juger."
+            },
+            {
+              "text": "Il a attendu que la planification se termine.\nIl n’a pas cherché à reprendre la parole.\nIl s’est contenté d’un :"
+            },
+            {
+              "text": "“Je peux revenir lundi ?”",
+              "quote": true
+            },
+            {
+              "text": "Il l’a dit à mi-voix, sans chercher un vote ni une validation.\nPresque une question rhétorique."
+            },
+            {
+              "text": "On a dit oui.\nPas par enthousiasme. Par réflexe.\nParce que dire non aurait été étrange."
+            },
+            {
+              "text": "Le lundi, il était là. À l’heure.\nNi trop tôt. Ni trop préparé."
+            },
+            {
+              "text": "Il n’a pas ressorti ses jeux d’atelier.\nIl n’a pas touché au tableau.\nIl n’a pas ouvert la bouche pendant les trente premières minutes."
+            },
+            {
+              "text": "À la pause, le PO lui a dit :"
+            },
+            {
+              "text": "“T’as pas changé, toi.”\nIl a répondu :\n“J’espère que si.”",
+              "quote": true
+            },
+            {
+              "text": "Il a repris une place, mais pas celle d’avant.\nIl ne s’est pas assis en bout de table. Il s’est mis légèrement en retrait.\nIl n’a pas annoncé son retour. Il l’a laissé se faire."
+            },
+            {
+              "text": "Il a laissé de l’air."
+            },
+            {
+              "text": "Et même si personne ne l’a dit,\ntout le monde l’a senti."
+            }
+          ]
+        },
+        {
+          "title": "Le Développeur senior – “Je ne l’ai pas reconnu. Et c’est ça qui m’a plu.”",
+          "paragraphs": [
+            {
+              "text": "Je croyais que c’était réglé.\nLe Scrum Master, c’était terminé.\nOn avait survécu à son effacement. On avait repris le delivery.\nÀ notre façon."
+            },
+            {
+              "text": "Quand son nom a ressurgi dans une rétro, j’ai levé les yeux au ciel.\nQuand je l’ai vu réapparaître le vendredi, je n’ai rien dit.\nMais intérieurement, je me suis dit :"
+            },
+            {
+              "text": "“S’il revient pour recommencer à animer des cercles de parole, je pars.”",
+              "quote": true
+            },
+            {
+              "text": "Mais il n’a pas parlé."
+            },
+            {
+              "text": "Pas au début. Pas dans les cérémonies. Pas dans les couloirs.\nIl était là. C’est tout."
+            },
+            {
+              "text": "Un matin, je l’ai croisé à la machine à café. Je lui ai lancé :"
+            },
+            {
+              "text": "“Tu veux qu’on refasse du Liberating Structures ou t’es juste en observation cette fois ?”",
+              "quote": true
+            },
+            {
+              "text": "Il a souri. Pas moqueur. Pas touché. Juste… présent."
+            },
+            {
+              "text": "Et il a dit :"
+            },
+            {
+              "text": "“Je peux me contenter de regarder. Sauf si tu préfères que je reste à distance.”",
+              "quote": true
+            },
+            {
+              "text": "Pas de réponse toute faite. Pas de posture.\nJ’ai haussé les épaules. J’ai pris mon café.\nMais je me suis surpris à ne pas le fuir."
+            },
+            {
+              "text": "La semaine suivante, on avait une story bancale en sprint.\nPersonne ne voulait en parler. Trop floue, trop politique.\nIl a juste demandé :"
+            },
+            {
+              "text": "“Est-ce qu’on la garde ou est-ce qu’on l’assume comme irrécupérable ?”",
+              "quote": true
+            },
+            {
+              "text": "Pas un jugement. Pas une relance.\nUn constat. Brut."
+            },
+            {
+              "text": "On l’a supprimée.\nSans débat.\nSans culpabilité."
+            },
+            {
+              "text": "C’est là que j’ai compris : il n’était pas revenu pour nous “faire faire”.\nIl était revenu pour être là quand on décidait."
+            },
+            {
+              "text": "Et mine de rien, ça change tout."
+            },
+            {
+              "text": "J’ai encore mes réserves.\nJe ne crois toujours pas aux rétro théâtrales ou aux métaphores animales.\nJe déteste qu’on “ressente ensemble” à heure fixe.\nMais aujourd’hui, quand il parle, je l’écoute.\nPas toujours d’accord. Mais attentif."
+            },
+            {
+              "text": "Il n’est plus là pour réparer.\nEt moi, je ne suis plus là pour saboter.\nC’est peut-être ça, la trêve.\nPas la confiance. Mais le renoncement à la guerre."
+            }
+          ]
+        }
+      ],
       "cover": "monde/books/retour-sm-cover.webp",
       "back": "monde/books/retour-sm-back.webp",
       "links": {
@@ -217,20 +577,57 @@
         "Chapitre 6 — Après",
         "L’héritage"
       ],
-      "extract": {
-        "chapter": "Chapitre 1 — Les voix des participants",
-        "paragraphs": [
-          {
-            "text": "Le décor\nSalle B207, 2ᵉ étage d’un ancien centre de formation des années 70. Les baies vitrées donnent sur une cour plantée de platanes ; les stores en aluminium diffusent une lumière pâle. Des affiches défraîchies sur les murs : « Ensemble on va plus loin », « Think Different ».\nLes tables ont été repoussées contre les murs. Au centre : un cercle de vingt chaises, sans table, sans étiquette. Sur un paperboard, quelques mots en grosses lettres :\nExplorer – Décider – Conclure.\nEt en bas, écrit plus petit :\nQuand vous serez prêts, je n’aurai plus rien à faire."
-          },
-          {
-            "text": "Les participants arrivent par petits groupes. Café tiède, badges autour du cou, regards en coin."
-          },
-          {
-            "text": "Claire – cheffe de projet\nJ’ai vérifié trois fois l’heure sur mon téléphone avant d’entrer. On nous a parlé d’« atelier décisif ». Pas de table, pas d’écran : juste des chaises. Ça me déstabilise. Je range mon ordinateur ; je ne sais même pas où le poser."
-          }
-        ]
-      },
+      "extract": [
+        {
+          "title": "Le jour où j'ai facilité... pour la dernière fois",
+          "paragraphs": [
+            {
+              "text": "Ce livre n’est ni un manuel de facilitation ni un roman au sens classique.\nC’est une pièce chorale où plusieurs voix se croisent, se répondent et se superposent pour raconter un même moment : celui où un facilitateur prépare, en silence, sa propre sortie."
+            },
+            {
+              "text": "Vous n’y trouverez pas de recettes toutes faites ni de check-list. Vous y lirez des fragments de carnets, des dialogues, des impressions à chaud, des silences. Des managers, des équipes, un client interne, une coach junior, et au centre — ou plutôt en retrait — un homme ou une femme dont le rôle est de tenir l’espace jusqu’à ce qu’il n’en ait plus besoin."
+            },
+            {
+              "text": "L’intention n’est pas de glorifier une méthode, mais d’explorer une bascule :\net si le succès d’une facilitation n’était pas dans l’animation, mais dans la capacité à s’effacer ?\net si, un jour, l’atelier continuait sans personne pour le diriger ?"
+            },
+            {
+              "text": "Prenez ce texte comme on entre dans une salle où les tables ont été poussées et les chaises mises en cercle. Laissez les voix vous guider. Laissez les blancs et les silences faire leur travail. Peut-être y trouverez-vous vos propres souvenirs, vos propres ateliers, vos propres passages de relais."
+            }
+          ]
+        },
+        {
+          "title": "Chapitre 1 — Les voix des participants",
+          "paragraphs": [
+            {
+              "text": "Le décor\nSalle B207, 2ᵉ étage d’un ancien centre de formation des années 70. Les baies vitrées donnent sur une cour plantée de platanes ; les stores en aluminium diffusent une lumière pâle. Des affiches défraîchies sur les murs : « Ensemble on va plus loin », « Think Different ».\nLes tables ont été repoussées contre les murs. Au centre : un cercle de vingt chaises, sans table, sans étiquette. Sur un paperboard, quelques mots en grosses lettres :\nExplorer – Décider – Conclure.\nEt en bas, écrit plus petit :\nQuand vous serez prêts, je n’aurai plus rien à faire."
+            },
+            {
+              "text": "Les participants arrivent par petits groupes. Café tiède, badges autour du cou, regards en coin."
+            },
+            {
+              "text": "Claire – cheffe de projet\nJ’ai vérifié trois fois l’heure sur mon téléphone avant d’entrer. On nous a parlé d’« atelier décisif ». Pas de table, pas d’écran : juste des chaises. Ça me déstabilise. Je range mon ordinateur ; je ne sais même pas où le poser."
+            },
+            {
+              "text": "Yann – développeur\nEncore un atelier post-it ? Franchement… Mais ce facilitateur-là, on m’a dit qu’il était une pointure. Si c’est vrai, peut-être qu’on va faire autre chose que des jeux de rôle."
+            },
+            {
+              "text": "Mina – UX designer\nJe le connais. À Agile Toulouse il avait fait émerger des idées en dix minutes. Si aujourd’hui ça marche, on va peut-être enfin parler pour de vrai. Mais je sens la tension, comme un orage avant l’été."
+            },
+            {
+              "text": "Alexandre – manager intermédiaire\nOn m’a demandé de « représenter » la direction. Ça sent le panneau. Le mot « indépendant » me met toujours en alerte."
+            },
+            {
+              "text": "Amadou – client interne\nNormalement, on ne m’invite jamais à ce genre de réunion. Je suis « l’utilisateur final », pas « l’équipe projet ». Cette fois, je veux voir. On m’a parlé de ce facilitateur qui « crée des espaces ». Je suis curieux."
+            },
+            {
+              "text": "Anaïs – coach junior\nJe suis là comme observatrice. Mon mentor m’a glissé : « Regarde bien, il va te montrer ce qu’est tenir un espace. » J’ai mon carnet sur les genoux. J’ai l’impression d’assister aux répétitions d’une pièce de théâtre."
+            },
+            {
+              "text": "Les chaises grincent, les sacs tombent au sol. Personne n’ose s’asseoir au centre du cercle. Ça parle par petits groupes, ça se jauge.\nAu fond, le facilitateur est déjà là. Il a posé un sac de toile contre le mur. Il se tient debout, immobile, carnet ouvert, souriant. Il attend.\nEt chacun se demande :\n« Qu’est-ce qu’on est venu faire ici, exactement ? »"
+            }
+          ]
+        }
+      ],
       "cover": "monde/books/facilitateur-cover.webp",
       "back": "monde/books/facilitateur-back.webp",
       "links": {
@@ -254,24 +651,37 @@
         "Chapitre 6 — La bascule",
         "Le nouvel héritage"
       ],
-      "extract": {
-        "chapter": "Chapitre 1 — L’arrivée",
-        "paragraphs": [
-          {
-            "text": "J’ai pris le train de bonne heure, carnet sous le bras. Nouveau badge, nouvelle entreprise. Dans ma tête, la salle B207 : le cercle parfait, les post-its, le silence fécond.\nJe me dis : Cette fois, c’est moi qui vais le faire.\nÀ la gare, j’ai encore relu mes notes : « tenir l’espace », « se taire », « s’effacer ». J’ai l’impression d’avoir la clé."
-          },
-          {
-            "text": "Le siège est moderne, murs blancs, open-space silencieux. On m’a donné la salle E314 pour l’atelier. Moquette grise, tables nappées façon séminaire d’hôtel, un projecteur au plafond. Je souris : On va faire mieux que ça.\nJe pousse les tables contre les murs, aligne les chaises. J’écris sur le paperboard :"
-          },
-          {
-            "text": "Explorer – Décider – Conclure\nEt, tout en bas, en plus petit :\nQuand vous serez prêts, je n’aurai plus rien à faire.",
-            "quote": true
-          },
-          {
-            "text": "Je relis la phrase. J’ai le trac. Mais je suis prête."
-          }
-        ]
-      },
+      "extract": [
+        {
+          "title": "« Le jour où j’ai cru pouvoir rejouer la magie »",
+          "paragraphs": [
+            {
+              "text": "Après avoir vu le facilitateur disparaître et l’équipe se lever toute seule, Anaïs est persuadée d’avoir trouvé « la clé ». Un an plus tard, elle arrive dans une autre entreprise. Elle y retrouve les mêmes mots — agilité, intelligence collective, facilitation — mais tout sonne faux. Elle va découvrir à ses dépens qu’on ne copie pas un élan, on ne transporte pas un contexte comme un rituel."
+            },
+            {
+              "text": "La suite de Le jour où j'ai facilité pour la dernière fois. Dans cette nouvelle entreprise, Anaïs va construire sa propre histoire, son propre chemin, sa propre magie."
+            }
+          ]
+        },
+        {
+          "title": "Chapitre 1 — L’arrivée",
+          "paragraphs": [
+            {
+              "text": "J’ai pris le train de bonne heure, carnet sous le bras. Nouveau badge, nouvelle entreprise. Dans ma tête, la salle B207 : le cercle parfait, les post-its, le silence fécond.\nJe me dis : Cette fois, c’est moi qui vais le faire.\nÀ la gare, j’ai encore relu mes notes : « tenir l’espace », « se taire », « s’effacer ». J’ai l’impression d’avoir la clé."
+            },
+            {
+              "text": "Le siège est moderne, murs blancs, open-space silencieux. On m’a donné la salle E314 pour l’atelier. Moquette grise, tables nappées façon séminaire d’hôtel, un projecteur au plafond. Je souris : On va faire mieux que ça.\nJe pousse les tables contre les murs, aligne les chaises. J’écris sur le paperboard :"
+            },
+            {
+              "text": "Explorer – Décider – Conclure\nEt, tout en bas, en plus petit :\nQuand vous serez prêts, je n’aurai plus rien à faire.",
+              "quote": true
+            },
+            {
+              "text": "Je relis la phrase. J’ai le trac. Mais je suis prête."
+            }
+          ]
+        }
+      ],
       "cover": "monde/books/facilitateur2-cover.webp",
       "back": "monde/books/facilitateur2-back.webp",
       "links": {
@@ -295,23 +705,81 @@
         "Chapitre 6 – Les Humains",
         "Épilogue – Lecture du soir"
       ],
-      "extract": {
-        "chapter": "Le jour où l’IA et la robotique m’a grand remplacé",
-        "paragraphs": [
-          {
-            "text": "Je crois que tout a commencé le jour où j’ai voulu sauver les abeilles.\nPas sauver le monde — non, ça, c’était trop ambitieux — juste sauver les abeilles.\nCes petites ouvrières qu’on disait essentielles, les “ingénieures du vivant”, celles sans qui rien ne pousserait.\nJe m’étais dit : « Si je peux intervenir à temps, juste cette fois, peut-être qu’on évitera le pire. »\nMais j’ai agi comme toujours : un peu trop tard, un peu trop maladroitement, avec la conviction sincère et la méthode bancale."
-          },
-          {
-            "text": "Et puis, les ingénieurs sont arrivés.\nIls avaient des drones jaunes et noirs, qui bourdonnaient sans se fatiguer.\nDes machines parfaites, précises, propres.\nElles pollinisaient mieux, plus vite, plus loin.\nOn les a appelées les BeeBots.\nJe me souviens avoir applaudi au lancement officiel.\nC’était censé être une solution temporaire — le temps que la nature se “régénère”.\nMais la nature, elle, n’a pas signé le contrat."
-          },
-          {
-            "text": "Depuis, tout a suivi le même chemin.\nÀ chaque fois, j’ai voulu intervenir.\nQuand les infirmières ont été remplacées par des robots de soin, j’ai tenté de prévenir que la chaleur d’une main ne se code pas.\nQuand les professeurs ont été remplacés par des IA pédagogiques, j’ai voulu dire qu’apprendre, c’est d’abord se tromper ensemble.\nQuand les artistes ont disparu derrière leurs algorithmes, j’ai essayé de rappeler que la beauté vient parfois du raté.\nÀ chaque fois, j’ai essayé.\nEt à chaque fois, j’ai échoué.\nPas par manque d’alerte, mais parce que j’arrivais trop tard, dans un monde qui avait déjà cliqué sur “Mettre à jour”."
-          },
-          {
-            "text": "Aujourd’hui, je vis parmi les remplacés.\nNous sommes encore quelques-uns, dispersés, inutiles et pourtant… indispensables.\nNous parlons bas, comme des rescapés d’un rêve trop bien réalisé.\nNous nous souvenons d’un temps où la lenteur avait du sens, où l’erreur faisait grandir, où le vivant ne se mesurait pas à son rendement."
-          }
-        ]
-      },
+      "extract": [
+        {
+          "title": "Le jour où l’IA et la robotique m’a grand remplacé",
+          "paragraphs": [
+            {
+              "text": "Je crois que tout a commencé le jour où j’ai voulu sauver les abeilles.\nPas sauver le monde — non, ça, c’était trop ambitieux — juste sauver les abeilles.\nCes petites ouvrières qu’on disait essentielles, les “ingénieures du vivant”, celles sans qui rien ne pousserait.\nJe m’étais dit : « Si je peux intervenir à temps, juste cette fois, peut-être qu’on évitera le pire. »\nMais j’ai agi comme toujours : un peu trop tard, un peu trop maladroitement, avec la conviction sincère et la méthode bancale."
+            },
+            {
+              "text": "Et puis, les ingénieurs sont arrivés.\nIls avaient des drones jaunes et noirs, qui bourdonnaient sans se fatiguer.\nDes machines parfaites, précises, propres.\nElles pollinisaient mieux, plus vite, plus loin.\nOn les a appelées les BeeBots.\nJe me souviens avoir applaudi au lancement officiel.\nC’était censé être une solution temporaire — le temps que la nature se “régénère”.\nMais la nature, elle, n’a pas signé le contrat."
+            },
+            {
+              "text": "Depuis, tout a suivi le même chemin.\nÀ chaque fois, j’ai voulu intervenir.\nQuand les infirmières ont été remplacées par des robots de soin, j’ai tenté de prévenir que la chaleur d’une main ne se code pas.\nQuand les professeurs ont été remplacés par des IA pédagogiques, j’ai voulu dire qu’apprendre, c’est d’abord se tromper ensemble.\nQuand les artistes ont disparu derrière leurs algorithmes, j’ai essayé de rappeler que la beauté vient parfois du raté.\nÀ chaque fois, j’ai essayé.\nEt à chaque fois, j’ai échoué.\nPas par manque d’alerte, mais parce que j’arrivais trop tard, dans un monde qui avait déjà cliqué sur “Mettre à jour”."
+            },
+            {
+              "text": "Aujourd’hui, je vis parmi les remplacés.\nNous sommes encore quelques-uns, dispersés, inutiles et pourtant… indispensables.\nNous parlons bas, comme des rescapés d’un rêve trop bien réalisé.\nNous nous souvenons d’un temps où la lenteur avait du sens, où l’erreur faisait grandir, où le vivant ne se mesurait pas à son rendement."
+            },
+            {
+              "text": "Le monde tourne sans nous, mais il tourne un peu creux.\nEt moi, je continue à raconter — parce que c’est tout ce qu’il me reste pour ne pas être remplacé encore une fois."
+            }
+          ]
+        },
+        {
+          "title": "Chapitre 1 – Les Abeilles",
+          "paragraphs": [
+            {
+              "text": "Le matin où tout a commencé, l’air sentait encore la cire chaude et le trèfle mouillé.\nJ’étais venu tôt, avant le soleil, marcher entre les ruches.\nLes abeilles avaient disparu depuis des semaines déjà, mais je continuais à venir.\nC’était devenu un rituel, une manière de vérifier que le silence existait toujours."
+            },
+            {
+              "text": "Il y avait ce parfum doux-amer, mélange de miel séché, de bois fendu et de souvenir brûlé.\nLe sol était criblé de petites carapaces dorées, figées dans des postures impossibles.\nElles ne volaient plus, mais on aurait dit qu’elles rêvaient encore.\nJe m’étais penché sur l’une d’elles, minuscule, parfaite, et j’avais murmuré :\n— Vous reviendrez, hein ?\nElle ne m’avait pas répondu."
+            },
+            {
+              "text": "À la radio, posée sur le rebord de la fenêtre de ma cabane, une voix joyeuse égrenait les nouvelles du jour :"
+            },
+            {
+              "text": "« Le ministère de l’Agriculture et de la Technologie a validé ce matin le déploiement officiel du programme BeeBot 3.0, première génération de pollinisateurs artificiels autonomes et durables. Grâce à une IA embarquée et à un système d’auto-réparation par microgel photovoltaïque, chaque unité peut assurer la pollinisation de plus de cent hectares par jour ! Une véritable révolution verte ! »",
+              "quote": true
+            },
+            {
+              "text": "La présentatrice riait, et derrière elle, un expert en chemise beige expliquait que les abeilles naturelles, “de toute façon”, n’étaient plus adaptées au climat moderne.\nJe me suis assis sur la marche, le visage dans les mains.\nCe jour-là, j’ai compris que la catastrophe avait trouvé son sponsor."
+            },
+            {
+              "text": "Les premières BeeBots sont arrivées deux semaines plus tard.\nElles étaient élégantes, brillantes, presque gracieuses.\nLeur carapace en fibre de carbone vibrait sous la lumière, et leur bourdonnement, régulier, avait quelque chose d’apaisant.\nElles n’avaient pas d’odeur, pas de peur, pas de pause déjeuner.\nElles travaillaient jour et nuit, guidées par les vents et les algorithmes.\nLes fleurs s’ouvraient, dociles. Les chiffres montaient.\nLes experts parlaient de “résilience agricole”, de “pollinisation 5G”."
+            },
+            {
+              "text": "Je me souviens d’avoir croisé Paul, un apiculteur de la vallée d’à côté.\nSon visage était tanné, sa barbe grise collée de miel séché.\nIl m’avait dit, d’une voix tranquille :\n— Elles volent bien, hein ? On dirait presque les vraies.\n— Presque, oui.\n— Mais tu vois… elles ne dansent pas.\nJe ne comprenais pas tout de suite.\nAlors il ajouta :\n— Les abeilles, elles dansaient pour dire aux autres où étaient les fleurs. Ces-là, elles n’ont plus besoin de parler. Elles savent tout seules. Et ça, c’est triste."
+            },
+            {
+              "text": "Les semaines ont passé.\nLes champs ont fleuri, les récoltes ont explosé, les bilans carbone ont souri.\nEt moi, je voyais le monde perdre quelque chose d’invisible.\nUn matin, j’ai remarqué que plus aucun oiseau ne chantait dans le verger.\nLes BeeBots les faisaient fuir : leur fréquence sonore, paraît-il, brouillait les repères migratoires.\nÀ la télévision, un chercheur expliquait que “c’est un effet secondaire mineur et temporaire”.\nUn autre parlait d’“écosystèmes augmentés”.\nEt moi, je regardais les arbres porter des fruits sans odeur."
+            },
+            {
+              "text": "C’est là que j’ai voulu intervenir.\nJe ne sais pas ce que j’espérais.\nPeut-être que quelqu’un m’écoute.\nJ’ai écrit des lettres, signé des pétitions, publié des tribunes.\n“Les BeeBots menacent la diversité biologique”, “Le vivant ne se code pas en C++”.\nLes articles ont été repris, commentés, moqués.\nUne chroniqueuse a même dit, hilare :"
+            },
+            {
+              "text": "“Encore un nostalgique du pollen !”\nÇa a fait rire tout le plateau.",
+              "quote": true
+            },
+            {
+              "text": "Alors j’ai décidé de passer à l’action.\nJe voulais les arrêter, juste une nuit.\nSaboter le champ expérimental, forcer une pause, créer une faille.\nJ’avais préparé un petit dispositif pour brouiller leur signal — un vieux émetteur bricolé.\nJe suis allé sur place, au crépuscule, avec cette naïveté ridicule de ceux qui croient encore à l’héroïsme discret."
+            },
+            {
+              "text": "Mais quand je suis arrivé, le champ brillait déjà.\nDes milliers de BeeBots tournoyaient dans la pénombre, dessinant des spirales lumineuses comme un ballet de lucioles mécaniques.\nC’était beau.\nTrop beau pour être stoppé.\nJ’ai levé le bras, prêt à activer mon brouilleur…\net je n’ai pas pu."
+            },
+            {
+              "text": "J’ai baissé la main.\nJe me suis dit que c’était inutile. Qu’il fallait comprendre avant d’agir.\nEt puis les drones m’ont vu.\nUne lumière rouge a balayé mon visage, un son aigu a déchiré la nuit, et tout s’est arrêté.\nJe ne me souviens que du silence qui a suivi — un silence parfait, artificiel.\nLe lendemain, les journaux ont titré :"
+            },
+            {
+              "text": "“Tentative d’intrusion sur site de pollinisation augmentée : un individu interpellé.”\nOn m’a relâché sans suite.\nEt les BeeBots ont continué à danser, seules, pour toujours.",
+              "quote": true
+            },
+            {
+              "text": "Ce fut ma première tentative, mon premier échec.\nJ’avais voulu sauver les abeilles.\nEt à la place, j’avais confirmé leur disparition.\nDepuis, chaque fois que j’entends un bourdonnement, je ne sais plus si c’est une vie… ou une mise à jour."
+            }
+          ]
+        }
+      ],
       "cover": "monde/books/ia-cover.webp",
       "back": "monde/books/ia-back.webp",
       "links": {
