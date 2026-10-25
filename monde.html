@@ -127,6 +127,26 @@
     }
     #monde-share:hover, #monde-share:focus-visible, #monde-share[aria-expanded="true"] { border-color: var(--accent); color: var(--accent); }
     #monde-share[hidden] { display: none; }
+    /* Plein écran : seulement sur téléphone tenu à l'horizontale (la barre du navigateur mange la
+       hauteur) ; caché aussi là où la page ne peut pas passer en plein écran (iPhone, cf. monde.ts) */
+    #monde-fullscreen {
+      flex: none;
+      display: none;
+      place-items: center;
+      width: 2.25rem;
+      height: 2.25rem;
+      border: 1px solid var(--border);
+      border-radius: 50%;
+      background: transparent;
+      color: var(--text);
+      cursor: pointer;
+    }
+    @media (orientation: landscape) and (pointer: coarse) and (max-height: 540px) { #monde-fullscreen { display: grid; } }
+    #monde-fullscreen[hidden] { display: none; }
+    #monde-fullscreen:hover, #monde-fullscreen:focus-visible { border-color: var(--accent); color: var(--accent); }
+    #monde-fullscreen svg { width: 1.1rem; height: 1.1rem; }
+    #monde-fullscreen .exit, #monde-fullscreen[aria-pressed="true"] .enter { display: none; }
+    #monde-fullscreen[aria-pressed="true"] .exit { display: block; }
     /* Panneau réduit / rouvert (cf. monde/overlay.ts) : même pastille ; un point quand il a du nouveau */
     #monde-panel {
       position: relative;
@@ -272,6 +292,8 @@
     #monde-caption h2 { font-family: 'Playfair Display', Georgia, serif; font-size: 1.2rem; line-height: 1.25; }
     #monde-caption p { margin-top: .4rem; font-size: .95rem; }
     .monde-caption-tagline { font-style: italic; color: var(--muted); }
+    .monde-caption-details { margin: .25rem 0 .75rem; padding-left: 1.1rem; font-size: .9rem; }
+    .monde-caption-details li { margin: .2rem 0; }
     .monde-caption-audio { color: var(--muted); }
     .monde-caption-links { display: flex; flex-wrap: wrap; gap: .4rem 1rem; margin-top: .7rem; }
     .monde-caption-links a { color: var(--accent); font-weight: 600; text-decoration: none; }
@@ -433,6 +455,12 @@
       pointer-events: none;
     }
     .monde-bd[hidden] { display: none; }
+    /* Parole de Blabou, à l'étage (cf. monde/etageBlabou.ts) : à sa couleur, comme dans le jeu */
+    .monde-bd-blabou { border-color: #ffb833; box-shadow: 4px 5px 0 rgba(255, 184, 51, .35); }
+    .monde-bd-blabou::before { border-color: #ffb833 transparent transparent transparent; }
+    /* Bulle accrochée à qui parle : sa pointe au-dessus de la tête (recalée à chaque image, cf. monde.ts) */
+    .monde-bd-anchored { top: 0; transform: translate(-40%, calc(-100% - 20px)) rotate(-1.5deg); max-width: min(20rem, calc(100vw - 2rem)); font-size: 1.05rem; }
+    @media (max-width: 600px) { .monde-bd-anchored { top: 0; font-size: .95rem; } }
     @media (max-width: 600px) { .monde-bd { top: 9%; font-size: 1.05rem; padding: .6rem .9rem; } }
     /* Pointe de la bulle, vers les livres */
     .monde-bd::before, .monde-bd::after {
@@ -471,8 +499,9 @@
       .monde-nav .short { display: inline; }
     }
     @media (max-width: 759px) { :root[data-sommaire="barre"] .monde-sections { display: none; } }
-    /* Boutons du bas : ceux du bureau, ou ceux de l'aile voisine (cf. monde/wing.ts) */
-    :root[data-lieu="aile"] .monde-nav-office, :root:not([data-lieu="aile"]) .monde-nav-wing { display: none; }
+    /* Boutons du bas : ceux du bureau, de l'aile voisine (cf. monde/wing.ts) ou de l'étage (cf. monde/etage.ts) */
+    :root[data-lieu="aile"] .monde-nav-office, :root[data-lieu="etage"] .monde-nav-office,
+    :root:not([data-lieu="aile"]) .monde-nav-wing, :root:not([data-lieu="etage"]) .monde-nav-etage { display: none; }
 
     /* Lecteur vidéo posé sur le mini-écran de la radio (cf. monde.ts, recalé à chaque image) */
     #monde-video { position: fixed; top: 0; left: 0; z-index: 3; background: #000; }
@@ -571,6 +600,14 @@
           <path d="M8 10.5H6a1.5 1.5 0 0 0-1.5 1.5v7.5A1.5 1.5 0 0 0 6 21h12a1.5 1.5 0 0 0 1.5-1.5V12a1.5 1.5 0 0 0-1.5-1.5h-2"/>
         </svg>
       </button>
+      <button id="monde-fullscreen" type="button" aria-label="Plein écran" title="Plein écran" aria-pressed="false">
+        <svg class="enter" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+          <path d="M4 9V4h5M15 4h5v5M20 15v5h-5M9 20H4v-5"/>
+        </svg>
+        <svg class="exit" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+          <path d="M9 4v5H4M20 9h-5V4M15 20v-5h5M4 15h5v5"/>
+        </svg>
+      </button>
       <button id="monde-theme" type="button" aria-label="Passer à la nuit" title="Passer à la nuit">
         <svg class="sun" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" aria-hidden="true">
           <circle cx="12" cy="12" r="4.2" fill="currentColor"/>
@@ -616,12 +653,16 @@
   <nav class="monde-nav" aria-label="Points de vue">
     <button type="button" data-view="overview" aria-pressed="true" class="monde-nav-office"><span class="long">Vue d'ensemble</span><span class="short">Bureau</span></button>
     <button type="button" data-view="shelf" aria-pressed="false" class="monde-nav-office"><span class="long">L'étagère</span><span class="short">Étagère</span></button>
-    <button type="button" data-view="armchair" aria-pressed="false" class="monde-nav-office"><span class="long">Le fauteuil</span><span class="short">Fauteuil</span></button>
+    <button type="button" data-view="etage" aria-pressed="false" class="monde-nav-office"><span class="long">Logibla</span><span class="short">Logibla</span></button>
     <button type="button" data-view="lectern" aria-pressed="false" class="monde-nav-office monde-nav-lectern"><span class="long">Le sommaire</span><span class="short">Sommaire</span></button>
     <button type="button" data-view="overview" aria-pressed="false" class="monde-nav-wing"><span class="long">← Le bureau</span><span class="short">← Bureau</span></button>
     <button type="button" data-view="outils" aria-pressed="false" class="monde-nav-wing"><span class="long">Outils</span><span class="short">Outils</span></button>
     <button type="button" data-view="ateliers" aria-pressed="false" class="monde-nav-wing"><span class="long">Ateliers</span><span class="short">Ateliers</span></button>
     <button type="button" data-view="conferences" aria-pressed="false" class="monde-nav-wing"><span class="long">Conférences</span><span class="short">Conf.</span></button>
+    <button type="button" data-view="overview" aria-pressed="false" class="monde-nav-etage"><span class="long">↓ Le bureau</span><span class="short">↓ Bureau</span></button>
+    <button type="button" data-view="etage-apps" aria-pressed="false" class="monde-nav-etage"><span class="long">Les apps</span><span class="short">Apps</span></button>
+    <button type="button" data-view="etage-fps" aria-pressed="false" class="monde-nav-etage"><span class="long">Les jeux</span><span class="short">Jeux</span></button>
+    <button type="button" data-view="etage-cours" aria-pressed="false" class="monde-nav-etage"><span class="long">Les cours</span><span class="short">Cours</span></button>
   </nav>
 
   <button type="button" id="monde-skip" hidden>Toucher pour arriver tout de suite</button>

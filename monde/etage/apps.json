@@ -1,0 +1,84 @@
+{
+  "apps": [
+    {
+      "id": "social",
+      "name": "Social",
+      "pitch": "Un fil social sans algorithme ni publicité, entre toi et les gens qui comptent.",
+      "url": "https://social.logibla.fr",
+      "access": "compte",
+      "image": "icons/icon-social.png"
+    },
+    {
+      "id": "kanban",
+      "name": "Kanban",
+      "pitch": "Organise tes tâches en tableaux, à ton rythme.",
+      "url": "https://kanban.logibla.fr",
+      "access": "compte",
+      "image": "icons/icon-kanban.png"
+    },
+    {
+      "id": "agenda",
+      "name": "Agenda",
+      "pitch": "Planifie tes rendez-vous sans jongler entre outils.",
+      "url": "https://agenda.logibla.fr",
+      "access": "compte",
+      "image": "icons/icon-agenda.png"
+    },
+    {
+      "id": "carriere",
+      "name": "Carrière",
+      "pitch": "Pilote ta recherche d’emploi de bout en bout.",
+      "url": "https://carriere.logibla.fr",
+      "access": "compte",
+      "image": "icons/icon-carriere.png"
+    },
+    {
+      "id": "narration",
+      "name": "Blabou",
+      "pitch": "Blabou raconte, semaine après semaine, ce que tu vis dans tes apps Logibla.",
+      "url": "https://narration.logibla.fr",
+      "access": "compte",
+      "image": "icons/blabou.svg"
+    },
+    {
+      "id": "crm",
+      "name": "CRM",
+      "pitch": "Garde le fil de tes contacts professionnels.",
+      "url": "https://crm.logibla.fr",
+      "access": "compte",
+      "image": "icons/icon-crm.png"
+    },
+    {
+      "id": "reservations",
+      "name": "Réservations",
+      "pitch": "Réserve des créneaux sans échange de mails interminable.",
+      "url": "https://reservations.logibla.fr",
+      "access": "compte",
+      "image": "icons/icon-reservations.png"
+    },
+    {
+      "id": "bibliotheque",
+      "name": "Bibliothèque",
+      "pitch": "Des livres numériques vendus au fil de leur écriture.",
+      "url": "https://bibliotheque.logibla.fr",
+      "access": "public",
+      "emoji": "📚"
+    },
+    {
+      "id": "jeux",
+      "name": "Jeux",
+      "pitch": "Des jeux de société à jouer seul ou à plusieurs sur le même écran.",
+      "url": "https://jeux.logibla.fr",
+      "access": "public",
+      "emoji": "🎲"
+    },
+    {
+      "id": "metiers",
+      "name": "Métiers",
+      "pitch": "Classement interactif de métiers par comparaison.",
+      "url": "https://metiers.logibla.fr",
+      "access": "public",
+      "emoji": "💼"
+    }
+  ]
+}

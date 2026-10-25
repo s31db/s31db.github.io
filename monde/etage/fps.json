@@ -1,0 +1,65 @@
+{
+  "url": "https://logibla-fps.netlify.app",
+  "modes": [
+    {
+      "id": "sauvetage",
+      "name": "Sauvetage",
+      "pitch": "Retrouver la scientifique et l'escorter jusqu'à l'extraction",
+      "image": "fps/sauvetage.webp"
+    },
+    {
+      "id": "carriere",
+      "name": "Carrière",
+      "pitch": "L'aventure de Sara, tirée de la BD Blabou",
+      "image": "fps/carriere.webp"
+    },
+    {
+      "id": "famille",
+      "name": "Famille",
+      "pitch": "La journée de Léo (TDAH/TOP), avec des scènes à embranchements et les outils du programme de Barkley"
+    },
+    {
+      "id": "survie",
+      "name": "Survie",
+      "pitch": "Vagues d'ennemis sans fin, tenir le plus longtemps possible",
+      "image": "fps/survie.webp"
+    },
+    {
+      "id": "zone-de-tir",
+      "name": "Zone de tir",
+      "pitch": "Stand libre et épreuve chronométrée de 60 s : 4 armes, 3 munitions, 6 types de cibles",
+      "image": "fps/zone-de-tir.webp"
+    },
+    {
+      "id": "maison",
+      "name": "Maison",
+      "pitch": "Explorer une maison sur 5 niveaux avec un personnage au choix, et répondre aux quiz La Maison de chaque pièce",
+      "image": "fps/maison.webp"
+    },
+    {
+      "id": "cartes",
+      "name": "Cartes",
+      "pitch": "Belote, poker, Kems, tarot et président, contre des joueurs IA ou à plusieurs"
+    },
+    {
+      "id": "halloween",
+      "name": "Halloween",
+      "pitch": "Un Pac-Man en FPS : ramasser les bonbons d'un labyrinthe hanté, chassé par des fantômes, avec très peu de balles"
+    },
+    {
+      "id": "aviation",
+      "name": "Aviation",
+      "pitch": "Monter un Blériot XI à l’atelier et le piloter, du saut de puce à la traversée de la Manche (5 épreuves, médailles)"
+    },
+    {
+      "id": "jouer-a-plusieurs",
+      "name": "Jouer à plusieurs",
+      "pitch": "Un code de partie, 4 à 8 joueurs : Zone de tir et Survie en coopération"
+    },
+    {
+      "id": "galerie",
+      "name": "Galerie",
+      "pitch": "Voir en 3D les ennemis, les personnages, les armes, les cibles de la Zone de tir, les objets de la Carrière et les décors ; comparer des styles de personnages et parcourir un catalogue d'environ 220 personnages animés ; écouter les musiques (calque par calque) et les bruitages"
+    }
+  ]
+}

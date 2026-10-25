@@ -1,0 +1,26 @@
+{
+  "url": "https://cours.logibla.fr",
+  "contact": "mailto:sam@logibla.fr?subject=Une%20formation%20Logibla%20Cours",
+  "courses": [
+    {
+      "id": "un-depot-plutot-qu-un-classeur",
+      "title": "Un dépôt plutôt qu'un classeur",
+      "text": "Au début, il y avait un cours Docker : deux jours, à distance, et une question qui revenait à chaque pause — « tu peux me renvoyer la commande de tout à l'heure ? ». Blabou, qui passait par là, a trouvé ça dommage : le cours existait déjà, écrit quelque part, mais il restait coincé dans la tête et l'écran de la personne qui l'animait."
+    },
+    {
+      "id": "des-cours-qu-on-fait-pas-qu-on-ecoute",
+      "title": "Des cours qu'on fait, pas qu'on écoute",
+      "text": "Blabou a une conviction : on apprend un métier en le pratiquant. Chaque cours est donc construit autour d'exercices, de corrections et d'un fil rouge — un site de commande pour une boulangerie, une piscine à construire, un configurateur 3D. Les commandes se lancent depuis la page même du cours, et chaque module a sa sketchnote, une page dessinée qui le résume d'un coup d'œil."
+    },
+    {
+      "id": "ce-qu-on-garde-et-ce-qu-on-ne-garde-pas",
+      "title": "Ce qu'on garde, et ce qu'on ne garde pas",
+      "text": "Le code qu'on t'a donné est temporaire : il ne vaut que pour cette session, et rien ne te demande de créer un compte. Ton prénom n'est visible que par la personne qui anime ; quand les réponses sont montrées au groupe, elles le sont sans les noms, et une réponse repérée par le filtre (insulte, lien, coordonnées) n'est montrée qu'après relecture par la personne qui anime. Tes messages ne vont qu'à la personne qui anime ; envoyés sans ton prénom, ils ne gardent aucune trace de qui les a écrits. Ce qui est dit en formation reste au service de la formation."
+    },
+    {
+      "id": "ce-que-blabou-n-a-pas-encore-fait",
+      "title": "Ce que Blabou n'a pas encore fait",
+      "text": "Il y a des idées qui attendent leur tour : retrouver ce que tu as appris d'une session à l'autre, rejouer un quiz chez soi… Blabou y pense. Mais il préfère d'abord entendre ce que tu en dis — à la fin de la journée, n'hésite pas."
+    }
+  ]
+}

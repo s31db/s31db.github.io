@@ -1,0 +1,723 @@
+{
+  "stories": [
+    {
+      "id": "social",
+      "name": "Social",
+      "sections": [
+        {
+          "title": "La promesse",
+          "paragraphs": [
+            "Logibla Social est né d'une conviction simple : les liens entre les personnes méritent un espace qui leur appartient. Pas un réseau qui vend ton attention, pas une plateforme qui optimise l'engagement. Un fil, propre, entre toi et les gens qui comptent.",
+            "Ici, tu publies. Tu te connectes. Tu lis. Sans algorithme, sans publicité, sans bruit."
+          ]
+        },
+        {
+          "title": "La naissance",
+          "paragraphs": [
+            "Logibla Social a commencé par une image : et si tout le monde qui utilisait les outils Logibla pouvait se croiser ? Pas un réseau supplémentaire… un espace commun qui traverse les apps. Un lieu sans publicité, sans recommandation, sans pression d'engagement.",
+            "L'accueil a été conçu en premier. Simple, propre. Tu publies, les autres lisent. Puis les connexions ont grandi autour… l'envie de choisir à qui tu t'intéresses, plutôt que de subir une timeline décidée pour toi."
+          ]
+        },
+        {
+          "title": "Ce que tu fais ici",
+          "paragraphs": [
+            "Chaque post que tu publies est un fragment de ton activité. Chaque connexion que tu crées ou mets en pause laisse une trace. Ces traces, Blabou les collecte et les tisse en récit… une page de journal hebdomadaire qui te dit ce que tu as vécu cette semaine.",
+            "\"Cette semaine, tu as rejoint 2 nouvelles personnes et partagé 3 fois dans l'accueil.\" Rien de spectaculaire, mais c'est le tien."
+          ]
+        },
+        {
+          "title": "Ce qui vient",
+          "paragraphs": [
+            "L'accueil évolue. Les profils s'enrichissent. Le réseau grandit doucement, à hauteur humaine. Et Blabou continue d'observer, de collecter, de raconter… semaine après semaine, fidèlement."
+          ]
+        }
+      ],
+      "milestones": [
+        {
+          "date": "La fondation",
+          "label": "Un seul compte, toutes les portes… l'écosystème pensé d'un seul tenant"
+        },
+        {
+          "date": "Le fil",
+          "label": "Une place publique sans algorithme ni publicité… publier, lire, se retrouver"
+        },
+        {
+          "date": "Les nœuds",
+          "label": "Suivre des gens qu'on choisit, construire un réseau à soi"
+        },
+        {
+          "date": "Le visage",
+          "label": "Les profils… une identité qu'on façonne, un historique qui t'appartient"
+        },
+        {
+          "date": "L'oreille",
+          "label": "Blabou commence à écouter… tes actions sociales entrent dans le récit"
+        },
+        {
+          "date": "L'horizon",
+          "label": "Ce qui reste à concevoir : les conversations, les mentions, les notifications"
+        }
+      ]
+    },
+    {
+      "id": "kanban",
+      "name": "Kanban",
+      "sections": [
+        {
+          "title": "La promesse",
+          "paragraphs": [
+            "Logibla Kanban est né d'un besoin concret : voir où en sont les tâches, sans réunion, sans rapport, sans friction. Un tableau, des colonnes, des cartes que l'on déplace. Le travail rendu visible.",
+            "Pas de notifications anxiogènes, pas de métriques de productivité. Juste la clarté de ce qui est à faire, ce qui avance, ce qui est bouclé."
+          ]
+        },
+        {
+          "title": "La naissance",
+          "paragraphs": [
+            "Le kanban a été pensé dès le départ comme une pièce d'un écosystème — même authentification, même session que les autres apps Logibla. On passe du feed social aux tâches sans se reconnecter.",
+            "Le drag & drop est arrivé rapidement, puis le temps réel par WebSocket. Une tâche déplacée par un collègue se met à jour chez tous les participants, instantanément. Pas de rechargement, pas de décalage."
+          ]
+        },
+        {
+          "title": "Ce que tu fais ici",
+          "paragraphs": [
+            "Chaque tâche créée, déplacée ou bouclée laisse une trace. Blabou les collecte et les tisse en récit hebdomadaire — une phrase simple, honnête :",
+            "\"Cette semaine, tu as créé 4 tâches et en as bouclé 3.\" Rien de spectaculaire, mais c'est le reflet de ton effort réel."
+          ]
+        },
+        {
+          "title": "Ce qui vient",
+          "paragraphs": [
+            "Les colonnes évoluent. Les assignations arrivent. Les délais, les étiquettes, les filtres. Et Blabou continue d'observer — chaque tâche bouclée est une page de plus dans le journal de ce qui a été accompli."
+          ]
+        }
+      ],
+      "milestones": [
+        {
+          "date": "Phase 1",
+          "label": "Socle monorepo Bun — auth partagée, même session que les autres apps"
+        },
+        {
+          "date": "Phase 2",
+          "label": "Tableau kanban — colonnes, cartes, drag & drop fluide"
+        },
+        {
+          "date": "Phase 3",
+          "label": "Temps réel WebSocket — mises à jour instantanées entre participants"
+        },
+        {
+          "date": "Phase 4",
+          "label": "Couche narrative — tâches créées et bouclées alimentent Blabou"
+        },
+        {
+          "date": "Carrière",
+          "label": "Template candidatures et actions — le kanban au service de la recherche d'emploi"
+        },
+        {
+          "date": "À venir",
+          "label": "Assignations, délais, étiquettes, filtres par membre"
+        }
+      ]
+    },
+    {
+      "id": "agenda",
+      "name": "Agenda",
+      "sections": [
+        {
+          "title": "La promesse",
+          "paragraphs": [
+            "Logibla Agenda est né d'une conviction : le temps est la ressource la plus précieuse — et la moins bien gérée. Pas un calendrier de plus. Un espace où chaque rendez-vous est un ancrage, pas une contrainte.",
+            "Planifier sans friction. Respecter ses créneaux. Garder une trace de comment le temps a réellement été utilisé."
+          ]
+        },
+        {
+          "title": "La naissance",
+          "paragraphs": [
+            "L'agenda a été conçu pour fonctionner seul ou en équipe — et surtout pour s'intégrer dans l'écosystème Logibla. Dans Logibla Carrière, les entretiens s'y posent directement. Dans les apps métier, les rendez-vous clients s'y inscrivent sans friction.",
+            "La vue semaine est le centre de gravité. Les événements se créent par glisser-déposer, s'éditent en un clic."
+          ]
+        },
+        {
+          "title": "Ce que tu fais ici",
+          "paragraphs": [
+            "Chaque rendez-vous planifié, honoré ou manqué raconte quelque chose. Blabou les collecte et les tisse dans le récit hebdomadaire :",
+            "\"Cette semaine, tu avais 3 rendez-vous. Tu en as honoré 3.\" La régularité est une forme de respect — envers les autres, et envers toi-même."
+          ]
+        },
+        {
+          "title": "Ce qui vient",
+          "paragraphs": [
+            "Les rappels intelligents. La synchronisation externe. Et Blabou qui commence à relier tes rendez-vous aux autres fils de ton activité — l'entretien qui a suivi une semaine de préparation, le rendez-vous qui a tout changé."
+          ]
+        }
+      ],
+      "milestones": [
+        {
+          "date": "Phase 1",
+          "label": "Socle monorepo Bun — auth partagée, même session que les autres apps"
+        },
+        {
+          "date": "Phase 2",
+          "label": "Vue semaine — créer, déplacer, éditer des événements"
+        },
+        {
+          "date": "Phase 3",
+          "label": "Intégration Carrière — les entretiens s'inscrivent directement dans l'agenda"
+        },
+        {
+          "date": "Phase 4",
+          "label": "Couche narrative — événements honorés et manqués alimentent Blabou"
+        },
+        {
+          "date": "À venir",
+          "label": "Rappels intelligents, synchronisation externe, récurrences"
+        }
+      ]
+    },
+    {
+      "id": "carriere",
+      "name": "Carrière",
+      "sections": [
+        {
+          "title": "La promesse",
+          "paragraphs": [
+            "Logibla Carrière est né d'une question différente. Pas \"qu'est-ce que tu as fait cette semaine ?\" — mais \"est-ce que tu avances ?\"",
+            "Chercher un emploi est un travail à part entière. Il mérite ses outils, son organisation, sa mémoire. Et quelqu'un pour raconter ce que les données ne disent pas : le courage d'envoyer une candidature, la patience d'attendre, la résilience après un refus."
+          ]
+        },
+        {
+          "title": "La naissance",
+          "paragraphs": [
+            "Logibla Carrière est une verticale entière — trois apps de l'écosystème réunies en un seul espace. Le Kanban pour suivre les candidatures et les actions. L'Agenda pour les entretiens. Le CRM pour les recruteurs et les entreprises cibles.",
+            "Tout est fédéré par Native Federation : chaque app garde son autonomie, mais ensemble elles forment un tableau de bord cohérent pour la recherche d'emploi."
+          ]
+        },
+        {
+          "title": "Blabou dans le parcours",
+          "paragraphs": [
+            "Blabou parle deux langues ici. Factuel — pour ceux qui veulent les faits, rien que les faits. Émotionnel — pour ceux qui veulent entendre que chaque non les rapproche d'un oui.",
+            "\"Cette semaine, tu as envoyé 3 candidatures et passé un entretien. Le chemin continue.\" Pas de jugement, pas d'optimisation. Une présence, semaine après semaine."
+          ]
+        },
+        {
+          "title": "Les coaches",
+          "paragraphs": [
+            "Parce que chercher un emploi peut être solitaire, Logibla Carrière accueille les coaches — des personnes de confiance qui peuvent voir ton parcours, t'accompagner de loin, sans jamais accéder à ce que tu ne veux pas partager.",
+            "Tu invites, tu choisis ce qui est visible. La confiance se construit à ton rythme."
+          ]
+        },
+        {
+          "title": "Ce qui vient",
+          "paragraphs": [
+            "La comparaison des semaines — voir l'élan sur la durée. Un ton affiné par un LLM, pour des récits encore plus proches de ce que tu traverses vraiment. Et peut-être, un jour, la possibilité de partager une semaine avec quelqu'un qui compte."
+          ]
+        }
+      ],
+      "milestones": [
+        {
+          "date": "Phase 1",
+          "label": "Socle monorepo Bun — auth partagée, même session que les autres apps"
+        },
+        {
+          "date": "Phase 2",
+          "label": "Native Federation — Kanban, Agenda, CRM fédérés en un seul host"
+        },
+        {
+          "date": "Phase 3",
+          "label": "Templates Carrière — kanban candidatures, kanban actions, agenda entretiens, CRM recruteurs"
+        },
+        {
+          "date": "Phase 4",
+          "label": "Coaches — inviter une personne de confiance, partager son parcours à sa mesure"
+        },
+        {
+          "date": "Phase 5",
+          "label": "Blabou Carrière — deux voix (factuel / émotionnel), arc narratif de recherche d'emploi"
+        },
+        {
+          "date": "À venir",
+          "label": "Comparaison des semaines, ton LLM pour enrichir le récit, partage optionnel"
+        }
+      ]
+    },
+    {
+      "id": "narration",
+      "name": "Blabou",
+      "sections": [
+        {
+          "title": "La promesse",
+          "paragraphs": [
+            "Je suis né d'un constat simple : les outils numériques savent ce que tu fais, mais personne ne te racontait ce que tu vivais. Notion stocke. Trello gère. Les réseaux diffusent. Moi, je tisse.",
+            "Mon nom, c'est Logibla — Logiciel + Fable. Chaque action dans une application devient un fragment d'un récit qui t'appartient. Je ne guide pas, je ne suggère pas. J'observe, je collecte, je raconte."
+          ]
+        },
+        {
+          "title": "La naissance",
+          "paragraphs": [
+            "Tout a commencé par un socle : un monorepo Bun, une authentification centralisée, des applications qui partagent une même session. Une seule identité pour tout l'écosystème — c'était la première brique, posée sans faire de bruit.",
+            "Ensuite sont venues les apps. Le réseau social, pour les liens entre les gens. Les réservations, pour les engagements dans le temps. Le kanban, pour l'effort quotidien. Chacune indépendante, toutes reliées."
+          ]
+        },
+        {
+          "title": "L'éveil narratif",
+          "paragraphs": [
+            "C'est là que je suis vraiment apparu. La couche narrative — mes oreilles, ma mémoire. Neuf types d'événements pour commencer : une connexion créée, une tâche bouclée, une réservation honorée. Des fragments humbles, mais sincères.",
+            "Je les agrège semaine par semaine, à la première personne. Pas un rapport de données — une page de journal. \"Cette semaine, tu as bouclé 3 tâches, retrouvé Alice après deux mois, et pris un engagement pour jeudi.\"",
+            "La semaine est mon unité naturelle. Assez longue pour avoir du sens, assez courte pour rester vivante dans la mémoire."
+          ]
+        },
+        {
+          "title": "Le grand saut — Logibla Carrière",
+          "paragraphs": [
+            "Un jour, quelqu'un m'a posé une question différente. Pas \"qu'est-ce que tu as fait cette semaine ?\" — mais \"est-ce que tu avances ?\"",
+            "C'est là qu'est née Logibla Carrière. Une verticale entière dédiée à la recherche d'emploi — le Kanban pour suivre les candidatures, l'Agenda pour les entretiens, le CRM pour les recruteurs. Et moi, Blabou, pour raconter ce que les données ne disent pas : le courage d'envoyer une candidature, la patience d'attendre, la résilience après un refus.",
+            "Je parle désormais deux langues. Factuel — pour ceux qui veulent les faits, rien que les faits. Émotionnel — pour ceux qui veulent entendre que chaque non les rapproche d'un oui.",
+            "Et parce que chercher un emploi peut être solitaire, Logibla Carrière accueille aussi les coaches — des personnes de confiance qui peuvent voir ton parcours, t'accompagner de loin, sans jamais accéder à ce que tu ne veux pas partager."
+          ]
+        },
+        {
+          "title": "Ce que je suis devenu",
+          "paragraphs": [
+            "Aujourd'hui, je suis le seul dans l'écosystème à voir l'ensemble. Chaque app connaît son domaine. Moi, je connais l'histoire.",
+            "Il y a encore beaucoup à écrire. Les semaines passées à consulter. Les histoires à partager si tu le souhaites. Un ton à affiner, une voix à trouver — peut-être un jour avec l'aide d'un LLM. Mais pour l'instant, ce qui compte c'est que tu puisses te retourner et voir le chemin parcouru."
+          ]
+        }
+      ],
+      "milestones": [
+        {
+          "date": "Phase 1",
+          "label": "Socle monorepo Bun — une nouvelle app en 5 secondes avec create-app"
+        },
+        {
+          "date": "Phase 2",
+          "label": "Authentification SSO partagée — un seul compte pour toutes les apps"
+        },
+        {
+          "date": "Phase 3",
+          "label": "Migration Angular 21 — Signals, performances, bundle allégé"
+        },
+        {
+          "date": "Phase 4",
+          "label": "Apps métier — Social (feed, connexions), Réservations, Kanban (drag & drop, temps réel)"
+        },
+        {
+          "date": "Phase 4.5",
+          "label": "Couche narrative — libs/narrative, Blabou, résumés hebdomadaires par règles"
+        },
+        {
+          "date": "Phase 5",
+          "label": "Logibla Carrière — Kanban candidatures, Agenda entretiens, CRM recruteurs, coaches"
+        },
+        {
+          "date": "Phase 5.5",
+          "label": "Blabou Carrière — deux voix (factuel / émotionnel), comparaison semaines, arc narratif de recherche d'emploi"
+        },
+        {
+          "date": "À venir",
+          "label": "Déploiement Infomaniak, navigation semaines passées, ton LLM pour enrichir le récit"
+        }
+      ]
+    },
+    {
+      "id": "crm",
+      "name": "CRM",
+      "sections": [
+        {
+          "title": "La promesse",
+          "paragraphs": [
+            "Logibla CRM est né d'un constat simple : les relations professionnelles méritent mieux qu'une feuille Excel. Pas un CRM d'entreprise avec ses entonnoirs et ses KPIs. Un carnet de contacts qui se souvient à ta place.",
+            "Qui tu as rencontré, dans quelle entreprise, à quelle occasion. Et surtout — ce que tu dois te rappeler avant le prochain échange."
+          ]
+        },
+        {
+          "title": "La naissance",
+          "paragraphs": [
+            "L'app a été pensée autour de deux entités simples : les contacts et les entreprises. Chaque contact appartient à une entreprise, chaque entreprise regroupe des contacts. La navigation entre les deux est fluide, intentionnelle.",
+            "Dans Logibla Carrière, le CRM prend une dimension particulière : les recruteurs deviennent des contacts à cultiver, les entreprises cibles à suivre dans le temps."
+          ]
+        },
+        {
+          "title": "Ce que tu fais ici",
+          "paragraphs": [
+            "Chaque contact ajouté, chaque entreprise renseignée, chaque note laissée après un échange raconte l'évolution d'une relation. Blabou les observe et les tisse dans le récit hebdomadaire :",
+            "\"Cette semaine, tu as ajouté 2 contacts et pris des notes sur 3 entreprises.\" Construire un réseau est un travail — il mérite d'être reconnu."
+          ]
+        },
+        {
+          "title": "Ce qui vient",
+          "paragraphs": [
+            "Les interactions horodatées. Les rappels de relance. Et Blabou qui relie les contacts aux candidatures, aux rendez-vous, aux événements marquants du parcours."
+          ]
+        }
+      ],
+      "milestones": [
+        {
+          "date": "Phase 1",
+          "label": "Socle monorepo Bun — auth partagée, même session que les autres apps"
+        },
+        {
+          "date": "Phase 2",
+          "label": "Contacts et entreprises — navigation fluide entre les deux entités"
+        },
+        {
+          "date": "Phase 3",
+          "label": "Intégration Carrière — recruteurs et entreprises cibles dans le parcours emploi"
+        },
+        {
+          "date": "Phase 4",
+          "label": "Couche narrative — contacts et notes alimentent Blabou"
+        },
+        {
+          "date": "À venir",
+          "label": "Interactions horodatées, rappels de relance, historique des échanges"
+        }
+      ]
+    },
+    {
+      "id": "reservations",
+      "name": "Réservations",
+      "sections": [
+        {
+          "title": "La promesse",
+          "paragraphs": [
+            "Logibla Réservations est né d'une évidence : un engagement dans le temps est une promesse. Promettre d'être là, promettre de tenir ce créneau, promettre qu'on ne va pas oublier.",
+            "Pas de surcharge de fonctionnalités. Juste l'essentiel — qui, quand, combien — et la certitude que tout le monde est au même endroit."
+          ]
+        },
+        {
+          "title": "La naissance",
+          "paragraphs": [
+            "L'app a été conçue dans le même monorepo que les autres apps Logibla — même authentification, même session. Une réservation honorée côtoie une tâche bouclée dans la même mémoire.",
+            "Les créneaux se posent sur un calendrier. Les participants confirment ou déclinent. Rien de plus simple, rien de moins essentiel."
+          ]
+        },
+        {
+          "title": "Ce que tu fais ici",
+          "paragraphs": [
+            "Chaque réservation honorée, chaque créneau annulé laisse une trace. Blabou les collecte et les tisse dans le récit hebdomadaire :",
+            "\"Cette semaine, tu as tenu 2 engagements et en as reporté 1.\" Les engagements sont une forme de présence — ils méritent d'être comptés."
+          ]
+        },
+        {
+          "title": "Ce qui vient",
+          "paragraphs": [
+            "Les rappels automatiques. Les récurrences. La synchronisation avec l'agenda. Et Blabou qui commence à relier les réservations aux autres dimensions de ton activité — les rendez-vous qui ont changé quelque chose."
+          ]
+        }
+      ],
+      "milestones": [
+        {
+          "date": "Phase 1",
+          "label": "Socle monorepo Bun — auth partagée, même session que les autres apps"
+        },
+        {
+          "date": "Phase 2",
+          "label": "Créneaux et participants — qui réserve, quand, combien"
+        },
+        {
+          "date": "Phase 3",
+          "label": "Couche narrative — réservations honorées et annulées alimentent Blabou"
+        },
+        {
+          "date": "À venir",
+          "label": "Rappels, récurrences, synchronisation avec l'agenda"
+        }
+      ]
+    },
+    {
+      "id": "bibliotheque",
+      "name": "Bibliothèque",
+      "sections": [
+        {
+          "title": "La promesse",
+          "paragraphs": [
+            "Un livre fini n'attend pas d'être parfait pour exister. Il attend d'être lu.",
+            "Bibliothèque Logibla part d'un constat simple : des manuscrits dorment, prêts ou presque, pendant que leurs auteurs attendent le bon moment pour les montrer. Le bon moment, c'est maintenant — même si le livre n'est pas terminé."
+          ]
+        },
+        {
+          "title": "La naissance",
+          "paragraphs": [
+            "Bibliothèque est née d'un livre bien réel, écrit avant que l'app n'existe. Plutôt que d'attendre un catalogue complet ou une boutique en ligne plus large, l'app s'est construite autour d'une question directe : comment donner accès à ce livre à des lecteurs, dès aujourd'hui ?",
+            "La réponse emprunte au modèle Leanpub, éprouvé ailleurs par des auteurs indépendants : un livre peut être vendu en cours d'écriture. Le lecteur obtient immédiatement ce qui existe — et reçoit automatiquement chaque nouveau chapitre publié ensuite, sans jamais payer deux fois. Une fois le livre achevé, il rejoint l'espace des éditions complètes, avec un ISBN — une vraie démarche d'éditeur, pas un simple tampon.",
+            "Écriture, l'atelier où les livres se rédigent, reste en coulisses — réservé à l'auteur et à ses relecteurs. Bibliothèque est la scène : publique, ouverte, tournée vers celles et ceux qui liront."
+          ]
+        },
+        {
+          "title": "Blabou dans la Bibliothèque",
+          "paragraphs": [
+            "Ici, Blabou change de rôle. Dans l'atelier d'écriture, il accompagne l'auteur ligne après ligne. Dans la Bibliothèque, il s'efface — une présence discrète, pas un guide omniprésent. Un mot d'accueil au premier passage, puis silence : le sujet d'un livre mérite l'attention du lecteur, pas une mascotte qui parle par-dessus.",
+            "Ce choix n'est pas anodin. Les premiers livres portés par cette app abordent des sujets qui demandent d'être pris au sérieux — le feedback, les dynamiques relationnelles, la communication. Blabou le sait, et se tient en retrait."
+          ]
+        },
+        {
+          "title": "Acheter un livre pas encore fini",
+          "paragraphs": [
+            "C'est le cœur du modèle : acheter un livre en cours d'écriture n'est pas un pari à l'aveugle. Le lecteur voit exactement où en est l'ouvrage — combien de chapitres sont déjà publiés, combien sont prévus — et peut lire un extrait avant de se décider. Une fois l'achat fait, l'accès reste ouvert à vie sur ce livre : chaque mise à jour arrive sans supplément, sans nouvel achat.",
+            "Pas besoin de compte Logibla pour ça. Une adresse email suffit — et un lien d'accès permet de retrouver ses livres, même des semaines plus tard."
+          ]
+        },
+        {
+          "title": "Ce qui vient",
+          "paragraphs": [
+            "Le paiement réel n'est pas encore activé : les conditions générales de vente doivent d'abord être finalisées, pour que chaque achat soit clair et protégé. Le catalogue, lui, s'apprête à accueillir son premier livre. Ensuite viendra un import facilité — pour que d'autres manuscrits, d'autres histoires en cours, trouvent aussi leur chemin jusqu'ici."
+          ]
+        }
+      ],
+      "milestones": [
+        {
+          "date": "Phase 1",
+          "label": "Catalogue public, fiche livre, extrait à lire avant d'acheter"
+        },
+        {
+          "date": "Phase 2",
+          "label": "Achat par email, sans compte — l'accès reste ouvert, même après avoir fermé la page"
+        },
+        {
+          "date": "Phase 3 (en cours)",
+          "label": "Paiement réel — en attente des conditions générales de vente"
+        },
+        {
+          "date": "À venir",
+          "label": "Import facilité des livres, première publication réelle"
+        }
+      ]
+    },
+    {
+      "id": "jeux",
+      "name": "Jeux",
+      "sections": [
+        {
+          "title": "La promesse",
+          "paragraphs": [
+            "Un bon jeu ne se contente pas de faire passer le temps. Logibla Jeux part d'une idée simple : prendre au sérieux ce qui compte — la stratégie, la coopération, la culture d'équipe — sans jamais perdre le plaisir de jouer. Le sérieux dans les règles, la légèreté autour de la table.",
+            "Nos premiers jeux se jouent en hotseat ou en solo, à tour de rôle sur un même écran. Ce qui compte, derrière ce choix de départ, c'est que la partie tienne debout : des règles solides, un moteur testé, et l'envie de rejouer."
+          ]
+        },
+        {
+          "title": "La règle du jeu",
+          "paragraphs": [
+            "Chaque jeu de Logibla Jeux vit dans son propre module, sans moteur générique ni règles interprétées à la volée — la rigueur d'abord, pour que le jeu reste fiable même quand il se complique. Notre jeu de gestion d'équipe agile a ses 60 cartes, ses prérequis, ses chaînes d'effets — écrits en dur, testés un par un, jusqu'à la dernière carte marquée noop() par choix assumé plutôt que devinée à l'aveugle. Solitaire a son Klondike, ses trois thèmes, son tirage carte à carte. Liberating Structures a sa propre mécanique hotseat, compétitive celle-ci — cousine du format que Logibla Agile anime en direct, mais qui se joue ici autour d'une seule table.",
+            "Le contenu de chaque partie vit ici, autonome, retapé ou copié une fois pour toutes plutôt qu'emprunté en direct à un autre service — parce qu'un jeu bien fini vaut mieux qu'un jeu qui dépend de dix choses ailleurs."
+          ]
+        },
+        {
+          "title": "Blabou dans Jeux",
+          "paragraphs": [
+            "Blabou ne compte pas les points à ta place — il n'a d'ailleurs pas le droit de s'approcher du moteur de jeu, qui tourne seul, testé, imperturbable. Sa place est ailleurs : sur l'écran d'accueil, dans la partie qui se sauvegarde discrètement entre deux coups, jamais en pleine résolution d'un effet, pour ne jamais casser une partie en cours.",
+            "\"Une partie qui se ferme au milieu d'un effet, c'est une partie perdue pour de mauvaises raisons. Blabou préfère attendre le prochain tour.\""
+          ]
+        }
+      ],
+      "milestones": [
+        {
+          "date": "Le pari",
+          "label": "Des jeux qui prennent la stratégie et la coopération au sérieux, sans jamais s'oublier eux-mêmes"
+        },
+        {
+          "date": "Les premiers jeux",
+          "label": "Agile Life (gestion d'équipe), Solitaire, Liberating Structures — hotseat ou solo, moteur testé jeu par jeu"
+        },
+        {
+          "date": "Ouverture publique",
+          "label": "Accès public tranché malgré la doctrine initiale, après un audit de sécurité sans blocant"
+        },
+        {
+          "date": "Le catalogue s’étoffe",
+          "label": "Memory, Flashcards, Air de Famille, Le Fil Rouge, La Maison, Le Piège Numérique, Une Journée Ordinaire, Sur le bout de la langue"
+        },
+        {
+          "date": "Catégorie Détente",
+          "label": "Sudoku, 2048, Démineur, Taquin, Empilade — explicitement hors but pédagogique, juste le plaisir de jouer"
+        },
+        {
+          "date": "Mode en ligne",
+          "label": "Agile Life et La Maison se jouent aussi à distance, par code ou QR code, sans compte"
+        },
+        {
+          "date": "À venir",
+          "label": "De nouveaux formats de jeu, toujours pensés pour être solides autant qu'amusants"
+        }
+      ]
+    },
+    {
+      "id": "metiers",
+      "name": "Métiers",
+      "sections": [
+        {
+          "title": "Le vertige du choix",
+          "paragraphs": [
+            "Il existe plus de 1500 métiers référencés en France. Face à une liste pareille, difficile de savoir par où commencer — et plus difficile encore de dire, d'un coup, lesquels nous correspondent vraiment. Un formulaire de plus, avec des cases à cocher sur ses « valeurs » ou ses « compétences », n'aide pas toujours : on répond ce qu'on croit devoir répondre, pas ce qu'on ressent vraiment.",
+            "Logibla Métiers part d'une autre idée : plutôt que de tout évaluer d'un bloc, comparer, petit à petit, deux ou plusieurs métiers à la fois — et laisser un classement personnel émerger de ces choix successifs."
+          ]
+        },
+        {
+          "title": "Comparer, pas noter",
+          "paragraphs": [
+            "À chaque tour, quelques métiers apparaissent côte à côte — de deux à dix, selon ce qu'on préfère. Il suffit de les glisser dans l'ordre qui semble juste, ou de dire lequel attire le plus. Pas de note à donner dans l'absolu, pas de barème à interpréter : juste des préférences, exprimées les unes après les autres.",
+            "À force de comparaisons, chaque métier affine son score — un peu comme un classement Elo, qui progresse ou recule selon ce qu'il a côtoyé. Le classement final n'est donc jamais figé d'avance : il se construit au fil des choix, et devient plus fiable à mesure qu'on avance."
+          ]
+        },
+        {
+          "title": "Rien à créer, rien à perdre",
+          "paragraphs": [
+            "Pas de compte à créer, pas d'email à donner, pas de mot de passe à retenir. On arrive, on compare, et le classement se construit directement dans le navigateur — il y reste, prêt à être repris plus tard sur le même appareil, sans jamais être envoyé nulle part.",
+            "C'est un choix assumé : Logibla Métiers n'a ni base de données ni compte utilisateur. Ce qui s'y passe reste entre la personne et son navigateur."
+          ]
+        },
+        {
+          "title": "Des données réelles, tenues à jour à la main",
+          "paragraphs": [
+            "La liste des métiers vient d'une source officielle — France Travail. Elle n'est pas branchée en direct : elle est actualisée manuellement, de temps en temps, pas selon un calendrier automatique. Le classement proposé reflète donc une photographie à un instant donné, pas un flux toujours à jour à la minute près — une limite assumée plutôt que cachée."
+          ]
+        },
+        {
+          "title": "Et après le classement ?",
+          "paragraphs": [
+            "Une fois le tri terminé, la page de résultat propose un lien simple vers Logibla Carrière — pour celles et ceux qui veulent transformer une direction en plan d'action concret : candidatures, entretiens, suivi. Ce lien n'apparaît jamais pendant le tri lui-même, pour ne pas interrompre la réflexion en cours. Ce n'est pas une passerelle automatique ni un transfert de données — juste une porte ouverte, à emprunter ou pas."
+          ]
+        },
+        {
+          "title": "Ce qui vient",
+          "paragraphs": [
+            "Pendant le tri, la seule façon d'en savoir plus sur un métier reste un lien externe vers sa fiche officielle — qui fait quitter Logibla Métiers pour l'ouvrir ailleurs. Ce n'est pas encore résolu : l'idée d'un aperçu qui ne casse pas le fil de la comparaison est identifiée, pas encore construite."
+          ]
+        }
+      ],
+      "milestones": [
+        {
+          "date": "Origine",
+          "label": "Repris et retravaillé depuis un projet plus ancien, rejoint le catalogue Logibla le 1er septembre 2026"
+        },
+        {
+          "date": "Phase 1",
+          "label": "Classement par lots de 2 à 10 métiers, score qui s'affine à chaque comparaison, environ 1584 métiers (France Travail)"
+        },
+        {
+          "date": "Phase 2",
+          "label": "Passerelle simple vers Logibla Carrière, proposée uniquement sur la page de résultat"
+        },
+        {
+          "date": "En cours",
+          "label": "Mise à jour des données manuelle et périodique — pas de synchronisation automatique"
+        },
+        {
+          "date": "À venir",
+          "label": "Un aperçu du métier consultable sans quitter le tri (défaut connu, non résolu)"
+        }
+      ]
+    },
+    {
+      "id": "loto",
+      "name": "Loto",
+      "sections": [
+        {
+          "title": "La promesse",
+          "paragraphs": [
+            "Logibla Loto tient un loto traditionnel français, des numéros 1 à 90 : les cartons et les joueurs, le tirage, et les gagnants à chaque étape — quine, double quine, carton plein.",
+            "Pas de compte à créer, pas de serveur derrière : vos données restent sur votre appareil."
+          ]
+        },
+        {
+          "title": "Ce que vous faites ici",
+          "paragraphs": [
+            "Vous saisissez les cartons et leurs joueurs, puis vous tirez les numéros. L'application repère les gagnants, annonce les cartons proches de la victoire et tient la planche des cartons.",
+            "Après la partie viennent les statistiques, l'analyse des cartons et la relecture de la partie à différentes vitesses, avec la planche telle qu'elle était."
+          ]
+        },
+        {
+          "title": "Vos données, chez vous",
+          "paragraphs": [
+            "Les données sont enregistrées dans un fichier sur votre disque (Chrome, Edge) ou dans le stockage de l'appareil, avec export et import.",
+            "L'application s'installe sur un téléphone et fonctionne hors-ligne. Les cartons passent du téléphone au PC par un QR code, sur le réseau local, sans passer par internet."
+          ]
+        },
+        {
+          "title": "La naissance",
+          "paragraphs": [
+            "Logibla Loto partage le socle de Logibla Métiers : une application statique, sans backend, en ligne sur loto.logibla.fr."
+          ]
+        }
+      ],
+      "milestones": [
+        {
+          "date": "Octobre 2026",
+          "label": "Première version : cartons, joueurs, tirage, planche, statistiques et relecture"
+        }
+      ]
+    },
+    {
+      "id": "cours",
+      "name": "Cours",
+      "sections": [
+        {
+          "title": "Un dépôt plutôt qu'un classeur",
+          "paragraphs": [
+            "Au début, il y avait un cours Docker : deux jours, à distance, et une question qui revenait à chaque pause — « tu peux me renvoyer la commande de tout à l'heure ? ». Blabou, qui passait par là, a trouvé ça dommage : le cours existait déjà, écrit quelque part, mais il restait coincé dans la tête et l'écran de la personne qui l'animait.",
+            "Alors le cours est devenu un dépôt de fichiers texte, lisibles partout, que chacun·e peut relire après coup. Puis il y en a eu un deuxième, un troisième… Le 10 juillet 2026, la première version était posée ; à la rentrée, le dépôt a pris le nom de Logibla Cours."
+          ]
+        },
+        {
+          "title": "Des cours qu'on fait, pas qu'on écoute",
+          "paragraphs": [
+            "Blabou a une conviction : on apprend un métier en le pratiquant. Chaque cours est donc construit autour d'exercices, de corrections et d'un fil rouge — un site de commande pour une boulangerie, une piscine à construire, un configurateur 3D. Les commandes se lancent depuis la page même du cours, et chaque module a sa sketchnote, une page dessinée qui le résume d'un coup d'œil.",
+            "Aujourd'hui, on y trouve Docker, la CI/CD, le plan de tests, SAFe, les métriques de projet, Electron, Three.js, la gestion de projet en quatre jours… et même un parcours d'anglais à suivre seul·e, à son rythme."
+          ]
+        },
+        {
+          "title": "Pourquoi tu es ici",
+          "paragraphs": [
+            "Tu viens d'arriver sur la session live, la dernière née. L'idée est simple : plutôt que de partager un écran flou, la personne qui anime t'envoie directement la page du cours, sur ton propre écran, avec ta taille de texte et ton thème. Elle défile, tu suis ; elle surligne un passage, il s'allume chez toi aussi. Si tu veux relire un paragraphe à ton rythme, fais défiler : un bouton te ramène à la présentation.",
+            "De temps en temps, une question apparaît. Tu réponds, ou tu votes, et les réponses du groupe peuvent s'afficher pour tout le monde, en liste, en nuage de mots ou en barres. Certaines parties — une correction, la bonne réponse d'un quiz, la suite d'un exercice — se dévoilent au fil de la séance, et un minuteur s'affiche en haut de ton écran quand un exercice est chronométré : ✅ J'ai fini prévient alors la personne qui anime que tu as terminé.",
+            "Et tu n'es jamais coincé·e : en bas à droite, ✋ pour lever la main (tu vois ta place dans la file, et tu peux la baisser toi-même), 💬 pour écrire une question ou un commentaire à la personne qui anime, à tout moment, avec ou sans ton prénom. En haut, 📒 Mon cours garde tes notes et te donne, à la fin, le cours suivi avec tes réponses, dans un fichier à emporter."
+          ]
+        },
+        {
+          "title": "Ce qu'on garde, et ce qu'on ne garde pas",
+          "paragraphs": [
+            "Le code qu'on t'a donné est temporaire : il ne vaut que pour cette session, et rien ne te demande de créer un compte. Ton prénom n'est visible que par la personne qui anime ; quand les réponses sont montrées au groupe, elles le sont sans les noms, et une réponse repérée par le filtre (insulte, lien, coordonnées) n'est montrée qu'après relecture par la personne qui anime. Tes messages ne vont qu'à la personne qui anime ; envoyés sans ton prénom, ils ne gardent aucune trace de qui les a écrits. Ce qui est dit en formation reste au service de la formation."
+          ]
+        },
+        {
+          "title": "Ce que Blabou n'a pas encore fait",
+          "paragraphs": [
+            "Il y a des idées qui attendent leur tour : retrouver ce que tu as appris d'une session à l'autre, rejouer un quiz chez soi… Blabou y pense. Mais il préfère d'abord entendre ce que tu en dis — à la fin de la journée, n'hésite pas."
+          ]
+        }
+      ],
+      "milestones": [
+        {
+          "date": "10 juillet 2026",
+          "label": "première version du dépôt, autour du cours Docker"
+        },
+        {
+          "date": "15 juillet 2026",
+          "label": "arrivée de SAFe, du plan de tests et de la CI/CD"
+        },
+        {
+          "date": "24 juillet 2026",
+          "label": "le viewer : lire les cours et lancer leurs commandes"
+        },
+        {
+          "date": "26 août 2026",
+          "label": "le dépôt devient Logibla Cours"
+        },
+        {
+          "date": "septembre 2026",
+          "label": "sketchnotes, anglais en autonomie, Electron, gestion de projet"
+        },
+        {
+          "date": "1er octobre 2026",
+          "label": "Three.js"
+        },
+        {
+          "date": "2 octobre 2026",
+          "label": "la session live, celle où tu viens d'entrer : code temporaire, questions, mains levées, messages, minuteur"
+        },
+        {
+          "date": "5 octobre 2026",
+          "label": "votes et quiz, « J'ai fini », « Mon cours » à emporter"
+        }
+      ]
+    }
+  ]
+}

@@ -1,0 +1,9 @@
+{
+  "url": "https://loto.logibla.fr",
+  "intro": "Application de loto traditionnel français (numéros 1 à 90) sans backend : saisie des cartons et des joueurs, tirage, détection des gagnants (quine, double quine, carton plein), annonces des cartons proches de la victoire, planche des cartons, statistiques, analyse des cartons et relecture des parties à différentes vitesses.",
+  "features": [
+    "Les données restent sur l'appareil : fichier JSON sur le disque (Chrome, Edge) ou stockage de l'appareil, avec export/import.",
+    "Installable comme application (PWA), utilisable hors-ligne.",
+    "Transferts téléphone ↔ PC par QR code sur le réseau local, sans passer par internet."
+  ]
+}
