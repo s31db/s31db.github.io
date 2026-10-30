@@ -49,7 +49,12 @@
     {
       "id": "aviation",
       "name": "Aviation",
-      "pitch": "Monter un Blériot XI à l’atelier et le piloter, du saut de puce à la traversée de la Manche (5 épreuves, médailles)"
+      "pitch": "Monter un Blériot XI à l’atelier et le piloter, du saut de puce à la traversée de la Manche (5 épreuves, médailles), puis à Horsarrieu, un vrai village des Landes (5 épreuves)"
+    },
+    {
+      "id": "epopee-de-l-aviation",
+      "name": "Épopée de l'aviation",
+      "pitch": "L'histoire de l'aviation d'hier à demain, depuis le champ réel ZE 0190 à Horsarrieu : promenade libre, carnet de vol à tampons, chapitres vrais ou inventés (train inaugural, école d'hydravion, Canadair, taxi volant)"
     },
     {
       "id": "jouer-a-plusieurs",
